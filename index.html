@@ -3,24 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amr ZAKI SALIH | Portfolio Ingénieur Data & IA — INSA Rouen</title>
-  <meta name="description" content="Portfolio d'Amr ZAKI SALIH, Élève-Ingénieur en Génie Mathématique (GM5) à l'INSA Rouen Normandie. Spécialisé en Data Science, Intelligence Artificielle & Calcul Scientifique.">
+  <title>Amr ZAKI SALIH | Portfolio Data Science, Machine Learning & Génie Mathématiques</title>
+  
+  <meta name="description" content="Portfolio d'Amr ZAKI SALIH, élève ingénieur en Génie Mathématiques en cinquième année GM5 à l'INSA Rouen Normandie. Recherche de stage de fin d'études de 6 mois dès le 4 mai 2027.">
+  <meta name="author" content="Amr ZAKI SALIH">
+  <meta name="theme-color" content="#f8fafc">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
   
-  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Tailwind Configuration -->
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -31,1081 +29,1361 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            bgDark: '#07090e',
-            cardDark: 'rgba(15, 23, 42, 0.72)',
-            borderDark: 'rgba(255, 255, 255, 0.08)',
-            accentBlue: '#38bdf8',
-            accentPurple: '#818cf8',
-            accentEmerald: '#34d399',
-            insaRed: '#e30613',
-          },
-          animation: {
-            'pulse-subtle': 'pulseSubtle 3s ease-in-out infinite',
-            'float': 'float 6s ease-in-out infinite',
-            'spin-slow': 'spin 18s linear infinite',
-          },
-          keyframes: {
-            pulseSubtle: {
-              '0%, 100%': { opacity: '0.4' },
-              '50%': { opacity: '0.8' },
-            },
-            float: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-8px)' },
+            brand: {
+              light: '#f8fafc',
+              card: '#ffffff',
+              cardHover: '#f1f5f9',
+              border: '#e2e8f0',
+              accent: '#4f46e5',
+              accentGlow: 'rgba(79, 70, 229, 0.15)',
+              purple: '#7c3aed',
+              emerald: '#059669',
             }
           }
         }
       }
     }
   </script>
-
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
   <style>
-    /* Custom Sleek Scrollbar */
+    body {
+      background-color: #f8fafc;
+      color: #1e293b;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    /* Background Grid Pattern */
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    }
+    
+    /* Radial Glow Orbs */
+    .glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(140px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    /* Glassmorphism Cards */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(99, 102, 241, 0.4);
+      box-shadow: 0 12px 28px -4px rgba(99, 102, 241, 0.12);
+    }
+
+    video {
+      outline: none;
+    }
+    
+    /* Tech pills */
+    .tech-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      padding: 0.28rem 0.65rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(203, 213, 225, 0.8);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.2s ease;
+    }
+    .tech-pill:hover {
+      border-color: rgba(99, 102, 241, 0.5);
+      background-color: rgba(99, 102, 241, 0.08);
+    }
+    
+    /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #07090e;
+      background: #f1f5f9;
     }
     ::-webkit-scrollbar-thumb {
-      background: #1e293b;
+      background: #cbd5e1;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #334155;
-    }
-
-    /* Glassmorphism Classes */
-    .glass-card {
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .glass-card:hover {
-      border-color: rgba(129, 140, 248, 0.35);
-      box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.15);
-    }
-
-    .glass-nav {
-      background: rgba(7, 9, 14, 0.82);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    /* Code & Metric Tag */
-    .tech-pill {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
-      padding: 0.2rem 0.55rem;
-      border-radius: 9999px;
-      letter-spacing: -0.01em;
-    }
-
-    /* Ambient Background Gradients */
-    .ambient-glow {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(120px);
-      pointer-events: none;
-      z-index: 0;
+      background: #6366f1;
     }
   </style>
 </head>
+<body class="bg-[#f8fafc] text-slate-800 min-h-screen relative antialiased selection:bg-indigo-500/20 selection:text-indigo-900">
 
-<body class="bg-[#07090e] text-slate-200 font-sans antialiased selection:bg-indigo-500/30 selection:text-white min-h-screen relative overflow-x-hidden">
+  <!-- Ambient Light Orbs -->
+  <div class="glow-orb w-[600px] h-[600px] bg-indigo-500/10 top-[-100px] left-[-150px]"></div>
+  <div class="glow-orb w-[650px] h-[650px] bg-sky-500/12 top-[300px] right-[-200px]"></div>
+  <div class="glow-orb w-[550px] h-[550px] bg-emerald-500/10 top-[1400px] left-[-100px]"></div>
+  <div class="glow-orb w-[600px] h-[600px] bg-purple-500/10 top-[2600px] right-[-150px]"></div>
 
-  <!-- Ambient Glow Orbs -->
-  <div class="ambient-glow w-[550px] h-[550px] bg-indigo-600/15 top-[-100px] left-1/2 -translate-x-1/2"></div>
-  <div class="ambient-glow w-[400px] h-[400px] bg-sky-500/10 top-[600px] right-[-100px]"></div>
-  <div class="ambient-glow w-[450px] h-[450px] bg-emerald-500/10 top-[1800px] left-[-100px]"></div>
+  <div class="relative z-10 bg-grid">
 
-  <!-- ========================================================= -->
-  <!-- NAVBAR                                                    -->
-  <!-- ========================================================= -->
-  <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      
-      <!-- Brand Logo -->
-      <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-sky-500 to-emerald-400 p-[1.5px] shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
-          <div class="w-full h-full bg-[#090d16] rounded-[10px] flex items-center justify-center font-mono font-bold text-sm text-white">
-            AZ
+    <!-- ========================================================= -->
+    <!-- NAVIGATION BAR                                            -->
+    <!-- ========================================================= -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-xl border-b border-slate-200/80 shadow-xs">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        
+        <!-- Logo / Name -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 via-indigo-500 to-emerald-500 p-[1.5px] transition transform group-hover:scale-105 shadow-sm">
+            <div class="w-full h-full bg-white rounded-[10px] flex items-center justify-center font-mono font-bold text-sm text-indigo-600">
+              AZ
+            </div>
           </div>
+          <div>
+            <div class="text-sm font-bold tracking-tight text-slate-900 group-hover:text-indigo-600 transition-colors">
+              Amr ZAKI SALIH
+            </div>
+            <div class="text-[11px] font-mono text-slate-500" data-i18n="nav_role">
+              Génie Mathématiques • GM5
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-6 text-xs font-mono text-slate-600 font-medium">
+          <a href="#featured" class="hover:text-indigo-600 transition-colors flex items-center gap-1.5">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-indigo-500"></i>
+            <span data-i18n="nav_featured">5 Projets Phares</span>
+          </a>
+          <a href="#catalog" class="hover:text-indigo-600 transition-colors" data-i18n="nav_catalog">Catalogue</a>
+          <a href="#skills" class="hover:text-indigo-600 transition-colors" data-i18n="nav_skills">Compétences</a>
+          <a href="#education" class="hover:text-indigo-600 transition-colors" data-i18n="nav_education">Formation</a>
+          <a href="#contact" class="hover:text-indigo-600 transition-colors" data-i18n="nav_contact">Contact</a>
+        </nav>
+
+        <!-- Right Quick Actions (Language Switcher + Contact) -->
+        <div class="flex items-center gap-2.5">
+          
+          <!-- Language Toggle Button -->
+          <button onclick="toggleLanguage()" id="btn-lang" 
+                  class="px-2.5 py-1.5 rounded-xl bg-white hover:bg-slate-50 text-xs font-mono font-bold text-indigo-600 border border-slate-200 shadow-xs hover:border-indigo-300 transition flex items-center gap-1.5"
+                  title="Changer de langue / Switch Language">
+            <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+            <span id="lang-label">EN</span>
+          </button>
+
+          <a href="https://www.linkedin.com/in/amr-zaki-salih" target="_blank" rel="noopener noreferrer"
+             class="p-2 rounded-xl bg-white hover:bg-slate-50 text-slate-600 hover:text-sky-600 border border-slate-200 shadow-xs hover:border-sky-300 transition"
+             title="LinkedIn (Amr ZAKI SALIH)">
+            <i data-lucide="linkedin" class="w-4 h-4"></i>
+          </a>
+          <a href="https://github.com/amrzakizakisalih-alt" target="_blank" rel="noopener noreferrer" 
+             class="p-2 rounded-xl bg-white hover:bg-slate-50 text-slate-600 hover:text-slate-900 border border-slate-200 shadow-xs hover:border-slate-400 transition"
+             title="GitHub (@amrzakizakisalih-alt)">
+            <i data-lucide="github" class="w-4 h-4"></i>
+          </a>
+
+          <a href="#contact" 
+             class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-indigo-600 to-sky-600 text-white text-xs font-semibold shadow-md shadow-indigo-600/20 hover:shadow-indigo-600/30 hover:scale-[1.02] transition flex items-center gap-1.5">
+            <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+            <span data-i18n="nav_btn_contact">Contact</span>
+          </a>
         </div>
-        <div class="flex flex-col">
-          <span class="font-bold text-sm tracking-tight text-white group-hover:text-indigo-300 transition-colors">Amr ZAKI SALIH</span>
-          <span class="text-[11px] text-slate-400 flex items-center gap-1 font-mono">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> INSA Rouen • GM5
+
+      </div>
+    </header>
+
+    <!-- ========================================================= -->
+    <!-- HERO SECTION                                              -->
+    <!-- ========================================================= -->
+    <main class="relative z-10 pt-28 pb-16">
+      <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-14">
+        
+        <!-- Top Availability Banner -->
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium mb-8 shadow-xs">
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-        </div>
-      </a>
-
-      <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-7 text-xs font-medium text-slate-300">
-        <a href="#featured" class="hover:text-sky-400 transition-colors">Projets Phares</a>
-        <a href="#catalog" class="hover:text-sky-400 transition-colors">Tous les Projets</a>
-        <a href="#skills" class="hover:text-sky-400 transition-colors">Compétences</a>
-        <a href="#education" class="hover:text-sky-400 transition-colors">Formation</a>
-        <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
-      </nav>
-
-      <!-- Right CTAs -->
-      <div class="flex items-center gap-3">
-        <a href="https://github.com/amrzakizakisalih-alt" target="_blank" rel="noopener noreferrer" 
-           class="p-2 rounded-lg bg-slate-800/60 hover:bg-slate-700/80 border border-white/5 text-slate-300 hover:text-white transition-all text-xs flex items-center gap-1.5">
-          <i data-lucide="github" class="w-4 h-4"></i>
-          <span class="hidden sm:inline font-mono">GitHub</span>
-        </a>
-        <a href="#contact" 
-           class="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-indigo-500 to-sky-500 hover:from-indigo-600 hover:to-sky-600 text-white font-medium text-xs shadow-md shadow-indigo-500/20 hover:shadow-indigo-500/35 transition-all flex items-center gap-1.5">
-          <i data-lucide="mail" class="w-3.5 h-3.5"></i>
-          <span>Me contacter</span>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- ========================================================= -->
-  <!-- HERO SECTION                                              -->
-  <!-- ========================================================= -->
-  <main class="relative z-10 pt-28 pb-16">
-    <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-14">
-      
-      <!-- Top Recruiter Availability Banner -->
-      <div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium mb-8">
-        <span class="flex h-2 w-2 relative">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-        </span>
-        <span>Recherche PFE / Stage de fin d'études — Data Science & IA (Février/Mars 2026)</span>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        
-        <!-- Left: Text content -->
-        <div class="lg:col-span-8 space-y-6">
-          <div class="space-y-2">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
-              Amr <span class="bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">ZAKI SALIH</span>
-            </h1>
-            <p class="text-lg sm:text-xl text-slate-300 font-medium">
-              Élève-Ingénieur en <span class="text-white font-semibold">Génie Mathématique (GM5)</span> à l'<span class="text-white font-semibold">INSA Rouen Normandie</span>
-            </p>
-          </div>
-
-          <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
-            Passionné par la convergence entre les <strong class="text-slate-200">modèles mathématiques rigoureux</strong> et l'<strong class="text-slate-200">intelligence artificielle</strong>. Je conçois des solutions prédictives et computationnelles allant du traitement de <strong class="text-slate-200">données satellitaires complexes</strong> (InSAR & GRACE avec le Cerema) aux <strong class="text-slate-200">systèmes d'IA multimodaux</strong> (OCR LaTeX, tuteur intelligent) et au <strong class="text-slate-200">calcul scientifique haute performance</strong>.
-          </p>
-
-          <!-- Key Metrics Grid -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 max-w-2xl">
-            <div class="glass-card p-3 rounded-xl border border-white/5">
-              <div class="text-xl font-bold font-mono text-sky-400">GM5</div>
-              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-mono">INSA Rouen</div>
-            </div>
-            <div class="glass-card p-3 rounded-xl border border-white/5">
-              <div class="text-xl font-bold font-mono text-indigo-400">10+</div>
-              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-mono">Projets R&D & Tech</div>
-            </div>
-            <div class="glass-card p-3 rounded-xl border border-white/5">
-              <div class="text-xl font-bold font-mono text-emerald-400">Cerema</div>
-              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-mono">Partenariat Données</div>
-            </div>
-            <div class="glass-card p-3 rounded-xl border border-white/5">
-              <div class="text-xl font-bold font-mono text-amber-400">5</div>
-              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-mono">Langages Scientifiques</div>
-            </div>
-          </div>
-
-          <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center gap-3 pt-4">
-            <a href="#featured" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 text-white text-xs font-semibold shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-[1.02] transition-all flex items-center gap-2">
-              <i data-lucide="sparkles" class="w-4 h-4"></i>
-              <span>Explorer les 4 Projets Phares</span>
-            </a>
-            <a href="https://github.com/amrzakizakisalih-alt" target="_blank" rel="noopener noreferrer"
-               class="px-5 py-2.5 rounded-xl glass-card text-slate-200 hover:text-white text-xs font-medium hover:border-slate-600 transition-all flex items-center gap-2">
-              <i data-lucide="github" class="w-4 h-4"></i>
-              <span>GitHub (@amrzakizakisalih-alt)</span>
-            </a>
-            <button onclick="copyEmail()" id="btn-copy-email"
-               class="px-4 py-2.5 rounded-xl glass-card text-slate-300 hover:text-white text-xs font-mono transition-all flex items-center gap-2">
-              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
-              <span id="copy-email-text">amrzaki.zakisalih@icloud.com</span>
-            </button>
-          </div>
+          <span data-i18n="hero_banner">À la recherche d'un stage de fin d'études de 6 mois à partir du 4 mai 2027</span>
         </div>
 
-        <!-- Right: Profile Card & Photo -->
-        <div class="lg:col-span-4 flex justify-center">
-          <div class="relative group">
-            
-            <!-- Glow background -->
-            <div class="absolute -inset-1.5 bg-gradient-to-tr from-indigo-500 via-sky-500 to-emerald-400 rounded-2xl blur-lg opacity-35 group-hover:opacity-60 transition duration-500"></div>
-            
-            <div class="relative w-64 sm:w-72 glass-card rounded-2xl p-4 border border-white/10 flex flex-col items-center text-center">
-              
-              <!-- Avatar Photo -->
-              <div class="w-40 h-40 sm:w-44 sm:h-44 rounded-xl overflow-hidden border-2 border-indigo-400/40 shadow-inner mb-4 relative">
-                <img src="assets/images/profile.jpg" alt="Amr ZAKI SALIH" class="w-full h-full object-cover object-top hover:scale-105 transition duration-500">
-                <div class="absolute bottom-1 right-1 bg-[#090d16]/90 p-1 rounded-md border border-white/10">
-                  <img src="assets/images/insa-logo.jpg" alt="INSA Rouen" class="h-4 object-contain">
-                </div>
-              </div>
-
-              <div class="font-bold text-base text-white tracking-tight">Amr ZAKI SALIH</div>
-              <div class="text-xs text-sky-400 font-mono mb-2">Mathématiques & Informatique</div>
-              
-              <div class="w-full pt-3 mt-1 border-t border-white/5 flex items-center justify-around text-xs text-slate-400 font-mono">
-                <span>📍 Rouen, France</span>
-                <span>🎓 Promo 2026</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- SECTION: LES 4 PROJETS PHARES (Bento Grid Deep Tech)       -->
-    <!-- ========================================================= -->
-    <section id="featured" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      
-      <!-- Section Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-        <div class="space-y-2">
-          <div class="flex items-center gap-2 text-sky-400 text-xs font-mono tracking-wider uppercase">
-            <i data-lucide="star" class="w-3.5 h-3.5"></i>
-            <span>Sélection Curatée</span>
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Les 4 Projets Phares
-          </h2>
-          <p class="text-slate-400 text-sm max-w-xl">
-            Projets majeurs démontrant la modélisation mathématique, l'apprentissage statistique, le traitement de données satellitaires et l'IA multimodale.
-          </p>
-        </div>
-        <div class="mt-4 md:mt-0 text-xs font-mono text-slate-500">
-          Chaque projet inclut le code source & le rapport scientifique.
-        </div>
-      </div>
-
-      <!-- Bento Grid (2x2 Layout) -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        
-        <!-- ===================================================== -->
-        <!-- PROJET 1 : ITIM (Tuteur Intelligent de Maths / IA)    -->
-        <!-- ===================================================== -->
-        <div class="glass-card rounded-2xl overflow-hidden border border-white/10 flex flex-col justify-between group">
-          <div class="p-6 sm:p-7 space-y-4">
-            
-            <!-- Header Badges -->
-            <div class="flex items-center justify-between">
-              <span class="tech-pill bg-purple-500/15 text-purple-300 border border-purple-500/30">
-                🤖 Intelligence Artificielle & EdTech
-              </span>
-              <span class="text-[11px] font-mono text-slate-400">Projet GM4/GM5</span>
-            </div>
-
-            <!-- Title & Pitch -->
-            <div>
-              <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors">
-                ITIM — Système de Tutorat Intelligent de Mathématiques
-              </h3>
-              <p class="text-slate-400 text-xs sm:text-sm mt-1 leading-relaxed">
-                Plateforme d'apprentissage combinant un <strong>canvas d'écriture manuscrite infini</strong>, une <strong>transcription VLM en LaTeX temps réel</strong> et un <strong>agent tuteur conversationnel</strong> basé sur la modélisation cognitive ACT-R.
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left: Text content -->
+          <div class="lg:col-span-8 space-y-6">
+            <div class="space-y-2">
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
+                Amr <span class="bg-gradient-to-r from-indigo-600 via-sky-600 to-emerald-600 bg-clip-text text-transparent">ZAKI SALIH</span>
+              </h1>
+              <p class="text-lg sm:text-xl text-slate-700 font-medium" data-i18n="hero_subtitle">
+                Élève ingénieur en Génie Mathématiques en cinquième année GM5 — <span class="text-slate-900 font-semibold">INSA Rouen Normandie</span>
               </p>
             </div>
 
-            <!-- Tech Tags -->
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="tech-pill bg-slate-800 text-slate-300">FastAPI</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">React 19 & Vite</span>
-              <span class="tech-pill bg-indigo-900/40 text-indigo-300">Vision-Language Model</span>
-              <span class="tech-pill bg-indigo-900/40 text-indigo-300">SymPy CAS</span>
-              <span class="tech-pill bg-emerald-900/40 text-emerald-300">WebSockets</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">Knowledge Tracing</span>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl font-normal" data-i18n="hero_desc">
+              Passionné par la convergence entre <strong class="text-slate-900 font-semibold">statistiques mathématiques</strong>, <strong class="text-slate-900 font-semibold">machine learning</strong> et <strong class="text-slate-900 font-semibold">recherche opérationnelle</strong>. De la conception d'architectures d'IA multimodales (OCR manuscrit LaTeX & tuteur intelligent) à la prévision stochastique de stocks (Université Koç), aux modèles de pathfinding heuristique A* et à l'analyse de données radar EGMS, je développe des solutions prédictives et computationnelles robustes.
+            </p>
+
+            <!-- Key Metrics Grid -->
+            <div class="grid grid-cols-3 gap-3 pt-2 max-w-lg">
+              <div class="glass-card p-3 rounded-xl border border-slate-200">
+                <div class="text-xl font-bold font-mono text-sky-600">GM5</div>
+                <div class="text-[11px] text-slate-500 uppercase tracking-wider font-mono">INSA Rouen</div>
+              </div>
+              <div class="glass-card p-3 rounded-xl border border-slate-200">
+                <div class="text-xl font-bold font-mono text-indigo-600">Koç Univ.</div>
+                <div class="text-[11px] text-slate-500 uppercase tracking-wider font-mono" data-i18n="metric_exchange">Échange 2026</div>
+              </div>
+              <div class="glass-card p-3 rounded-xl border border-slate-200">
+                <div class="text-xl font-bold font-mono text-amber-600">5 Projets</div>
+                <div class="text-[11px] text-slate-500 uppercase tracking-wider font-mono" data-i18n="metric_projects">Phares Curatés</div>
+              </div>
             </div>
 
-            <!-- Interactive Visual Simulation of the Canvas -->
-            <div class="mt-4 rounded-xl bg-[#090d16] border border-white/5 p-4 relative overflow-hidden">
-              <div class="text-[11px] font-mono text-slate-400 mb-2 flex items-center justify-between border-b border-white/5 pb-2">
-                <span class="flex items-center gap-1.5 text-sky-400">
-                  <i data-lucide="pen-tool" class="w-3.5 h-3.5"></i> Canvas Numérique & Inférence VLM
-                </span>
-                <span class="text-emerald-400 font-mono text-[10px] bg-emerald-500/10 px-2 py-0.5 rounded">Vérification Formelle Active</span>
-              </div>
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-3 pt-4">
+              <a href="#featured" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 via-sky-600 to-emerald-600 text-white text-xs font-semibold shadow-md shadow-indigo-600/25 hover:shadow-indigo-600/40 hover:scale-[1.02] transition-all flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                <span data-i18n="btn_explore_featured">Explorer les 5 Projets Phares</span>
+              </a>
+              <a href="https://www.linkedin.com/in/amr-zaki-salih" target="_blank" rel="noopener noreferrer"
+                 class="px-4 py-2.5 rounded-xl bg-white border border-slate-200 text-sky-700 hover:text-sky-800 text-xs font-medium hover:border-sky-300 hover:bg-sky-50 shadow-xs transition-all flex items-center gap-2">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/amrzakizakisalih-alt" target="_blank" rel="noopener noreferrer"
+                 class="px-4 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-slate-900 text-xs font-medium hover:border-slate-400 hover:bg-slate-50 shadow-xs transition-all flex items-center gap-2">
+                <i data-lucide="github" class="w-4 h-4"></i>
+                <span>GitHub</span>
+              </a>
+              <button onclick="copyEmail()" id="btn-copy-email"
+                 class="px-4 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-indigo-600 text-xs font-mono hover:border-indigo-300 hover:bg-indigo-50/50 shadow-xs transition-all flex items-center gap-2"
+                 title="Cliquer pour copier l'email">
+                <i data-lucide="copy" class="w-3.5 h-3.5 text-indigo-500"></i>
+                <span id="copy-email-text">amrzakisalih@gmail.com</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Profile Card & Photo -->
+          <div class="lg:col-span-4 flex justify-center">
+            <div class="relative group">
               
-              <!-- Mockup Interface math -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                <div class="bg-slate-900/90 p-3 rounded-lg border border-slate-800 font-mono text-xs">
-                  <div class="text-[10px] text-slate-500 uppercase tracking-wider mb-1">OCR HandWriting ➔ LaTeX</div>
-                  <div class="text-indigo-300 font-semibold">\int_0^1 (3x^2 + 2x) \, dx = [x^3 + x^2]_0^1</div>
-                  <div class="text-emerald-400 text-[11px] mt-1.5 flex items-center gap-1">
-                    <i data-lucide="check-circle" class="w-3 h-3"></i> Validé via SymPy : Résultat = 2
+              <!-- Glow background -->
+              <div class="absolute -inset-1.5 bg-gradient-to-tr from-indigo-500 via-sky-500 to-emerald-400 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              
+              <div class="relative w-64 sm:w-72 glass-card rounded-2xl p-4 border border-slate-200 shadow-md flex flex-col items-center text-center">
+                
+                <!-- Avatar Photo -->
+                <div class="w-44 h-48 sm:w-48 sm:h-52 rounded-xl overflow-hidden border-2 border-indigo-200/80 shadow-inner mb-4 relative bg-slate-100">
+                  <img src="assets/images/profile.jpg" alt="Amr ZAKI SALIH" class="w-full h-full object-cover object-top hover:scale-105 transition duration-500">
+                  <div class="absolute bottom-1 right-1 bg-white/95 p-1 rounded-md border border-slate-200 shadow-sm">
+                    <img src="assets/images/insa-logo.jpg" alt="INSA Rouen" class="h-4 object-contain">
                   </div>
                 </div>
 
-                <div class="bg-slate-900/90 p-3 rounded-lg border border-slate-800 font-sans text-xs">
-                  <div class="text-[10px] text-slate-500 font-mono uppercase tracking-wider mb-1">Tuteur Cognitif (ACT-R)</div>
-                  <div class="text-slate-300 italic">"Très bon calcul de primitive ! Veille bien à vérifier les bornes d'intégration."</div>
-                  <div class="text-[10px] text-slate-400 font-mono mt-1">Charge cognitive estimée : <span class="text-sky-400">Optimale</span></div>
+                <div class="font-bold text-base text-slate-900 tracking-tight">Amr ZAKI SALIH</div>
+                <div class="text-xs text-indigo-600 font-mono font-semibold mb-2" data-i18n="profile_card_role">Élève Ingénieur GM5</div>
+                
+                <div class="w-full pt-3 mt-1 border-t border-slate-100 flex items-center justify-around text-xs text-slate-500 font-mono">
+                  <span data-i18n="profile_mobility">🌍 Mobile Monde</span>
+                  <span data-i18n="profile_insa">🎓 INSA Rouen</span>
                 </div>
               </div>
             </div>
-
-            <!-- Highlights / Metrics -->
-            <ul class="text-xs text-slate-300 space-y-1.5 pt-2">
-              <li class="flex items-start gap-2">
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-sky-400 mt-0.5 shrink-0"></i>
-                <span><strong>Transcription OCR & VLM :</strong> Reconnaissance optique d'expressions mathématiques manuscrites converties en LaTeX formel.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-sky-400 mt-0.5 shrink-0"></i>
-                <span><strong>Apprentissage de règles d'erreurs (Buggy Rules) :</strong> Détection incrémentale des conceptions erronées récurrentes chez l'élève sans donner la solution.</span>
-              </li>
-            </ul>
-
           </div>
 
-          <!-- Bottom Card Footer / Links -->
-          <div class="px-6 py-4 bg-slate-950/60 border-t border-white/5 flex items-center justify-between">
-            <a href="https://github.com/amrzakizakisalih-alt/ITIM" target="_blank" rel="noopener noreferrer"
-               class="text-xs font-mono text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5 font-semibold">
-              <i data-lucide="github" class="w-3.5 h-3.5"></i> Explorer le Dépôt
-            </a>
-            <span class="text-[11px] font-mono text-slate-500">Python 3 • FastAPI • React 19</span>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION: LES 5 PROJETS PHARES                             -->
+      <!-- ========================================================= -->
+      <section id="featured" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 text-indigo-600 text-xs font-mono tracking-wider uppercase">
+              <i data-lucide="star" class="w-3.5 h-3.5"></i>
+              <span data-i18n="featured_badge">Sélection Curatée & Éprouvée</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" data-i18n="featured_title">
+              Les 5 Projets Phares
+            </h2>
+            <p class="text-slate-600 text-sm max-w-2xl" data-i18n="featured_subtitle">
+              Projets majeurs associant intelligence artificielle, interfaces utilisateur intelligentes (IUI), machine learning avec pathfinding A*, traitement de données radar EGMS, séries temporelles avec recherche opérationnelle et clustering de données médicales.
+            </p>
+          </div>
+          <div class="mt-4 md:mt-0 text-xs font-mono text-slate-500 flex items-center gap-1.5">
+            <i data-lucide="file-check" class="w-3.5 h-3.5 text-emerald-600"></i>
+            <span data-i18n="featured_reports_hint">Rapports scientifiques complets & code source</span>
           </div>
         </div>
 
-        <!-- ===================================================== -->
-        <!-- PROJET 2 : SIMULATION SATELLITE (Java / Mécanique N-corps)-->
-        <!-- ===================================================== -->
-        <div class="glass-card rounded-2xl overflow-hidden border border-white/10 flex flex-col justify-between group">
-          <div class="p-6 sm:p-7 space-y-4">
-            
-            <!-- Header Badges -->
-            <div class="flex items-center justify-between">
-              <span class="tech-pill bg-sky-500/15 text-sky-300 border border-sky-500/30">
-                🛰️ Mécanique Céleste & Simulation
-              </span>
-              <span class="text-[11px] font-mono text-slate-400">Projet GM4</span>
-            </div>
+        <!-- Vertical Showcase List -->
+        <div class="space-y-12">
+          
+          <!-- ===================================================== -->
+          <!-- PROJET 1 : ITIM (Tuteur Intelligent de Maths / IA)    -->
+          <!-- ===================================================== -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-indigo-200 transition-all duration-300 group">
+            <div class="p-6 sm:p-8 lg:p-10">
+              
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left: Project Narrative & Technical Details -->
+                <div class="lg:col-span-6 space-y-4">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="tech-pill bg-purple-50 text-purple-700 border border-purple-200 font-semibold" data-i18n="p1_domain">
+                      🤖 Intelligence Artificielle & IUI
+                    </span>
+                    <span class="text-[11px] font-mono text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200" data-i18n="p1_context">
+                      Projet 1 • Université Koç
+                    </span>
+                  </div>
 
-            <!-- Title & Pitch -->
-            <div>
-              <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-sky-300 transition-colors">
-                Simulation Satellite & Trajectoire Autonome
-              </h3>
-              <p class="text-slate-400 text-xs sm:text-sm mt-1 leading-relaxed">
-                Moteur de <strong>simulation orbitale physique</strong> et de <strong>planification autonome de trajectoires</strong> avec modélisation gravitationnelle à $N$-corps et évitement de débris spatiaux.
-              </p>
-            </div>
+                  <div>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors" data-i18n="p1_title">
+                      ITIM — Système de Tutorat Intelligent de Mathématiques
+                    </h3>
+                    <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed" data-i18n="p1_desc">
+                      Plateforme d'apprentissage intelligente combinant un <strong>canvas d'écriture manuscrite infini</strong>, une <strong>transcription VLM en LaTeX temps réel</strong> (&lt; 200 ms), un <strong>moteur de calcul symbolique formel (SymPy)</strong> et un <strong>agent tuteur adaptatif</strong> inspiré de l'architecture cognitive ACT-R.
+                    </p>
+                  </div>
 
-            <!-- Tech Tags -->
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="tech-pill bg-slate-800 text-slate-300">Java (POO Avancée)</span>
-              <span class="tech-pill bg-sky-900/40 text-sky-300">Dynamique Newtonienne</span>
-              <span class="tech-pill bg-indigo-900/40 text-indigo-300">Problème à N-corps</span>
-              <span class="tech-pill bg-emerald-900/40 text-emerald-300">Évitement de Collisions</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">Intégration Numérique</span>
-            </div>
+                  <!-- Competencies & Skills Pills -->
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span class="tech-pill bg-indigo-50 text-indigo-700 border border-indigo-200">Vision-Language Model (VLM)</span>
+                    <span class="tech-pill bg-emerald-50 text-emerald-700 border border-emerald-200" data-i18n="p1_tag_rt">Inférence Temps Réel (&lt;200ms)</span>
+                    <span class="tech-pill bg-indigo-50 text-indigo-700 border border-indigo-200">Vérification Formelle SymPy</span>
+                    <span class="tech-pill bg-purple-50 text-purple-700 border border-purple-200">Modélisation Cognitive ACT-R</span>
+                    <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">FastAPI & WebSockets</span>
+                    <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">React 19 & Vite</span>
+                  </div>
 
-            <!-- Orbital Visual Graphic Scheme -->
-            <div class="mt-4 rounded-xl bg-[#090d16] border border-white/5 p-4 relative overflow-hidden">
-              <div class="text-[11px] font-mono text-slate-400 mb-2 flex items-center justify-between border-b border-white/5 pb-2">
-                <span class="flex items-center gap-1.5 text-sky-400">
-                  <i data-lucide="orbit" class="w-3.5 h-3.5"></i> Système Gravitationnel & Champ de Débris
-                </span>
-                <span class="text-sky-400 font-mono text-[10px] bg-sky-500/10 px-2 py-0.5 rounded">Rapport de Calcul Disponible</span>
-              </div>
+                  <!-- Highlights Bullet Points with Data -->
+                  <ul class="text-xs text-slate-600 space-y-2 pt-2">
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-indigo-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p1_bullet1"><strong>Reconnaissance OCR & VLM Multimodale :</strong> Numérisation instantanée d'expressions mathématiques manuscrites complexes converties en syntaxe formelle LaTeX.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-indigo-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p1_bullet2"><strong>Calcul Symbolique & Validation Pas-à-Pas :</strong> Évaluation formelle étape par étape via SymPy pour vérifier la rigueur du raisonnement sans révéler la solution.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-indigo-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p1_bullet3"><strong>Diagnostic Cognitif & Buggy Rules :</strong> Détection active des règles erronées récurrentes chez l'élève et génération d'indices adaptés à la charge cognitive.</span>
+                    </li>
+                  </ul>
 
-              <!-- SVG Orbital Graphic -->
-              <div class="h-28 w-full flex items-center justify-center relative">
-                <svg viewBox="0 0 400 120" class="w-full h-full">
-                  <!-- Terre -->
-                  <circle cx="200" cy="60" r="24" fill="#1e3a8a" stroke="#38bdf8" stroke-width="2" />
-                  <circle cx="195" cy="55" r="7" fill="#60a5fa" opacity="0.6" />
+                  <!-- Action Buttons -->
+                  <div class="pt-4 flex flex-wrap items-center gap-3">
+                    <a href="https://github.com/amrzakizakisalih-alt/ITIM" target="_blank" rel="noopener noreferrer"
+                       class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold font-mono flex items-center gap-2 shadow-sm transition">
+                      <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                      <span data-i18n="btn_github">Code GitHub</span>
+                    </a>
+                    <a href="assets/reports/Rapport ITIM.pdf" target="_blank"
+                       class="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white text-xs font-semibold font-mono flex items-center gap-2 shadow-sm shadow-emerald-600/20 transition">
+                      <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                      <span data-i18n="p1_btn_report">Rapport ITIM (PDF)</span>
+                    </a>
+                  </div>
+
+                </div>
+
+                <!-- Right: Interactive Media Showcase (Video Players + Clickable Thumbnails) -->
+                <div class="lg:col-span-6 space-y-3">
                   
-                  <!-- Orbite nominale -->
-                  <ellipse cx="200" cy="60" rx="90" ry="38" fill="none" stroke="#334155" stroke-dasharray="3,3" stroke-width="1.5" />
+                  <!-- Video Switcher Header -->
+                  <div class="flex items-center justify-between bg-slate-100/90 p-2 rounded-xl border border-slate-200">
+                    <span class="text-[11px] font-mono text-slate-600 flex items-center gap-1.5 pl-2 font-medium">
+                      <i data-lucide="play-circle" class="w-3.5 h-3.5 text-indigo-600"></i> <span data-i18n="video_demo_label">Démonstration Vidéo</span>
+                    </span>
+                    <div class="flex items-center gap-1">
+                      <button id="btn-itim-demo" onclick="switchItimMedia('demo')" class="px-2.5 py-1 text-[11px] font-mono rounded-lg bg-indigo-600 text-white shadow-xs transition" data-i18n="p1_tab_demo">
+                        Interface & Tuteur
+                      </button>
+                      <button id="btn-itim-ocr" onclick="switchItimMedia('ocr')" class="px-2.5 py-1 text-[11px] font-mono rounded-lg bg-white text-slate-600 hover:text-slate-900 border border-slate-200 transition" data-i18n="p1_tab_ocr">
+                        Reconnaissance OCR
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Video Container -->
+                  <div class="rounded-xl overflow-hidden bg-slate-900 border border-slate-200 aspect-video relative flex items-center justify-center shadow-inner">
+                    <video id="itim-video-demo" src="assets/images/ITIM/itim-demo.mp4" controls playsinline muted loop 
+                           class="w-full h-full object-contain"></video>
+                    <video id="itim-video-ocr" src="assets/images/ITIM/itim-ocr.webm" controls playsinline muted loop 
+                           class="w-full h-full object-contain hidden"></video>
+                  </div>
+
+                  <!-- Screenshot Thumbnails -->
+                  <div class="grid grid-cols-3 gap-2 pt-1">
+                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-indigo-400 hover:shadow-md transition group/thumb"
+                         onclick="openLightbox('assets/images/ITIM/itim-ui-full.png', 'ITIM : Vue complète du Canvas d\'écriture et de l\'interface de résolution')">
+                      <img src="assets/images/ITIM/itim-ui-full.png" alt="ITIM Canvas complet" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-indigo-400 hover:shadow-md transition group/thumb"
+                         onclick="openLightbox('assets/images/ITIM/itim-ui-handwriting.png', 'ITIM : Écriture manuscrite mathématique et transcription instantanée')">
+                      <img src="assets/images/ITIM/itim-ui-handwriting.png" alt="ITIM HandWriting" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-indigo-400 hover:shadow-md transition group/thumb"
+                         onclick="openLightbox('assets/images/ITIM/itim-ui-chat.png', 'ITIM : Agent Conversationnel et Détection Cognitive ACT-R')">
+                      <img src="assets/images/ITIM/itim-ui-chat.png" alt="ITIM Chat & ACT-R" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    </div>
+                  </div>
+                  <div class="text-[10px] text-slate-500 font-mono text-right" data-i18n="hint_click_zoom">
+                    Cliquer sur une miniature pour agrandir en plein écran
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ===================================================== -->
+          <!-- PROJET 2 : SIMULATION SATELLITE (ML & Algorithme A*)  -->
+          <!-- ===================================================== -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-sky-200 transition-all duration-300 group">
+            <div class="p-6 sm:p-8 lg:p-10">
+              
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left: Narrative -->
+                <div class="lg:col-span-6 space-y-4">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="tech-pill bg-sky-50 text-sky-700 border border-sky-200 font-semibold" data-i18n="p2_domain">
+                      🛰️ Machine Learning & Navigation Autonome
+                    </span>
+                    <span class="text-[11px] font-mono text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200" data-i18n="p2_context">
+                      Projet 2 • INSA Rouen (GM4)
+                    </span>
+                  </div>
+
+                  <div>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 group-hover:text-sky-600 transition-colors" data-i18n="p2_title">
+                      Simulation Satellite & Trajectoire Autonome
+                    </h3>
+                    <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed" data-i18n="p2_desc">
+                      Conception et développement en <strong>Java</strong> d'un environnement de <strong>simulation dynamique spatiale</strong> et de <strong>planification autonome de trajectoires</strong> par <strong>algorithme heuristique A*</strong> sous contraintes d'évitement d'obstacles et d'optimisation énergétique.
+                    </p>
+                  </div>
+
+                  <!-- Competencies & Skills Pills -->
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span class="tech-pill bg-sky-50 text-sky-700 border border-sky-200">Algorithme Heuristique A*</span>
+                    <span class="tech-pill bg-emerald-50 text-emerald-700 border border-emerald-200">Optimisation Multi-Critères</span>
+                    <span class="tech-pill bg-indigo-50 text-indigo-700 border border-indigo-200">Évitement Dynamique d'Obstacles</span>
+                    <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">Java (POO Avancée & MVC)</span>
+                    <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">Communication Réseau & GUI Swing</span>
+                  </div>
+
+                  <!-- Highlights Bullet Points with Data -->
+                  <ul class="text-xs text-slate-600 space-y-2 pt-2">
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-sky-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p2_bullet1"><strong>Optimisation de Chemin par A* :</strong> Fonction de coût multi-objectifs pondérée $f(n) = \alpha \cdot d(n) + \beta \cdot c(n) + \gamma \cdot p(n)$ conciliant distance, dépense énergétique et pénalité de risque.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-sky-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p2_bullet2"><strong>Modélisation de l'Espace 2D :</strong> Discrétisation de l'espace, détection géométrique des risques de collision avec corps célestes et débris orbitaux en temps réel.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-sky-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p2_bullet3"><strong>Génie Logiciel Robuste :</strong> Architecture logicielle modulaire découplant le moteur physique, le système de communication réseau et l'interface de visualisation.</span>
+                    </li>
+                  </ul>
+
+                  <!-- Action Buttons -->
+                  <div class="pt-4 flex flex-wrap items-center gap-3">
+                    <a href="https://github.com/amrzakizakisalih-alt/Simulation_Satellite_INSA" target="_blank" rel="noopener noreferrer"
+                       class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold font-mono flex items-center gap-2 shadow-sm transition">
+                      <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                      <span data-i18n="btn_github">Code GitHub</span>
+                    </a>
+                    <a href="assets/reports/Rapport Simulation Satellite.pdf" target="_blank"
+                       class="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white text-xs font-semibold font-mono flex items-center gap-2 shadow-sm shadow-emerald-600/20 transition">
+                      <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                      <span data-i18n="p2_btn_report">Rapport Simulation Satellite (PDF)</span>
+                    </a>
+                  </div>
+
+                </div>
+
+                <!-- Right: Video Player & Screenshots -->
+                <div class="lg:col-span-6 space-y-3">
                   
-                  <!-- Trajectoire d'évitement calculée -->
-                  <path d="M 110,60 C 130,20 180,15 230,22 C 270,30 290,60 290,60" fill="none" stroke="#34d399" stroke-width="2" />
+                  <div class="flex items-center justify-between bg-slate-100/90 p-2 rounded-xl border border-slate-200">
+                    <span class="text-[11px] font-mono text-slate-600 flex items-center gap-1.5 pl-2 font-medium">
+                      <i data-lucide="video" class="w-3.5 h-3.5 text-sky-600"></i> <span data-i18n="p2_video_label">Simulation Orbitale en Temps Réel</span>
+                    </span>
+                    <span class="text-[10px] font-mono text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded font-semibold">
+                      Exécution Java
+                    </span>
+                  </div>
+
+                  <!-- Video Container -->
+                  <div class="rounded-xl overflow-hidden bg-slate-900 border border-slate-200 aspect-video relative flex items-center justify-center shadow-inner">
+                    <video src="assets/images/Satellite/satellite-demo.webm" controls playsinline muted loop 
+                           class="w-full h-full object-contain"></video>
+                  </div>
+
+                  <!-- Screenshots Thumbnails -->
+                  <div class="grid grid-cols-2 gap-2 pt-1">
+                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-sky-400 hover:shadow-md transition group/thumb"
+                         onclick="openLightbox('assets/images/Satellite/satellite-ui-main.png', 'Simulation Satellite : Interface graphique et tracé orbital 2D')">
+                      <img src="assets/images/Satellite/satellite-ui-main.png" alt="Interface Satellite" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-sky-400 hover:shadow-md transition group/thumb"
+                         onclick="openLightbox('assets/images/Satellite/satellite-ui-panel.png', 'Simulation Satellite : Panneau de contrôle et paramètres physiques')">
+                      <img src="assets/images/Satellite/satellite-ui-panel.png" alt="Panneau Satellite" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    </div>
+                  </div>
+                  <div class="text-[10px] text-slate-500 font-mono text-right" data-i18n="hint_click_zoom">
+                    Cliquer sur une miniature pour agrandir en plein écran
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ===================================================== -->
+          <!-- PROJET 3 : ÉTUDE DU LIEN SOL & ASSÈCHEMENT (EGMS)     -->
+          <!-- ===================================================== -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 group">
+            <div class="p-6 sm:p-8 lg:p-10">
+              
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left: Narrative -->
+                <div class="lg:col-span-6 space-y-4">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="tech-pill bg-emerald-50 text-emerald-800 border border-emerald-200 font-semibold" data-i18n="p3_domain">
+                      🌍 Télédétection Radar & Analyse Spatio-Temporelle
+                    </span>
+                    <span class="text-[11px] font-mono text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200" data-i18n="p3_context">
+                      Projet 3 • INSA Rouen (GM4)
+                    </span>
+                  </div>
+
+                  <div>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 group-hover:text-emerald-700 transition-colors" data-i18n="p3_title">
+                      Étude du lien entre assèchement du sol et hauteur du sol en Europe
+                    </h3>
+                    <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed" data-i18n="p3_desc">
+                      Étude statistique spatio-temporelle en <strong>R</strong> du couplage physique entre le <strong>retrait-gonflement des argiles</strong> mesuré à l'échelle millimétrique par le service européen <strong>EGMS</strong> (European Ground Motion Service) et le <strong>déficit de stock d'eau souterraine</strong> issu de la mission satellitaire <strong>GRACE</strong> (TWS).
+                    </p>
+                  </div>
+
+                  <!-- Competencies & Skills Pills (Méthodes utilisées) -->
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span class="tech-pill bg-emerald-50 text-emerald-700 border border-emerald-200">Interférométrie Radar Différentielle (InSAR / EGMS)</span>
+                    <span class="tech-pill bg-sky-50 text-sky-700 border border-sky-200">Analyse Statistique Spatio-Temporelle</span>
+                    <span class="tech-pill bg-indigo-50 text-indigo-700 border border-indigo-200">Corrélation Croisée & Estimation de Lag</span>
+                    <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">Reprojection Géodésique (WGS84 / ETRS89)</span>
+                    <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">Harmonisation & Rééchantillonnage Temporel (R)</span>
+                  </div>
+
+                  <!-- Highlights Bullet Points with Data -->
+                  <ul class="text-xs text-slate-600 space-y-2 pt-2">
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p3_bullet1"><strong>Exploitation de Données Massives EGMS :</strong> Filtrage géométrique et traitement statistique de millions de points de déplacement vertical du sol acquis par les satellites Sentinel-1.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p3_bullet2"><strong>Estimation du Déphasage Temporel :</strong> Calcul de fonctions d'inter-corrélation temporelle démontrant un retard caractéristique de 1 à 2 mois entre le pic de déficit hydrique et l'affaissement mécanique du sol.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p3_bullet3"><strong>Harmonisation Temporelle & Spatiale :</strong> Rééchantillonnage temporel mensuel et projection spatiale pour aligner les résolutions spatiales hétérogènes d'EGMS et de GRACE.</span>
+                    </li>
+                  </ul>
+
+                  <!-- Action Buttons -->
+                  <div class="pt-4 flex flex-wrap items-center gap-3">
+                    <a href="https://github.com/amrzakizakisalih-alt/Projet_EGMS_GRACE_INSA" target="_blank" rel="noopener noreferrer"
+                       class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold font-mono flex items-center gap-2 shadow-sm transition">
+                      <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                      <span data-i18n="btn_github">Code GitHub</span>
+                    </a>
+                    <a href="assets/reports/rapport-egms-grace-cerema.pdf" target="_blank"
+                       class="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white text-xs font-semibold font-mono flex items-center gap-2 shadow-sm shadow-emerald-600/20 transition">
+                      <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                      <span data-i18n="p3_btn_report">Rapport d'Étude MSRO (PDF)</span>
+                    </a>
+                  </div>
+
+                </div>
+
+                <!-- Right: Gallery of EGMS & TWS plots -->
+                <div class="lg:col-span-6 space-y-3">
                   
-                  <!-- Débris spatial -->
-                  <circle cx="170" cy="24" r="4" fill="#ef4444" />
-                  <circle cx="170" cy="24" r="8" fill="none" stroke="#ef4444" stroke-width="0.8" opacity="0.6" />
-                  <text x="180" y="27" fill="#f87171" font-size="9" font-family="monospace">Champ de débris</text>
+                  <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-200 aspect-video relative cursor-pointer group/main shadow-xs hover:border-emerald-300 transition"
+                       onclick="openLightbox('assets/images/EGMS CEREMA/cerema-timeseries-tws.png', 'EGMS x GRACE : Séries temporelles TWS et Déplacement vertical millimétrique (Caen 2019-2023)')">
+                    <img src="assets/images/EGMS CEREMA/cerema-timeseries-tws.png" alt="Série temporelle GRACE vs EGMS" class="w-full h-full object-contain p-2 group-hover/main:scale-105 transition duration-300">
+                    <div class="absolute bottom-2 right-2 bg-white/95 text-[10px] font-mono text-emerald-800 px-2 py-1 rounded border border-slate-200 shadow-sm flex items-center gap-1 font-medium">
+                      <i data-lucide="zoom-in" class="w-3 h-3 text-emerald-600"></i> <span data-i18n="hint_zoom">Cliquer pour agrandir</span>
+                    </div>
+                  </div>
 
-                  <!-- Satellite -->
-                  <rect x="226" y="18" width="8" height="8" fill="#fbbf24" stroke="#ffffff" stroke-width="1" />
-                  <line x1="222" y1="22" x2="238" y2="22" stroke="#fbbf24" stroke-width="2" />
-                  <text x="240" y="20" fill="#fbbf24" font-size="9" font-family="monospace">Satellite autonome</text>
+                  <!-- Sub-gallery thumbnails -->
+                  <div class="grid grid-cols-3 gap-2 pt-1">
+                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-emerald-400 hover:shadow-md transition group/thumb"
+                         onclick="openLightbox('assets/images/EGMS CEREMA/cerema-map-insar.png', 'EGMS : Cartographie radar des vitesses de déformation du sol')">
+                      <img src="assets/images/EGMS CEREMA/cerema-map-insar.png" alt="Carte EGMS" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-emerald-400 hover:shadow-md transition group/thumb"
+                         onclick="openLightbox('assets/images/EGMS CEREMA/cerema-multisite-analysis.png', 'EGMS x GRACE : Analyse comparée multi-sites du déficit hydrique')">
+                      <img src="assets/images/EGMS CEREMA/cerema-multisite-analysis.png" alt="Multi-sites EGMS" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-emerald-400 hover:shadow-md transition group/thumb"
+                         onclick="openLightbox('assets/images/EGMS CEREMA/cerema-cross-correlation.png', 'EGMS x GRACE : Corrélation croisée et identification de la latence')">
+                      <img src="assets/images/EGMS CEREMA/cerema-cross-correlation.png" alt="Corrélation croisée" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    </div>
+                  </div>
+                  <div class="text-[10px] text-slate-500 font-mono text-right" data-i18n="hint_click_zoom">
+                    Cliquer sur une miniature pour agrandir en plein écran
+                  </div>
 
-                  <text x="10" y="112" fill="#94a3b8" font-size="9" font-family="monospace">Modélisation RK4 / EDO gravitationnelles</text>
-                  <text x="280" y="112" fill="#34d399" font-size="9" font-family="monospace">Orbite corrigée</text>
-                </svg>
+                </div>
+
               </div>
+
             </div>
-
-            <!-- Highlights -->
-            <ul class="text-xs text-slate-300 space-y-1.5 pt-2">
-              <li class="flex items-start gap-2">
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-sky-400 mt-0.5 shrink-0"></i>
-                <span><strong>Physique orbitale $N$-corps :</strong> Simulation des forces d'attraction multiples et perturbations gravitationnelles.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-sky-400 mt-0.5 shrink-0"></i>
-                <span><strong>Algorithme d'évitement en temps réel :</strong> Détection géométrique des cônes de collision et génération d'impulsions de poussée optimales.</span>
-              </li>
-            </ul>
-
           </div>
 
-          <!-- Bottom Card Footer / Links -->
-          <div class="px-6 py-4 bg-slate-950/60 border-t border-white/5 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <a href="https://github.com/amrzakizakisalih-alt/Simulation_Satellite_INSA" target="_blank" rel="noopener noreferrer"
-                 class="text-xs font-mono text-sky-400 hover:text-sky-300 flex items-center gap-1.5 font-semibold">
-                <i data-lucide="github" class="w-3.5 h-3.5"></i> Code GitHub
-              </a>
-              <span class="text-slate-600">•</span>
-              <a href="assets/reports/rapport-trajectoire-satellite.pdf" target="_blank"
-                 class="text-xs font-mono text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5 font-semibold">
-                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Rapport Trajectoire (PDF)
-              </a>
+          <!-- ===================================================== -->
+          <!-- PROJET 4 : FORECASTING & NEWSVENDOR (Koç University)  -->
+          <!-- ===================================================== -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-200 transition-all duration-300 group">
+            <div class="p-6 sm:p-8 lg:p-10">
+              
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left: Narrative -->
+                <div class="lg:col-span-6 space-y-4">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="tech-pill bg-amber-50 text-amber-900 border border-amber-200 font-semibold" data-i18n="p4_domain">
+                      📈 Séries Temporelles & Recherche Opérationnelle
+                    </span>
+                    <span class="text-[11px] font-mono text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200" data-i18n="p4_context">
+                      Projet 4 • Université Koç
+                    </span>
+                  </div>
+
+                  <div>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 group-hover:text-amber-700 transition-colors" data-i18n="p4_title">
+                      Forecasting des Ventes & Optimisation de Stocks (Newsvendor)
+                    </h3>
+                    <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed" data-i18n="p4_desc">
+                      Pipeline quantitatif articulé en deux étapes : <strong>prévision statistique de séries temporelles</strong> (Régression OLS saisonnière, lags autorégressifs, Random Forest) puis <strong>décision prescriptive stochastique</strong> via le modèle du Newsvendor pour minimiser les coûts espérés sous incertitude de la demande.
+                    </p>
+                  </div>
+
+                  <!-- Competencies & Skills Pills -->
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span class="tech-pill bg-amber-50 text-amber-800 border border-amber-200">Forecasting de Séries Temporelles</span>
+                    <span class="tech-pill bg-indigo-50 text-indigo-700 border border-indigo-200">Feature Engineering (Lags yt-12)</span>
+                    <span class="tech-pill bg-emerald-50 text-emerald-700 border border-emerald-200">Modélisation OLS & Random Forest</span>
+                    <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">Optimisation Stochastique Newsvendor</span>
+                    <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">Validation Temporelle Hold-out (24 mois)</span>
+                  </div>
+
+                  <!-- Highlights Bullet Points with Data -->
+                  <ul class="text-xs text-slate-600 space-y-2 pt-2">
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-amber-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p4_bullet1"><strong>Volumétrie & Benchmark Prédictif :</strong> Analyse de 108 mois d'historique de ventes automobiles US avec split temporel strict (test set 1967-1968). L'OLS saisonnière atteint un RMSE de 1 954 unités et le Random Forest un MAPE de 9.99%.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-amber-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p4_bullet2"><strong>Importance des Variables Autorégressives :</strong> Identification formelle du terme saisonnier $y_{t-12}$ comme prédicteur dominant (coefficient 0.68 en OLS, feature importance majeure en Random Forest).</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-amber-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p4_bullet3"><strong>Prise de Décision Opérationnelle Optimale :</strong> Détermination du stock mensuel optimal sous ratio critique de coût et analyse de sensibilité continue entre risque de rupture et coût de stockage.</span>
+                    </li>
+                  </ul>
+
+                  <!-- Action Buttons -->
+                  <div class="pt-4 flex flex-wrap items-center gap-3">
+                    <a href="assets/reports/Rapport data science KOC.pdf" target="_blank"
+                       class="px-4 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-semibold font-mono flex items-center gap-2 shadow-sm shadow-amber-600/20 transition">
+                      <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                      <span data-i18n="p4_btn_report">Rapport Data Science Koç (PDF)</span>
+                    </a>
+                    <span class="text-[11px] font-mono text-slate-500" data-i18n="p4_note">11 pages • Prof. Fikri Karaesmen</span>
+                  </div>
+
+                </div>
+
+                <!-- Right: Figures Showcase -->
+                <div class="lg:col-span-6 space-y-3">
+                  
+                  <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-200 aspect-video relative cursor-pointer group/main shadow-xs hover:border-amber-300 transition"
+                       onclick="openLightbox('assets/images/datascience/proj_fig4_test_forecasts.png', 'Université Koç : Comparaison des prévisions sur l\'échantillon de test (1967-1968)')">
+                    <img src="assets/images/datascience/proj_fig4_test_forecasts.png" alt="Prévisions Test Set" class="w-full h-full object-contain p-2 group-hover/main:scale-105 transition duration-300">
+                    <div class="absolute bottom-2 right-2 bg-white/95 text-[10px] font-mono text-amber-800 px-2 py-1 rounded border border-slate-200 shadow-sm flex items-center gap-1 font-medium">
+                      <i data-lucide="zoom-in" class="w-3 h-3 text-amber-600"></i> <span data-i18n="hint_zoom">Cliquer pour agrandir</span>
+                    </div>
+                  </div>
+
+                  <!-- Sub-gallery thumbnails -->
+                  <div class="grid grid-cols-3 gap-2 pt-1">
+                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-amber-400 hover:shadow-md transition group/thumb"
+                         onclick="openLightbox('assets/images/datascience/proj_fig7_newsvendor.png', 'Université Koç : Optimisation des stocks Newsvendor (Courbe Coût Espéré vs Niveau de Stock)')">
+                      <img src="assets/images/datascience/proj_fig7_newsvendor.png" alt="Newsvendor Optimization" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-amber-400 hover:shadow-md transition group/thumb"
+                         onclick="openLightbox('assets/images/datascience/proj_fig6_rf_importance.png', 'Université Koç : Importances des variables (Random Forest Feature Importance)')">
+                      <img src="assets/images/datascience/proj_fig6_rf_importance.png" alt="Random Forest Importance" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-amber-400 hover:shadow-md transition group/thumb"
+                         onclick="openLightbox('assets/images/datascience/proj_fig8_sensitivity.png', 'Université Koç : Analyse de sensibilité du niveau de stock selon le ratio critique')">
+                      <img src="assets/images/datascience/proj_fig8_sensitivity.png" alt="Sensibilité Newsvendor" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    </div>
+                  </div>
+                  <div class="text-[10px] text-slate-500 font-mono text-right" data-i18n="hint_click_zoom">
+                    Cliquer sur une miniature pour agrandir en plein écran
+                  </div>
+
+                </div>
+
+              </div>
+
             </div>
-            <span class="text-[11px] font-mono text-slate-500">Java • Physique EDO</span>
+          </div>
+
+          <!-- ===================================================== -->
+          <!-- PROJET 5 : CLUSTERING DE DONNÉES DE SANTÉ (ACP & CAH) -->
+          <!-- ===================================================== -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-rose-200 transition-all duration-300 group">
+            <div class="p-6 sm:p-8 lg:p-10">
+              
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left: Narrative -->
+                <div class="lg:col-span-6 space-y-4">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="tech-pill bg-rose-50 text-rose-800 border border-rose-200 font-semibold" data-i18n="p5_domain">
+                      🧬 Machine Learning Non Supervisé & Santé
+                    </span>
+                    <span class="text-[11px] font-mono text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200" data-i18n="p5_context">
+                      Projet 5 • INSA Rouen (GM3)
+                    </span>
+                  </div>
+
+                  <div>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 group-hover:text-rose-600 transition-colors" data-i18n="p5_title">
+                      Classification Non Supervisée & Clustering de Données de Santé
+                    </h3>
+                    <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed" data-i18n="p5_desc">
+                      Analyse exploratoire et segmentation d'une cohorte clinique en <strong>R</strong> : <strong>Analyse en Composantes Principales (ACP)</strong> normée et non-normée pour la réduction de dimension, suivie d'une <strong>Classification Ascendante Hiérarchique (CAH / critère de Ward)</strong> pour identifier des profils métaboliques distincts.
+                    </p>
+                  </div>
+
+                  <!-- Competencies & Skills Pills -->
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span class="tech-pill bg-rose-50 text-rose-700 border border-rose-200">Réduction de Dimensionnalité (ACP)</span>
+                    <span class="tech-pill bg-indigo-50 text-indigo-700 border border-indigo-200">Clustering Hiérarchique (Ward)</span>
+                    <span class="tech-pill bg-emerald-50 text-emerald-700 border border-emerald-200">Analyse de Variance & Saut d'Inertie</span>
+                    <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">Sélection de Facteurs (Règle de Kaiser)</span>
+                    <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">Programmation Statistique R & FactoMineR</span>
+                  </div>
+
+                  <!-- Highlights Bullet Points with Data -->
+                  <ul class="text-xs text-slate-600 space-y-2 pt-2">
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-rose-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p5_bullet1"><strong>Décomposition Spectrale Rigoureuse :</strong> Diagonalisation de la matrice de corrélation, analyse de l'éboulis des valeurs propres et projection sur les axes factoriels principaux capturant la majorité de l'inertie totale.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-rose-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p5_bullet2"><strong>Segmentation Clinique par CAH :</strong> Agrégation selon le critère de variance minimale de Ward et découpage objectif du dendrogramme basé sur le saut d'inertie inter-classes.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i data-lucide="check-circle" class="w-4 h-4 text-rose-600 mt-0.5 shrink-0"></i>
+                      <span data-i18n="p5_bullet3"><strong>Interprétation Multivariée des Corrélations :</strong> Projection des variables cliniques (indices métaboliques, mensurations) dans le cercle des corrélations pour caractériser chaque sous-groupe de patients sans a priori.</span>
+                    </li>
+                  </ul>
+
+                  <!-- Action Buttons -->
+                  <div class="pt-4 flex flex-wrap items-center gap-3">
+                    <a href="https://github.com/amrzakizakisalih-alt/Projet_Classification_Hierarchique_INSA" target="_blank" rel="noopener noreferrer"
+                       class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold font-mono flex items-center gap-2 shadow-sm transition">
+                      <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                      <span data-i18n="btn_github">Code GitHub</span>
+                    </a>
+                    <a href="assets/reports/rapport-classification-biomedicale.pdf" target="_blank"
+                       class="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white text-xs font-semibold font-mono flex items-center gap-2 shadow-sm shadow-emerald-600/20 transition">
+                      <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                      <span data-i18n="p5_btn_report">Rapport d'Analyse (PDF)</span>
+                    </a>
+                  </div>
+
+                </div>
+
+                <!-- Right: Gallery of ACP & CAH figures -->
+                <div class="lg:col-span-6 space-y-3">
+                  
+                  <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-200 aspect-video relative cursor-pointer group/main shadow-xs hover:border-rose-300 transition"
+                       onclick="openLightbox('assets/images/biomedical/biomedical-cluster-projection.png', 'Données de Santé : Projection factorielle des clusters d\'individus')">
+                    <img src="assets/images/biomedical/biomedical-cluster-projection.png" alt="Projection des Clusters" class="w-full h-full object-contain p-2 group-hover/main:scale-105 transition duration-300">
+                    <div class="absolute bottom-2 right-2 bg-white/95 text-[10px] font-mono text-rose-800 px-2 py-1 rounded border border-slate-200 shadow-sm flex items-center gap-1 font-medium">
+                      <i data-lucide="zoom-in" class="w-3 h-3 text-rose-600"></i> <span data-i18n="hint_zoom">Cliquer pour agrandir</span>
+                    </div>
+                  </div>
+
+                  <!-- Sub-gallery thumbnails -->
+                  <div class="grid grid-cols-3 gap-2 pt-1">
+                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-rose-400 hover:shadow-md transition group/thumb"
+                         onclick="openLightbox('assets/images/biomedical/biomedical-correlation-circle.png', 'Données de Santé : Cercle des corrélations des variables')">
+                      <img src="assets/images/biomedical/biomedical-correlation-circle.png" alt="Cercle des corrélations" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-rose-400 hover:shadow-md transition group/thumb"
+                         onclick="openLightbox('assets/images/biomedical/biomedical-dendrogram-cah.png', 'Données de Santé : Dendrogramme de la Classification Hiérarchique (Ward)')">
+                      <img src="assets/images/biomedical/biomedical-dendrogram-cah.png" alt="Dendrogramme CAH" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-rose-400 hover:shadow-md transition group/thumb"
+                         onclick="openLightbox('assets/images/biomedical/biomedical-variance-scree.png', 'Données de Santé : Éboulis des valeurs propres et pourcentage d\'inertie')">
+                      <img src="assets/images/biomedical/biomedical-variance-scree.png" alt="Éboulis des valeurs propres" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    </div>
+                  </div>
+                  <div class="text-[10px] text-slate-500 font-mono text-right" data-i18n="hint_click_zoom">
+                    Cliquer sur une miniature pour agrandir en plein écran
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION: CATALOGUE SECONDAIRE DES PROJETS                 -->
+      <!-- ========================================================= -->
+      <section id="catalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+          <div>
+            <div class="flex items-center gap-2 text-indigo-600 text-xs font-mono tracking-wider uppercase mb-2">
+              <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+              <span data-i18n="catalog_badge">Autres Travaux Académiques & R&D</span>
+            </div>
+            <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight" data-i18n="catalog_title">Catalogue de Projets</h2>
+            <p class="text-slate-600 text-xs sm:text-sm mt-1" data-i18n="catalog_subtitle">
+              Calcul haute performance (HPC), optimisation continue, intégrateurs symplectiques et algorithmique système.
+            </p>
+          </div>
+
+          <!-- Category filter buttons -->
+          <div class="flex flex-wrap gap-2 mt-4 md:mt-0 font-mono text-xs">
+            <button id="btn-filter-all" onclick="filterCatalog('all')" 
+                    class="filter-btn px-3.5 py-1.5 rounded-lg bg-indigo-600 text-white border border-indigo-600 shadow-xs transition font-semibold" data-i18n="filter_all">
+              Tous (6)
+            </button>
+            <button id="btn-filter-hpc" onclick="filterCatalog('hpc')" 
+                    class="filter-btn px-3.5 py-1.5 rounded-lg bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition" data-i18n="filter_hpc">
+              Calcul & HPC (4)
+            </button>
+            <button id="btn-filter-software" onclick="filterCatalog('software')" 
+                    class="filter-btn px-3.5 py-1.5 rounded-lg bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition" data-i18n="filter_software">
+              Génie Logiciel (2)
+            </button>
           </div>
         </div>
 
-        <!-- ===================================================== -->
-        <!-- PROJET 3 : EGMS & GRACE (Cerema / InSAR / Sécheresse) -->
-        <!-- ===================================================== -->
-        <div class="glass-card rounded-2xl overflow-hidden border border-white/10 flex flex-col justify-between group">
-          <div class="p-6 sm:p-7 space-y-4">
-            
-            <!-- Header Badges -->
-            <div class="flex items-center justify-between">
-              <span class="tech-pill bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-                🌍 Télédétection Satellitaire & Géoscience
-              </span>
-              <span class="text-[11px] font-mono text-slate-400">Cerema x INSA Rouen (GM4)</span>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <!-- Title & Pitch -->
-            <div>
-              <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-emerald-300 transition-colors">
-                Sécheresse des Sols & Subsidence : EGMS x GRACE
-              </h3>
-              <p class="text-slate-400 text-xs sm:text-sm mt-1 leading-relaxed">
-                Étude statistique spatio-temporelle en <strong>R</strong> du couplage entre le <strong>retrait-gonflement des argiles</strong> (subsidence radar millimétrique EGMS InSAR) et les <strong>variations de stockage de l'eau souterraine</strong> (gravimétrie satellite GRACE).
+          <!-- Card 1 : Gauss-Seidel HPC -->
+          <div class="catalog-item glass-card rounded-xl p-5 border border-slate-200 shadow-xs hover:shadow-md hover:border-indigo-300 transition-all flex flex-col justify-between" data-category="hpc">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="tech-pill bg-sky-50 text-sky-700 border border-sky-200" data-i18n="cat_c1_pill">HPC & Numérique</span>
+                <span class="text-[11px] font-mono text-slate-500 font-semibold">GM4</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base" data-i18n="cat_c1_title">Résolveur Gauss-Seidel Optimisé</h4>
+              <p class="text-xs text-slate-600 leading-relaxed" data-i18n="cat_c1_desc">
+                Implémentation en Fortran 90 et Python pour la résolution de systèmes linéaires creux issus de la discrétisation de l'équation de Poisson.
               </p>
-            </div>
-
-            <!-- Tech Tags -->
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="tech-pill bg-slate-800 text-slate-300">R</span>
-              <span class="tech-pill bg-emerald-900/40 text-emerald-300">InSAR (EGMS L3)</span>
-              <span class="tech-pill bg-sky-900/40 text-sky-300">Gravimétrie GRACE (TWS)</span>
-              <span class="tech-pill bg-indigo-900/40 text-indigo-300">Séries Temporelles</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">Corrélation Spatiale</span>
-            </div>
-
-            <!-- Real Visual Plot (Click to zoom) -->
-            <div class="mt-4 rounded-xl bg-[#090d16] border border-white/5 p-3 relative cursor-pointer group/img"
-                 onclick="openLightbox('assets/images/egms-grace-caen.png', 'Évolution temporelle du TWS (Total Water Storage - GRACE) et de l\'affaissement InSAR à Caen (2019-2023)')">
-              <div class="text-[11px] font-mono text-slate-400 mb-2 flex items-center justify-between border-b border-white/5 pb-1.5">
-                <span class="flex items-center gap-1.5 text-emerald-400">
-                  <i data-lucide="image" class="w-3.5 h-3.5"></i> Données Réelles : Séries Temporelles TWS vs Déplacement
-                </span>
-                <span class="text-[10px] text-slate-400 font-mono flex items-center gap-1 group-hover/img:text-white">
-                  <i data-lucide="zoom-in" class="w-3 h-3"></i> Agrandir le graphique
-                </span>
-              </div>
-              <div class="h-36 w-full rounded-lg overflow-hidden bg-slate-950 flex items-center justify-center">
-                <img src="assets/images/egms-grace-caen.png" alt="Série temporelle GRACE TWS Caen" class="max-h-full max-w-full object-contain group-hover/img:scale-105 transition duration-300">
+              <div class="flex flex-wrap gap-1 font-mono text-[10px]">
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">Fortran 90</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">Python</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">SciPy</span>
               </div>
             </div>
-
-            <!-- Highlights -->
-            <ul class="text-xs text-slate-300 space-y-1.5 pt-2">
-              <li class="flex items-start gap-2">
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-emerald-400 mt-0.5 shrink-0"></i>
-                <span><strong>Partenariat officiel Cerema :</strong> Traitement de millions de points radar de déplacement vertical du sol à l'échelle européenne.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-emerald-400 mt-0.5 shrink-0"></i>
-                <span><strong>Modélisation de décalage de phase :</strong> Analyse de corrélation croisée entre le déficit hydrique des nappes et le tassement mécanique des sols.</span>
-              </li>
-            </ul>
-
-          </div>
-
-          <!-- Bottom Card Footer / Links -->
-          <div class="px-6 py-4 bg-slate-950/60 border-t border-white/5 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <a href="https://github.com/amrzakizakisalih-alt/Projet_EGMS_GRACE_INSA" target="_blank" rel="noopener noreferrer"
-                 class="text-xs font-mono text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5 font-semibold">
-                <i data-lucide="github" class="w-3.5 h-3.5"></i> Code GitHub
+            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-mono">
+              <a href="https://github.com/amrzakizakisalih-alt/Projet_Analyse_Numerique_INSA" target="_blank" class="text-indigo-600 hover:underline flex items-center gap-1 font-medium">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i> <span data-i18n="cat_code">Code</span>
               </a>
-              <span class="text-slate-600">•</span>
-              <a href="assets/reports/rapport-egms-grace-cerema.pdf" target="_blank"
-                 class="text-xs font-mono text-sky-400 hover:text-sky-300 flex items-center gap-1.5 font-semibold">
-                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Rapport Complet Cerema (PDF)
+              <a href="assets/reports/rapport-gauss-seidel.pdf" target="_blank" class="text-emerald-700 hover:underline flex items-center gap-1 font-semibold">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> <span data-i18n="cat_report">Rapport PDF</span>
               </a>
             </div>
-            <span class="text-[11px] font-mono text-slate-500">R • Big Data Géospatial</span>
           </div>
-        </div>
 
-        <!-- ===================================================== -->
-        <!-- PROJET 4 : CLASSIFICATION BIOMÉDICALE (ACP & CAH - R) -->
-        <!-- ===================================================== -->
-        <div class="glass-card rounded-2xl overflow-hidden border border-white/10 flex flex-col justify-between group">
-          <div class="p-6 sm:p-7 space-y-4">
-            
-            <!-- Header Badges -->
-            <div class="flex items-center justify-between">
-              <span class="tech-pill bg-amber-500/15 text-amber-300 border border-amber-500/30">
-                🧬 Statistique Multivariée & Data Mining
-              </span>
-              <span class="text-[11px] font-mono text-slate-400">Projet GM3</span>
-            </div>
-
-            <!-- Title & Pitch -->
-            <div>
-              <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-amber-300 transition-colors">
-                Classification Non Supervisée & ACP Biomédicale
-              </h3>
-              <p class="text-slate-400 text-xs sm:text-sm mt-1 leading-relaxed">
-                Analyse exploratoire et modélisation prédictive en <strong>R</strong> : <strong>Analyse en Composantes Principales (ACP)</strong> normée/non-normée et <strong>Classification Ascendante Hiérarchique (CAH / Ward)</strong> sur données d'obésité et marqueurs de santé.
+          <!-- Card 2 : Verlet vs RK4 -->
+          <div class="catalog-item glass-card rounded-xl p-5 border border-slate-200 shadow-xs hover:shadow-md hover:border-purple-300 transition-all flex flex-col justify-between" data-category="hpc">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="tech-pill bg-purple-50 text-purple-700 border border-purple-200" data-i18n="cat_c2_pill">Physique Numérique</span>
+                <span class="text-[11px] font-mono text-slate-500 font-semibold">GM4</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base" data-i18n="cat_c2_title">Intégrateurs Verlet vs Runge-Kutta</h4>
+              <p class="text-xs text-slate-600 leading-relaxed" data-i18n="cat_c2_desc">
+                Étude comparative de la conservation de l'énergie et de la symplecticité sur les systèmes hamiltoniens dynamiques à temps long.
               </p>
-            </div>
-
-            <!-- Tech Tags -->
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="tech-pill bg-slate-800 text-slate-300">R</span>
-              <span class="tech-pill bg-amber-900/40 text-amber-300">ACP Normée / Non-Normée</span>
-              <span class="tech-pill bg-indigo-900/40 text-indigo-300">Clustering de Ward</span>
-              <span class="tech-pill bg-emerald-900/40 text-emerald-300">Analyse de Variance & Inertie</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">Cercle des Corrélations</span>
-            </div>
-
-            <!-- Real Visual Plot (Click to zoom) -->
-            <div class="mt-4 rounded-xl bg-[#090d16] border border-white/5 p-3 relative cursor-pointer group/img"
-                 onclick="openLightbox('assets/images/acp-normee.png', 'Projection ACP Normée : Premier plan factoriel des individus et clusters biomédicaux')">
-              <div class="text-[11px] font-mono text-slate-400 mb-2 flex items-center justify-between border-b border-white/5 pb-1.5">
-                <span class="flex items-center gap-1.5 text-amber-400">
-                  <i data-lucide="image" class="w-3.5 h-3.5"></i> Données Réelles : Premier Plan Factoriel (ACP Normée)
-                </span>
-                <span class="text-[10px] text-slate-400 font-mono flex items-center gap-1 group-hover/img:text-white">
-                  <i data-lucide="zoom-in" class="w-3 h-3"></i> Agrandir le graphique
-                </span>
-              </div>
-              <div class="h-36 w-full rounded-lg overflow-hidden bg-slate-950 flex items-center justify-center">
-                <img src="assets/images/acp-normee.png" alt="Projection ACP Normée" class="max-h-full max-w-full object-contain group-hover/img:scale-105 transition duration-300">
+              <div class="flex flex-wrap gap-1 font-mono text-[10px]">
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">Python</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200" data-i18n="cat_c2_tag2">EDO Symplectiques</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">NumPy</span>
               </div>
             </div>
-
-            <!-- Highlights -->
-            <ul class="text-xs text-slate-300 space-y-1.5 pt-2">
-              <li class="flex items-start gap-2">
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-amber-400 mt-0.5 shrink-0"></i>
-                <span><strong>Réduction de dimension rigoureuse :</strong> Analyse spectrale de la matrice de corrélation, règle de Kaiser et scree plot d'inertie.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-amber-400 mt-0.5 shrink-0"></i>
-                <span><strong>Segmentation phénotypique :</strong> Découpage optimal de l'arbre hiérarchique selon le critère de perte d'inertie inter-classes.</span>
-              </li>
-            </ul>
-
-          </div>
-
-          <!-- Bottom Card Footer / Links -->
-          <div class="px-6 py-4 bg-slate-950/60 border-t border-white/5 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <a href="https://github.com/amrzakizakisalih-alt/Projet_Classification_Hierarchique_INSA" target="_blank" rel="noopener noreferrer"
-                 class="text-xs font-mono text-amber-400 hover:text-amber-300 flex items-center gap-1.5 font-semibold">
-                <i data-lucide="github" class="w-3.5 h-3.5"></i> Code GitHub
+            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-mono">
+              <a href="https://github.com/amrzakizakisalih-alt/Projet_Analyse_Numerique_Verlet_RK_INSA" target="_blank" class="text-indigo-600 hover:underline flex items-center gap-1 font-medium">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i> <span data-i18n="cat_code">Code</span>
               </a>
-              <span class="text-slate-600">•</span>
-              <a href="assets/reports/rapport-classification-biomedicale.pdf" target="_blank"
-                 class="text-xs font-mono text-sky-400 hover:text-sky-300 flex items-center gap-1.5 font-semibold">
-                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Rapport d'Analyse (PDF)
+              <a href="assets/reports/rapport-verlet-runge-kutta.pdf" target="_blank" class="text-emerald-700 hover:underline flex items-center gap-1 font-semibold">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> <span data-i18n="cat_report">Rapport PDF</span>
               </a>
             </div>
-            <span class="text-[11px] font-mono text-slate-500">R • FactoMineR • Stats</span>
           </div>
+
+          <!-- Card 3 : Treillis & Éléments Finis -->
+          <div class="catalog-item glass-card rounded-xl p-5 border border-slate-200 shadow-xs hover:shadow-md hover:border-emerald-300 transition-all flex flex-col justify-between" data-category="hpc">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="tech-pill bg-emerald-50 text-emerald-800 border border-emerald-200" data-i18n="cat_c3_pill">Mécanique Numérique</span>
+                <span class="text-[11px] font-mono text-slate-500 font-semibold">GM4</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base" data-i18n="cat_c3_title">Analyse Statique & Modale de Treillis</h4>
+              <p class="text-xs text-slate-600 leading-relaxed" data-i18n="cat_c3_desc">
+                Modélisation matricielle de la rigidité globale par éléments finis barres, calcul des contraintes et déformées d'un pont sous sollicitations.
+              </p>
+              <div class="flex flex-wrap gap-1 font-mono text-[10px]">
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">Python</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200" data-i18n="cat_c3_tag2">Algèbre Creuse</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">Matplotlib 3D</span>
+              </div>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-mono">
+              <a href="https://github.com/amrzakizakisalih-alt/TP2_Methodes_Iteratives" target="_blank" class="text-indigo-600 hover:underline flex items-center gap-1 font-medium">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i> <span data-i18n="cat_code">Code</span>
+              </a>
+              <a href="assets/reports/rapport-treillis-methodes-iteratives.pdf" target="_blank" class="text-emerald-700 hover:underline flex items-center gap-1 font-semibold">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> <span data-i18n="cat_report">Rapport PDF</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4 : Méthodes Directes LU & Cholesky -->
+          <div class="catalog-item glass-card rounded-xl p-5 border border-slate-200 shadow-xs hover:shadow-md hover:border-amber-300 transition-all flex flex-col justify-between" data-category="hpc">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="tech-pill bg-amber-50 text-amber-900 border border-amber-200" data-i18n="cat_c4_pill">Algèbre Numérique</span>
+                <span class="text-[11px] font-mono text-slate-500 font-semibold">GM3</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base" data-i18n="cat_c4_title">Factorisations LU & Cholesky</h4>
+              <p class="text-xs text-slate-600 leading-relaxed" data-i18n="cat_c4_desc">
+                Développement des algorithmes de factorisation directe sans pivotage et avec pivot partiel, étude de stabilité numérique et erreurs d'arrondi.
+              </p>
+              <div class="flex flex-wrap gap-1 font-mono text-[10px]">
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">C / Python</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200" data-i18n="cat_c4_tag2">Analyse Matricielle</span>
+              </div>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-mono">
+              <a href="https://github.com/amrzakizakisalih-alt/TP_Methodes_Directes_INSA" target="_blank" class="text-indigo-600 hover:underline flex items-center gap-1 font-medium">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i> <span data-i18n="cat_code">Code</span>
+              </a>
+              <a href="assets/reports/rapport-methodes-directes.pdf" target="_blank" class="text-emerald-700 hover:underline flex items-center gap-1 font-semibold">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> <span data-i18n="cat_report">Rapport PDF</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5 : Dictionnaire en C -->
+          <div class="catalog-item glass-card rounded-xl p-5 border border-slate-200 shadow-xs hover:shadow-md hover:border-rose-300 transition-all flex flex-col justify-between" data-category="software">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="tech-pill bg-rose-50 text-rose-800 border border-rose-200" data-i18n="cat_c5_pill">Système & Mémoire</span>
+                <span class="text-[11px] font-mono text-slate-500 font-semibold">GM3</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base" data-i18n="cat_c5_title">Dictionnaire Indexé & Arbres en C</h4>
+              <p class="text-xs text-slate-600 leading-relaxed" data-i18n="cat_c5_desc">
+                Moteur de recherche lexicographique optimisé en langage C via tables de hachage et arbres préfixes (Trie) avec gestion manuelle de la mémoire.
+              </p>
+              <div class="flex flex-wrap gap-1 font-mono text-[10px]">
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">C Pur</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">Valgrind</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200" data-i18n="cat_c5_tag3">Trie / Hachage</span>
+              </div>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-mono">
+              <a href="https://github.com/amrzakizakisalih-alt/Projet_INSA_dico" target="_blank" class="text-indigo-600 hover:underline flex items-center gap-1 font-medium">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i> <span data-i18n="cat_code">Code</span>
+              </a>
+              <a href="assets/reports/rapport-dictionnaire-c.pdf" target="_blank" class="text-emerald-700 hover:underline flex items-center gap-1 font-semibold">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> <span data-i18n="cat_report">Rapport PDF</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 6 : Jeu Chiffres Croisés Java -->
+          <div class="catalog-item glass-card rounded-xl p-5 border border-slate-200 shadow-xs hover:shadow-md hover:border-indigo-300 transition-all flex flex-col justify-between" data-category="software">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="tech-pill bg-indigo-50 text-indigo-700 border border-indigo-200" data-i18n="cat_c6_pill">Génie Logiciel</span>
+                <span class="text-[11px] font-mono text-slate-500 font-semibold">GM3</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base" data-i18n="cat_c6_title">Jeu des Chiffres Croisés (Java Swing)</h4>
+              <p class="text-xs text-slate-600 leading-relaxed" data-i18n="cat_c6_desc">
+                Application de jeu mathématique interactif selon le patron de conception MVC, gestion d'événements asynchrones et validation d'équations.
+              </p>
+              <div class="flex flex-wrap gap-1 font-mono text-[10px]">
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">Java</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">Swing GUI</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">Pattern MVC</span>
+              </div>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-mono">
+              <a href="https://github.com/amrzakizakisalih-alt/Projet_INSA_Jeu_Des_Chiffres_Croises" target="_blank" class="text-indigo-600 hover:underline flex items-center gap-1 font-medium">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i> <span data-i18n="cat_code">Code</span>
+              </a>
+              <a href="assets/reports/rapport-chiffres-croises.pdf" target="_blank" class="text-emerald-700 hover:underline flex items-center gap-1 font-semibold">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> <span data-i18n="cat_report">Rapport PDF</span>
+              </a>
+            </div>
+          </div>
+
         </div>
 
-      </div>
-    </section>
+      </section>
 
-    <!-- ========================================================= -->
-    <!-- SECTION: CATALOGUE COMPLET DES TRAVAUX (Filtres)          -->
-    <!-- ========================================================= -->
-    <section id="catalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
-        <div>
-          <div class="flex items-center gap-2 text-indigo-400 text-xs font-mono tracking-wider uppercase mb-1">
-            <i data-lucide="layers" class="w-3.5 h-3.5"></i>
-            <span>Répertoire Exhaustif</span>
+      <!-- ========================================================= -->
+      <!-- SECTION: COMPÉTENCES & TECHNOLOGIES                       -->
+      <!-- ========================================================= -->
+      <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+          <div class="inline-flex items-center gap-1.5 text-xs font-mono text-indigo-600 tracking-wider uppercase font-semibold">
+            <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+            <span data-i18n="skills_badge">Boîte à Outils d'Ingénieur</span>
           </div>
-          <h2 class="text-3xl font-extrabold text-white tracking-tight">
-            Autres Projets & Travaux Spécialisés
-          </h2>
-          <p class="text-slate-400 text-xs sm:text-sm mt-1">
-            Travaux en calcul haute performance, équations différentielles, analyse modale et génie logiciel.
+          <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight" data-i18n="skills_title">Compétences & Technologies</h2>
+          <p class="text-slate-600 text-xs sm:text-sm" data-i18n="skills_subtitle">
+            Un profil d'ingénieur en Génie Mathématiques combinant machine learning, optimisation mathématique, modélisation statistique avancée et développement logiciel.
           </p>
         </div>
 
-        <!-- Filter Buttons -->
-        <div class="flex flex-wrap items-center gap-2 mt-4 md:mt-0 font-mono text-xs">
-          <button onclick="filterCatalog('all')" id="btn-filter-all" class="filter-btn px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-medium border border-indigo-500 transition-all">
-            Tous (6)
-          </button>
-          <button onclick="filterCatalog('num')" id="btn-filter-num" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-white/5 transition-all">
-            Calcul & HPC
-          </button>
-          <button onclick="filterCatalog('dev')" id="btn-filter-dev" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-white/5 transition-all">
-            Génie Logiciel
-          </button>
-        </div>
-      </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <!-- Catalog Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Card 1 : Gauss-Seidel HPC -->
-        <div class="catalog-item glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="num">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
-              <span class="text-sky-400">Analyse Numérique</span>
-              <span>Fortran • Python • MATLAB</span>
+          <!-- Pilier 1 : Machine Learning & IA Appliquée -->
+          <div class="glass-card p-6 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-600">
+              <i data-lucide="brain" class="w-5 h-5"></i>
             </div>
-            <h4 class="text-lg font-bold text-white tracking-tight">Solveurs de Systèmes Linéaires (Gauss-Seidel HPC)</h4>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Résolution de grands systèmes creux $Ax=b$. Étude du rayon spectral de la matrice d'itération, preuve théorique de convergence et benchmark haute performance Fortran 90 vs Python.
-            </p>
-            <div class="flex flex-wrap gap-1">
-              <span class="tech-pill bg-slate-800 text-slate-300">Fortran 90</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">Algèbre Linéaire</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">Rayon Spectral</span>
+            <h3 class="font-bold text-slate-900 text-base" data-i18n="sk1_title">Machine Learning & IA Appliquée</h3>
+            <ul class="text-xs text-slate-700 space-y-2 font-mono">
+              <li>• Vision-Language Models (VLM) & OCR</li>
+              <li>• Support Vector Machines (SVM RBF / Linéaires)</li>
+              <li>• Algorithmes Heuristiques & Pathfinding (A*)</li>
+              <li>• Random Forest & Arbres de Décision</li>
+              <li>• Régression Logistique from scratch (NumPy)</li>
+              <li>• Clustering (CAH critère de Ward, K-Means)</li>
+            </ul>
+          </div>
+
+          <!-- Pilier 2 : Séries Temporelles & Recherche Opérationnelle -->
+          <div class="glass-card p-6 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 border border-amber-200 flex items-center justify-center text-amber-700">
+              <i data-lucide="trending-up" class="w-5 h-5"></i>
             </div>
+            <h3 class="font-bold text-slate-900 text-base" data-i18n="sk2_title">Séries Temporelles & R.O.</h3>
+            <ul class="text-xs text-slate-700 space-y-2 font-mono">
+              <li>• Prévision Temporelle (ARIMA, SARIMA)</li>
+              <li>• OLS Saisonnière & Lags Autorégressifs</li>
+              <li>• Modèle Stochastique de Stocks (Newsvendor)</li>
+              <li>• Optimisation Convexe & Conditions KKT</li>
+              <li>• Algorithme d'Uzawa & Dualité Lagrangienne</li>
+              <li>• Scipy Optimize & Programmation Linéaire</li>
+            </ul>
           </div>
-          <div class="pt-4 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
-            <a href="https://github.com/amrzakizakisalih-alt/Projet_Analyse_Numerique_INSA" target="_blank" class="text-sky-400 hover:underline flex items-center gap-1">
-              <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub
-            </a>
-            <a href="assets/reports/rapport-gauss-seidel.pdf" target="_blank" class="text-emerald-400 hover:underline flex items-center gap-1">
-              <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Rapport PDF
-            </a>
-          </div>
-        </div>
 
-        <!-- Card 2 : Verlet vs Runge-Kutta -->
-        <div class="catalog-item glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="num">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
-              <span class="text-purple-400">EDO & Symplectique</span>
-              <span>Python • Fortran</span>
+          <!-- Pilier 3 : Statistique Avancée & Modélisation -->
+          <div class="glass-card p-6 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-rose-100 border border-rose-200 flex items-center justify-center text-rose-600">
+              <i data-lucide="function-square" class="w-5 h-5"></i>
             </div>
-            <h4 class="text-lg font-bold text-white tracking-tight">Intégration Numérique : Verlet vs Runge-Kutta</h4>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Comparaison d'intégrateurs numériques pour systèmes dynamiques hamiltoniens. Mise en évidence de la conservation de l'énergie et de la stabilité de l'algorithme de Verlet face à RK4.
-            </p>
-            <div class="flex flex-wrap gap-1">
-              <span class="tech-pill bg-slate-800 text-slate-300">EDO Dynamiques</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">Conservation Énergie</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">Méthode Symplectique</span>
+            <h3 class="font-bold text-slate-900 text-base" data-i18n="sk3_title">Statistique & Modélisation</h3>
+            <ul class="text-xs text-slate-700 space-y-2 font-mono">
+              <li>• Régression Non Linéaire (Gauss-Newton)</li>
+              <li>• Rééchantillonnage Bootstrap & Bandes de Confiance</li>
+              <li>• Réduction de Dimension (ACP Normée / Non Normée)</li>
+              <li>• Estimation de Densité par Noyau (KDE)</li>
+              <li>• Analyse de Séries Spatio-temporelles (EGMS)</li>
+              <li>• Détection de Latence & Corrélation Croisée</li>
+            </ul>
+          </div>
+
+          <!-- Pilier 4 : Ingénierie Logicielle & Calcul Scientifique -->
+          <div class="glass-card p-6 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-sky-100 border border-sky-200 flex items-center justify-center text-sky-600">
+              <i data-lucide="code-2" class="w-5 h-5"></i>
             </div>
+            <h3 class="font-bold text-slate-900 text-base" data-i18n="sk4_title">Calcul Scientifique & Software</h3>
+            <ul class="text-xs text-slate-700 space-y-2 font-mono">
+              <li>• Python (NumPy, SciPy, Pandas, SymPy)</li>
+              <li>• Langage R (FactoMineR, analyse spatiale)</li>
+              <li>• Java (POO Avancée, Pattern MVC, Swing)</li>
+              <li>• C Pur (Pointeurs, Arbres Trie, Hachage)</li>
+              <li>• Fortran 90 (Calcul Creux & HPC Gauss-Seidel)</li>
+              <li>• FastAPI, React 19, Git / CI-CD, Linux (Ubuntu)</li>
+            </ul>
           </div>
-          <div class="pt-4 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
-            <a href="https://github.com/amrzakizakisalih-alt/Projet_Analyse_Numerique_Verlet_RK_INSA" target="_blank" class="text-sky-400 hover:underline flex items-center gap-1">
-              <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub
-            </a>
-            <a href="assets/reports/rapport-verlet-runge-kutta.pdf" target="_blank" class="text-emerald-400 hover:underline flex items-center gap-1">
-              <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Rapport PDF
-            </a>
-          </div>
+
         </div>
+      </section>
 
-        <!-- Card 3 : Déformation & Analyse Modale Treillis -->
-        <div class="catalog-item glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="num">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
-              <span class="text-emerald-400">Mécanique Numérique</span>
-              <span>Python</span>
-            </div>
-            <h4 class="text-lg font-bold text-white tracking-tight">Déformation & Analyse Modale de Treillis</h4>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Modélisation éléments finis d'un pont en treillis élastique. Calcul de la déformation statique sous charges et détermination des modes propres de vibration (valeurs et vecteurs propres).
-            </p>
-            <div class="flex flex-wrap gap-1">
-              <span class="tech-pill bg-slate-800 text-slate-300">Matrice de Rigidité</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">Modes Propres</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">NumPy / SciPy</span>
-            </div>
-          </div>
-          <div class="pt-4 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
-            <a href="https://github.com/amrzakizakisalih-alt/TP2_Methodes_Iteratives" target="_blank" class="text-sky-400 hover:underline flex items-center gap-1">
-              <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub
-            </a>
-            <span class="text-[11px] text-slate-500">TP GM Noté</span>
-          </div>
-        </div>
-
-        <!-- Card 4 : Méthodes Directes & Conditionnement -->
-        <div class="catalog-item glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="num">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
-              <span class="text-sky-400">Algèbre Linéaire</span>
-              <span>Python</span>
-            </div>
-            <h4 class="text-lg font-bold text-white tracking-tight">Méthodes Directes & Conditionnement (LU, Cholesky)</h4>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Implémentation de factorisations matricielles directes (Gauss sans/avec pivot partiel, LU, Cholesky) et analyse d'erreur numérique liée au conditionnement des matrices.
-            </p>
-            <div class="flex flex-wrap gap-1">
-              <span class="tech-pill bg-slate-800 text-slate-300">Décomposition LU</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">Cholesky</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">Sensibilité Numérique</span>
-            </div>
-          </div>
-          <div class="pt-4 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
-            <a href="https://github.com/amrzakizakisalih-alt/TP_Methodes_Directes_INSA" target="_blank" class="text-sky-400 hover:underline flex items-center gap-1">
-              <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub
-            </a>
-            <span class="text-[11px] text-slate-500">Rapport inclus dans le repo</span>
-          </div>
-        </div>
-
-        <!-- Card 5 : Dictionnaire C Système -->
-        <div class="catalog-item glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="dev">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
-              <span class="text-amber-400">Génie Logiciel & C</span>
-              <span>Langage C</span>
-            </div>
-            <h4 class="text-lg font-bold text-white tracking-tight">Système de Gestion de Dictionnaire Dynamique en C</h4>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Moteur en ligne de commande avec structures de données chaînées imbriquées, indexation alphabétique hachée, allocation dynamique stricte et absence totale de fuites mémoires (Valgrind).
-            </p>
-            <div class="flex flex-wrap gap-1">
-              <span class="tech-pill bg-slate-800 text-slate-300">Pointeurs & Mémoire</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">Listes Chaînées</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">Parsing de Chaînes</span>
-            </div>
-          </div>
-          <div class="pt-4 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
-            <a href="https://github.com/amrzakizakisalih-alt/Projet_INSA_dico" target="_blank" class="text-sky-400 hover:underline flex items-center gap-1">
-              <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub
-            </a>
-            <span class="text-[11px] text-slate-500">MIPP S5</span>
-          </div>
-        </div>
-
-        <!-- Card 6 : Jeu Chiffres Croisés -->
-        <div class="catalog-item glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="dev">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
-              <span class="text-rose-400">Programmation Objet</span>
-              <span>Java • Web</span>
-            </div>
-            <h4 class="text-lg font-bold text-white tracking-tight">Jeu de Chiffres Croisés & Moteur de Règles</h4>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Jeu de plateau arithmétique combinatoire au tour par tour. Architecture objet modulaire, validation automatique de contraintes d'opérations et interface interactive.
-            </p>
-            <div class="flex flex-wrap gap-1">
-              <span class="tech-pill bg-slate-800 text-slate-300">POO Java</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">Logique Arithmétique</span>
-              <span class="tech-pill bg-slate-800 text-slate-300">UI / Game Loop</span>
-            </div>
-          </div>
-          <div class="pt-4 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
-            <a href="https://github.com/amrzakizakisalih-alt/Projet_INSA_Jeu_Des_Chiffres_Croises" target="_blank" class="text-sky-400 hover:underline flex items-center gap-1">
-              <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub
-            </a>
-            <span class="text-[11px] text-slate-500">Architecture Modulaire</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- SECTION: COMPÉTENCES TECHNIQUES (Organisées par piliers)   -->
-    <!-- ========================================================= -->
-    <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      
-      <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
-        <div class="inline-flex items-center gap-1.5 text-xs font-mono text-sky-400 tracking-wider uppercase">
-          <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
-          <span>Boîte à Outils d'Ingénieur</span>
-        </div>
-        <h2 class="text-3xl font-extrabold text-white tracking-tight">Compétences & Technologies</h2>
-        <p class="text-slate-400 text-xs sm:text-sm">
-          Un profil polyvalent associant modélisation théorique, exploitation de données massives et développement d'applications logicielles.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- Pilier 1 : Data & IA -->
-        <div class="glass-card p-6 rounded-2xl border border-white/5 space-y-4">
-          <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-            <i data-lucide="brain" class="w-5 h-5"></i>
-          </div>
-          <h3 class="font-bold text-white text-base">Data Science & IA</h3>
-          <ul class="text-xs text-slate-300 space-y-2 font-mono">
-            <li>• Vision-Language Models (VLM)</li>
-            <li>• Machine Learning Non Supervisé (ACP, CAH)</li>
-            <li>• Traitement de Séries Temporelles</li>
-            <li>• Modélisation Cognitive (ACT-R)</li>
-            <li>• SymPy (Calcul Formel) & OCR LaTeX</li>
-            <li>• Scikit-learn, FactoMineR</li>
-          </ul>
-        </div>
-
-        <!-- Pilier 2 : Mathématiques & Calcul Numérique -->
-        <div class="glass-card p-6 rounded-2xl border border-white/5 space-y-4">
-          <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
-            <i data-lucide="function-square" class="w-5 h-5"></i>
-          </div>
-          <h3 class="font-bold text-white text-base">Mathématiques & HPC</h3>
-          <ul class="text-xs text-slate-300 space-y-2 font-mono">
-            <li>• Algèbre Linéaire Creuse ($Ax=b$)</li>
-            <li>• EDO & Méthodes Symplectiques (Verlet, RK)</li>
-            <li>• Analyse Spectrale & Conditionnement</li>
-            <li>• Mécanique Céleste & Problème N-Corps</li>
-            <li>• Méthodes des Éléments Finis (Treillis)</li>
-            <li>• Fortran 90, MATLAB, SciPy</li>
-          </ul>
-        </div>
-
-        <!-- Pilier 3 : Données Satellitaires & Analyse -->
-        <div class="glass-card p-6 rounded-2xl border border-white/5 space-y-4">
-          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-            <i data-lucide="satellite" class="w-5 h-5"></i>
-          </div>
-          <h3 class="font-bold text-white text-base">Données Satellitaires</h3>
-          <ul class="text-xs text-slate-300 space-y-2 font-mono">
-            <li>• Radar InSAR (Copernicus EGMS L3)</li>
-            <li>• Gravimétrie Spatiale (Mission GRACE)</li>
-            <li>• Détection de Déplacement Millimétrique</li>
-            <li>• Analyse Statistique Spatio-temporelle</li>
-            <li>• Visualisation Avancée (ggplot2, R)</li>
-            <li>• NetCDF, HDF5, Formats Spatiaux</li>
-          </ul>
-        </div>
-
-        <!-- Pilier 4 : Ingénierie Logicielle -->
-        <div class="glass-card p-6 rounded-2xl border border-white/5 space-y-4">
-          <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
-            <i data-lucide="code-2" class="w-5 h-5"></i>
-          </div>
-          <h3 class="font-bold text-white text-base">Ingénierie Logicielle</h3>
-          <ul class="text-xs text-slate-300 space-y-2 font-mono">
-            <li>• Python 3, R, Java, C, Fortran</li>
-            <li>• FastAPI, Uvicorn, WebSockets</li>
-            <li>• React 19, Vite, TypeScript</li>
-            <li>• Git, GitHub Actions, Linux (Ubuntu)</li>
-            <li>• Structures de Données & Gestion Mémoire</li>
-            <li>• Conception Orientée Objet (POO)</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- SECTION: FORMATION & PARCOURS INSA ROUEN                  -->
-    <!-- ========================================================= -->
-    <section id="education" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      
-      <div class="glass-card rounded-2xl p-8 sm:p-10 border border-white/10 relative overflow-hidden">
+      <!-- ========================================================= -->
+      <!-- SECTION: FORMATION & PARCOURS ACADÉMIQUE                  -->
+      <!-- ========================================================= -->
+      <section id="education" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-white/10 pb-6">
-          <div class="flex items-center gap-4">
-            <div class="w-14 h-14 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-lg">
-              <img src="assets/images/insa-logo.jpg" alt="Logo INSA Rouen" class="w-full h-full object-contain">
-            </div>
-            <div>
-              <h3 class="text-xl sm:text-2xl font-bold text-white">INSA Rouen Normandie</h3>
-              <p class="text-sky-400 text-xs sm:text-sm font-mono">Diplôme d'Ingénieur — Département Génie Mathématique (GM)</p>
-            </div>
-          </div>
-          <div class="text-right font-mono text-xs text-slate-400">
-            <span class="inline-block px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-white/5">
-              2021 — 2026 (Diplôme d'État CTI)
-            </span>
-          </div>
-        </div>
-
-        <!-- Timeline GM -->
-        <div class="space-y-6">
+        <div class="glass-card rounded-2xl p-8 sm:p-10 border border-slate-200 shadow-xs relative overflow-hidden">
           
-          <div class="flex items-start gap-4">
-            <div class="w-7 h-7 rounded-full bg-emerald-500/20 border border-emerald-500 text-emerald-400 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">
-              5
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <h4 class="font-bold text-white text-sm">GM5 — Année de Spécialisation & Projet de Fin d'Études (En cours)</h4>
-                <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-mono">Actuel</span>
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-slate-200 pb-6">
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-xl bg-slate-50 border border-slate-200 p-1.5 flex items-center justify-center shadow-xs">
+                <img src="assets/images/insa-logo.jpg" alt="Logo INSA Rouen" class="w-full h-full object-contain">
               </div>
-              <p class="text-xs text-slate-400 mt-1">
-                Deep Learning avancé, détection d'anomalies, méta-apprentissage, régression non-linéaire, préparation du Projet de Fin d'Études (PFE).
-              </p>
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-900">INSA Rouen Normandie & Université Koç</h3>
+                <p class="text-indigo-600 text-xs sm:text-sm font-mono font-medium" data-i18n="edu_headline">Diplôme d'Ingénieur — Département Génie Mathématique (GM)</p>
+              </div>
+            </div>
+            <div class="text-right font-mono text-xs text-slate-500">
+              <span class="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200" data-i18n="edu_badge_years">
+                2022 — 2027 (Diplôme d'Ingénieur CTI)
+              </span>
             </div>
           </div>
 
-          <div class="flex items-start gap-4">
-            <div class="w-7 h-7 rounded-full bg-slate-800 border border-white/10 text-slate-300 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">
-              4
+          <!-- Timeline GM & Koç -->
+          <div class="space-y-6">
+            
+            <!-- GM5 -->
+            <div class="flex items-start gap-4">
+              <div class="w-7 h-7 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">
+                5
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="font-bold text-slate-900 text-sm" data-i18n="edu_gm5_title">GM5 — Cinquième Année de Spécialisation en Génie Mathématiques</h4>
+                  <span class="text-[10px] bg-emerald-50 border border-emerald-200 text-emerald-700 px-2 py-0.5 rounded font-mono font-semibold" data-i18n="badge_current">En cours</span>
+                </div>
+                <p class="text-xs text-slate-600 mt-1" data-i18n="edu_gm5_desc">
+                  Machine Learning avancé, régression non-linéaire (Gauss-Newton, Bootstrap), méta-apprentissage, classification médicale par SVM, recherche d'un stage de fin d'études de 6 mois dès le 4 mai 2027.
+                </p>
+              </div>
             </div>
-            <div>
-              <h4 class="font-bold text-white text-sm">GM4 — Modélisation Stochastique, EDP & Systèmes Complexes</h4>
-              <p class="text-xs text-slate-400 mt-1">
-                Processus de Markov, Équations aux Dérivées Partielles (EDP), Séries Temporelles, Projet satellitaire InSAR/GRACE avec le Cerema, Simulation spatiale Java.
-              </p>
-            </div>
-          </div>
 
-          <div class="flex items-start gap-4">
-            <div class="w-7 h-7 rounded-full bg-slate-800 border border-white/10 text-slate-300 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">
-              3
+            <!-- Koç University Exchange -->
+            <div class="flex items-start gap-4">
+              <div class="w-7 h-7 rounded-full bg-amber-100 border border-amber-300 text-amber-800 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">
+                ✈️
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="font-bold text-slate-900 text-sm" data-i18n="edu_koc_title">Université Koç (Istanbul) — Échange Académique International</h4>
+                  <span class="text-[10px] bg-amber-50 border border-amber-200 text-amber-800 px-2 py-0.5 rounded font-mono font-semibold">Spring 2026</span>
+                </div>
+                <p class="text-xs text-slate-600 mt-1" data-i18n="edu_koc_desc">
+                  Semestre d'études d'excellence en anglais : Data Science for Operational Decision Making (INDR 422 - Forecasting & Newsvendor), Intelligent User Interfaces (COMP 437 - Projet ITIM), Machine Learning (multiclass classification from scratch), Financial Engineering (INDR 473 - Modélisation stochastique).
+                </p>
+              </div>
             </div>
-            <div>
-              <h4 class="font-bold text-white text-sm">GM3 — Mathématiques Appliquées & Analyse de Données</h4>
-              <p class="text-xs text-slate-400 mt-1">
-                Statistique exploratoire multivariée (ACP, CAH), Analyse Numérique Matricielle (Gauss-Seidel, Cholesky), Structures de données en C, Optimisation continue.
-              </p>
-            </div>
-          </div>
 
-          <div class="flex items-start gap-4">
-            <div class="w-7 h-7 rounded-full bg-slate-800 border border-white/10 text-slate-400 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">
-              1-2
+            <!-- GM4 -->
+            <div class="flex items-start gap-4">
+              <div class="w-7 h-7 rounded-full bg-slate-100 border border-slate-300 text-slate-700 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">
+                4
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm" data-i18n="edu_gm4_title">GM4 — Modélisation Stochastique, Optimisation Convexe & Systèmes Dynamiques</h4>
+                <p class="text-xs text-slate-600 mt-1" data-i18n="edu_gm4_desc">
+                  Optimisation continue (conditions KKT, algorithme d'Uzawa), processus stochastiques, séries temporelles et données radar EGMS/GRACE (projet MSRO), algorithmes heuristiques A* et programmation orientée objet en Java.
+                </p>
+              </div>
             </div>
-            <div>
-              <h4 class="font-bold text-slate-300 text-sm">STPI — Classes Préparatoires Intégrées</h4>
-              <p class="text-xs text-slate-400 mt-1">
-                Mathématiques fondamentales (Analyse, Algèbre), Physique, Algorithmique et Programmation impérative.
-              </p>
+
+            <!-- GM3 -->
+            <div class="flex items-start gap-4">
+              <div class="w-7 h-7 rounded-full bg-slate-100 border border-slate-300 text-slate-700 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">
+                3
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm" data-i18n="edu_gm3_title">GM3 — Mathématiques Appliquées & Analyse Numérique Matricielle</h4>
+                <p class="text-xs text-slate-600 mt-1" data-i18n="edu_gm3_desc">
+                  Statistique multivariée exploratoire (ACP normée/non-normée, CAH de Ward), résolution de systèmes linéaires creux (Gauss-Seidel, Cholesky), calcul de valeurs propres (puissance itérée), structures de données et gestion mémoire en C.
+                </p>
+              </div>
             </div>
+
+            <!-- STPI -->
+            <div class="flex items-start gap-4">
+              <div class="w-7 h-7 rounded-full bg-slate-100 border border-slate-300 text-slate-500 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">
+                1-2
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-800 text-sm" data-i18n="edu_stpi_title">STPI — Classes Préparatoires Intégrées INSA Rouen (2022-2024)</h4>
+                <p class="text-xs text-slate-600 mt-1" data-i18n="edu_stpi_desc">
+                  Formation scientifique fondamentale : analyse mathématique, algèbre linéaire, probabilités, physique générale, algorithmique et programmation impérative.
+                </p>
+              </div>
+            </div>
+
           </div>
 
         </div>
+      </section>
 
-      </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- SECTION: CONTACT EXPRESS POUR RECRUTEUR                   -->
-    <!-- ========================================================= -->
-    <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      
-      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-indigo-500/30 text-center relative overflow-hidden shadow-2xl shadow-indigo-500/10">
+      <!-- ========================================================= -->
+      <!-- SECTION: CONTACT EXPRESS POUR RECRUTEUR                   -->
+      <!-- ========================================================= -->
+      <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         
-        <!-- Background subtle glow -->
-        <div class="ambient-glow w-96 h-96 bg-indigo-500/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-        
-        <div class="relative z-10 space-y-6">
+        <div class="bg-gradient-to-br from-indigo-50/90 via-sky-50/70 to-emerald-50/80 rounded-3xl p-8 sm:p-12 border border-indigo-100 shadow-md text-center relative overflow-hidden">
           
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 text-xs font-mono">
-            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Échangeons ensemble
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 border border-indigo-200 text-indigo-700 text-xs font-mono mb-4 font-semibold">
+            <i data-lucide="mail-check" class="w-3.5 h-3.5"></i>
+            <span data-i18n="contact_badge">Disponibilité Immédiate pour Entretien</span>
           </div>
 
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Vous recrutez un profil Data Science & IA ?
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4" data-i18n="contact_title">
+            Opportunité de Stage de Fin d'Études
           </h2>
 
-          <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-            Je suis disponible pour un <strong>Stage de Fin d'Études (PFE)</strong> de 6 mois à partir de <strong>Février / Mars 2026</strong>, avec perspective de pré-embauche. N'hésitez pas à me contacter pour échanger sur vos problématiques ou convenir d'un entretien technique.
+          <p class="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed mb-8" data-i18n="contact_desc">
+            Actuellement élève ingénieur en <strong>cinquième année GM5</strong> je suis à la recherche d'un <strong>stage de fin d'études de 6 mois à partir du 4 mai 2027</strong> en Data Science, Machine Learning, IA ou Recherche Opérationnelle. Mobilité totale en <strong>France et à l'international</strong>.
           </p>
 
           <!-- Contact Action Cards -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto pt-2">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
             
             <!-- Email Box -->
-            <button onclick="copyEmail()" class="p-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-white/10 hover:border-indigo-400/40 transition-all text-left flex items-center justify-between group">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
-                  <i data-lucide="mail" class="w-5 h-5"></i>
+            <button onclick="copyEmail()" class="p-4 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-indigo-400 shadow-xs transition-all text-left flex items-center justify-between group">
+              <div class="flex items-center gap-3 min-w-0">
+                <div class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
+                  <i data-lucide="mail" class="w-4 h-4"></i>
                 </div>
-                <div>
-                  <div class="text-[11px] font-mono text-slate-400">Email direct</div>
-                  <div class="text-xs font-bold text-white group-hover:text-indigo-300">amrzaki.zakisalih@icloud.com</div>
+                <div class="min-w-0">
+                  <div class="text-[11px] font-mono text-slate-500" data-i18n="contact_email_label">Email direct</div>
+                  <div class="text-xs font-bold text-slate-900 group-hover:text-indigo-600 truncate">amrzakisalih@gmail.com</div>
                 </div>
               </div>
-              <i data-lucide="copy" class="w-4 h-4 text-slate-500 group-hover:text-white"></i>
+              <i data-lucide="copy" class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 transition shrink-0"></i>
             </button>
+
+            <!-- LinkedIn Box -->
+            <a href="https://www.linkedin.com/in/amr-zaki-salih" target="_blank" rel="noopener noreferrer" 
+               class="p-4 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-sky-400 shadow-xs transition-all text-left flex items-center justify-between group">
+              <div class="flex items-center gap-3 min-w-0">
+                <div class="w-9 h-9 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center shrink-0">
+                  <i data-lucide="linkedin" class="w-4 h-4"></i>
+                </div>
+                <div class="min-w-0">
+                  <div class="text-[11px] font-mono text-slate-500">LinkedIn</div>
+                  <div class="text-xs font-bold text-slate-900 group-hover:text-sky-600 truncate">amr-zaki-salih</div>
+                </div>
+              </div>
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-sky-600 transition shrink-0"></i>
+            </a>
 
             <!-- GitHub Box -->
             <a href="https://github.com/amrzakizakisalih-alt" target="_blank" rel="noopener noreferrer" 
-               class="p-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-white/10 hover:border-sky-400/40 transition-all text-left flex items-center justify-between group">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
-                  <i data-lucide="github" class="w-5 h-5"></i>
+               class="p-4 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-400 shadow-xs transition-all text-left flex items-center justify-between group">
+              <div class="flex items-center gap-3 min-w-0">
+                <div class="w-9 h-9 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
+                  <i data-lucide="github" class="w-4 h-4"></i>
                 </div>
-                <div>
-                  <div class="text-[11px] font-mono text-slate-400">Profil GitHub</div>
-                  <div class="text-xs font-bold text-white group-hover:text-sky-300">amrzakizakisalih-alt</div>
+                <div class="min-w-0">
+                  <div class="text-[11px] font-mono text-slate-500">GitHub</div>
+                  <div class="text-xs font-bold text-slate-900 group-hover:text-slate-700 truncate">amrzakizakisalih-alt</div>
                 </div>
               </div>
-              <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-white"></i>
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition shrink-0"></i>
             </a>
 
           </div>
 
-          <div class="pt-4 text-xs font-mono text-slate-400">
-            📍 INSA Rouen Normandie • Campus du Madrillet, Saint-Étienne-du-Rouvray
+          <!-- Location and availability footer -->
+          <div class="mt-8 pt-6 border-t border-indigo-100 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 font-mono">
+            <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-indigo-600"></i> <span data-i18n="contact_mobility">Mobilité : Partout en France & à l'International</span></span>
+            <span class="flex items-center gap-1.5"><i data-lucide="calendar" class="w-3.5 h-3.5 text-emerald-600"></i> <span data-i18n="contact_dates">Durée : 6 mois (Dès le 4 mai 2027)</span></span>
           </div>
 
         </div>
 
+      </section>
+
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- FOOTER                                                    -->
+    <!-- ========================================================= -->
+    <footer class="border-t border-slate-200 bg-white py-8 text-xs font-mono text-slate-500">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          © 2026-2027 <span class="text-slate-800 font-bold">Amr ZAKI SALIH</span> — INSA Rouen Normandie
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#hero" class="hover:text-indigo-600 transition-colors" data-i18n="footer_top">Haut de page ↑</a>
+          <a href="https://www.linkedin.com/in/amr-zaki-salih" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors">LinkedIn</a>
+          <a href="https://github.com/amrzakizakisalih-alt" target="_blank" class="hover:text-indigo-600 transition-colors">GitHub</a>
+          <a href="mailto:amrzakisalih@gmail.com" class="hover:text-indigo-600 transition-colors">amrzakisalih@gmail.com</a>
+        </div>
       </div>
+    </footer>
 
-    </section>
-
-  </main>
-
-  <!-- ========================================================= -->
-  <!-- FOOTER                                                    -->
-  <!-- ========================================================= -->
-  <footer class="border-t border-white/5 py-8 text-center text-xs text-slate-500 font-mono">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>
-        © 2026 Amr ZAKI SALIH — Département Génie Mathématique, INSA Rouen Normandie.
-      </div>
-      <div class="flex items-center gap-4 text-slate-400">
-        <a href="#hero" class="hover:text-white transition-colors">Haut de page ↑</a>
-        <a href="https://github.com/amrzakizakisalih-alt" target="_blank" class="hover:text-white transition-colors">GitHub</a>
-      </div>
-    </div>
-  </footer>
+  </div>
 
   <!-- ========================================================= -->
-  <!-- LIGHTBOX MODAL (Pour voir les graphiques en grand)         -->
+  <!-- LIGHTBOX MODAL (Image & Video zoom)                       -->
   <!-- ========================================================= -->
-  <div id="lightbox" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4" onclick="closeLightbox()">
-    <div class="max-w-4xl w-full glass-card rounded-2xl overflow-hidden p-4 relative" onclick="event.stopPropagation()">
-      <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-3">
-        <span id="lightbox-title" class="text-xs font-mono text-sky-400 font-semibold truncate pr-4"></span>
-        <button onclick="closeLightbox()" class="text-slate-400 hover:text-white p-1 rounded-lg bg-slate-800">
+  <div id="lightbox" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4" onclick="closeLightbox()">
+    <div class="max-w-5xl w-full bg-white rounded-2xl overflow-hidden p-4 relative border border-slate-200 shadow-2xl" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-200 mb-3">
+        <span id="lightbox-title" class="text-xs font-mono text-indigo-600 font-semibold truncate pr-4"></span>
+        <button onclick="closeLightbox()" class="text-slate-500 hover:text-slate-900 p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 transition">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
-      <div class="max-h-[75vh] flex items-center justify-center bg-slate-950 rounded-xl overflow-hidden">
-        <img id="lightbox-img" src="" alt="Agrandissement" class="max-h-[70vh] max-w-full object-contain">
+      <div class="max-h-[80vh] flex items-center justify-center bg-slate-900 rounded-xl overflow-hidden p-2">
+        <img id="lightbox-img" src="" alt="Agrandissement" class="max-h-[75vh] max-w-full object-contain">
+        <video id="lightbox-video" src="" controls playsinline class="max-h-[75vh] max-w-full rounded-lg hidden"></video>
       </div>
     </div>
   </div>
@@ -1117,7 +1395,7 @@
   </div>
 
   <!-- ========================================================= -->
-  <!-- JAVASCRIPT LOGIC                                          -->
+  <!-- JAVASCRIPT LOGIC & BILINGUAL TRANSLATION ENGINE           -->
   <!-- ========================================================= -->
   <script>
     // Initialize Lucide icons
@@ -1125,9 +1403,9 @@
 
     // Copy Email Function
     function copyEmail() {
-      const email = 'amrzaki.zakisalih@icloud.com';
+      const email = 'amrzakisalih@gmail.com';
       navigator.clipboard.writeText(email).then(() => {
-        showToast('Email copié : ' + email);
+        showToast(currentLang === 'fr' ? 'Email copié : ' + email : 'Email copied: ' + email);
       }).catch(err => {
         showToast('Email : ' + email);
       });
@@ -1147,19 +1425,41 @@
       }, 3000);
     }
 
-    // Lightbox Modal for Plots
-    function openLightbox(src, title) {
+    // Lightbox Modal for Plots & Videos
+    function openLightbox(src, title, isVideo = false) {
       const modal = document.getElementById('lightbox');
       const img = document.getElementById('lightbox-img');
+      const video = document.getElementById('lightbox-video');
       const titleElem = document.getElementById('lightbox-title');
       
-      img.src = src;
       titleElem.innerText = title;
+      
+      if (isVideo || src.endsWith('.mp4') || src.endsWith('.webm')) {
+        img.classList.add('hidden');
+        video.classList.remove('hidden');
+        video.src = src;
+        video.play();
+      } else {
+        if (video) {
+          video.classList.add('hidden');
+          video.pause();
+          video.src = '';
+        }
+        img.classList.remove('hidden');
+        img.src = src;
+      }
+      
       modal.classList.remove('hidden');
+      lucide.createIcons();
     }
 
     function closeLightbox() {
       const modal = document.getElementById('lightbox');
+      const video = document.getElementById('lightbox-video');
+      if (video) {
+        video.pause();
+        video.src = '';
+      }
       modal.classList.add('hidden');
     }
 
@@ -1168,24 +1468,48 @@
       if (e.key === 'Escape') closeLightbox();
     });
 
+    // ITIM Media Switcher (Demo Video vs OCR Video)
+    function switchItimMedia(type) {
+      const demo = document.getElementById('itim-video-demo');
+      const ocr = document.getElementById('itim-video-ocr');
+      const btnDemo = document.getElementById('btn-itim-demo');
+      const btnOcr = document.getElementById('btn-itim-ocr');
+      
+      if (type === 'demo') {
+        ocr.pause();
+        ocr.classList.add('hidden');
+        demo.classList.remove('hidden');
+        demo.play();
+        
+        btnDemo.className = "px-2.5 py-1 text-[11px] font-mono rounded-lg bg-indigo-600 text-white shadow-xs transition";
+        btnOcr.className = "px-2.5 py-1 text-[11px] font-mono rounded-lg bg-white text-slate-600 hover:text-slate-900 border border-slate-200 transition";
+      } else {
+        demo.pause();
+        demo.classList.add('hidden');
+        ocr.classList.remove('hidden');
+        ocr.play();
+        
+        btnOcr.className = "px-2.5 py-1 text-[11px] font-mono rounded-lg bg-indigo-600 text-white shadow-xs transition";
+        btnDemo.className = "px-2.5 py-1 text-[11px] font-mono rounded-lg bg-white text-slate-600 hover:text-slate-900 border border-slate-200 transition";
+      }
+    }
+
     // Catalog Filtering
     function filterCatalog(category) {
       const items = document.querySelectorAll('.catalog-item');
       const buttons = document.querySelectorAll('.filter-btn');
 
-      // Update button active states
       buttons.forEach(btn => {
-        btn.classList.remove('bg-indigo-600', 'text-white', 'border-indigo-500');
-        btn.classList.add('bg-slate-900', 'text-slate-400', 'border-white/5');
+        btn.classList.remove('bg-indigo-600', 'text-white', 'border-indigo-600', 'shadow-xs');
+        btn.classList.add('bg-white', 'text-slate-600', 'border-slate-200');
       });
 
       const activeBtn = document.getElementById('btn-filter-' + category);
       if (activeBtn) {
-        activeBtn.classList.remove('bg-slate-900', 'text-slate-400', 'border-white/5');
-        activeBtn.classList.add('bg-indigo-600', 'text-white', 'border-indigo-500');
+        activeBtn.classList.remove('bg-white', 'text-slate-600', 'border-slate-200');
+        activeBtn.classList.add('bg-indigo-600', 'text-white', 'border-indigo-600', 'shadow-xs');
       }
 
-      // Filter cards
       items.forEach(item => {
         const itemCat = item.getAttribute('data-category');
         if (category === 'all' || itemCat === category) {
@@ -1195,6 +1519,336 @@
         }
       });
     }
+
+    // =========================================================
+    // BILINGUAL TRANSLATION ENGINE (FR / EN)
+    // =========================================================
+    let currentLang = localStorage.getItem('site_lang') || 'fr';
+
+    const translations = {
+      fr: {
+        nav_role: "Génie Mathématiques • GM5",
+        nav_featured: "5 Projets Phares",
+        nav_catalog: "Catalogue",
+        nav_skills: "Compétences",
+        nav_education: "Formation",
+        nav_contact: "Contact",
+        nav_btn_contact: "Me contacter",
+        hero_banner: "À la recherche d'un stage de fin d'études de 6 mois à partir du 4 mai 2027",
+        hero_subtitle: "Élève ingénieur en Génie Mathématiques en cinquième année GM5 — <span class='text-slate-900 font-semibold'>INSA Rouen Normandie</span>",
+        hero_desc: "Passionné par la convergence entre <strong class='text-slate-900 font-semibold'>statistiques mathématiques</strong>, <strong class='text-slate-900 font-semibold'>machine learning</strong> et <strong class='text-slate-900 font-semibold'>recherche opérationnelle</strong>. De la conception d'architectures d'IA multimodales (OCR manuscrit LaTeX & tuteur intelligent) à la prévision stochastique de stocks (Université Koç), aux modèles de pathfinding heuristique A* et à l'analyse de données radar EGMS, je développe des solutions prédictives et computationnelles robustes.",
+        metric_exchange: "Échange 2026",
+        metric_projects: "Phares Curatés",
+        btn_explore_featured: "Explorer les 5 Projets Phares",
+        profile_card_role: "Élève Ingénieur GM5",
+        profile_mobility: "🌍 Mobile Monde",
+        profile_insa: "🎓 INSA Rouen (GM5)",
+        featured_badge: "Sélection Curatée & Éprouvée",
+        featured_title: "Les 5 Projets Phares",
+        featured_subtitle: "Projets majeurs associant intelligence artificielle, interfaces utilisateur intelligentes (IUI), machine learning avec pathfinding A*, traitement de données radar EGMS, séries temporelles avec recherche opérationnelle et clustering de données médicales.",
+        featured_reports_hint: "Rapports scientifiques complets & code source",
+        
+        // P1 ITIM
+        p1_domain: "🤖 Intelligence Artificielle & IUI",
+        p1_context: "Projet 1 • Université Koç",
+        p1_title: "ITIM — Système de Tutorat Intelligent de Mathématiques",
+        p1_desc: "Plateforme d'apprentissage intelligente combinant un <strong>canvas d'écriture manuscrite infini</strong>, une <strong>transcription VLM en LaTeX temps réel</strong> (&lt; 200 ms), un <strong>moteur de calcul symbolique formel (SymPy)</strong> et un <strong>agent tuteur adaptatif</strong> inspiré de l'architecture cognitive ACT-R.",
+        p1_tag_rt: "Inférence Temps Réel (<200ms)",
+        p1_bullet1: "<strong>Reconnaissance OCR & VLM Multimodale :</strong> Numérisation instantanée d'expressions mathématiques manuscrites complexes converties en syntaxe formelle LaTeX.",
+        p1_bullet2: "<strong>Calcul Symbolique & Validation Pas-à-Pas :</strong> Évaluation formelle étape par étape via SymPy pour vérifier la rigueur du raisonnement sans révéler la solution.",
+        p1_bullet3: "<strong>Diagnostic Cognitif & Buggy Rules :</strong> Détection active des règles erronées récurrentes chez l'élève et génération d'indices adaptés à la charge cognitive.",
+        p1_btn_report: "Rapport ITIM (PDF)",
+        video_demo_label: "Démonstration Vidéo",
+        p1_tab_demo: "Interface & Tuteur",
+        p1_tab_ocr: "Reconnaissance OCR",
+        
+        // P2 Satellite
+        p2_domain: "🛰️ Machine Learning & Navigation Autonome",
+        p2_context: "Projet 2 • INSA Rouen (GM4)",
+        p2_title: "Simulation Satellite & Trajectoire Autonome",
+        p2_desc: "Conception et développement en <strong>Java</strong> d'un environnement de <strong>simulation dynamique spatiale</strong> et de <strong>planification autonome de trajectoires</strong> par <strong>algorithme heuristique A*</strong> sous contraintes d'évitement d'obstacles et d'optimisation énergétique.",
+        p2_bullet1: "<strong>Optimisation de Chemin par A* :</strong> Fonction de coût multi-objectifs pondérée $f(n) = \\alpha \\cdot d(n) + \\beta \\cdot c(n) + \\gamma \\cdot p(n)$ conciliant distance, dépense énergétique et pénalité de risque.",
+        p2_bullet2: "<strong>Modélisation de l'Espace 2D :</strong> Discrétisation de l'espace, détection géométrique des risques de collision avec corps célestes et débris orbitaux en temps réel.",
+        p2_bullet3: "<strong>Génie Logiciel Robuste :</strong> Architecture logicielle modulaire découplant le moteur physique, le système de communication réseau et l'interface de visualisation.",
+        p2_btn_report: "Rapport Simulation Satellite (PDF)",
+        p2_video_label: "Simulation Orbitale en Temps Réel",
+
+        // P3 EGMS
+        p3_domain: "🌍 Télédétection Radar & Analyse Spatio-Temporelle",
+        p3_context: "Projet 3 • INSA Rouen (GM4)",
+        p3_title: "Étude du lien entre assèchement du sol et hauteur du sol en Europe",
+        p3_desc: "Étude statistique spatio-temporelle en <strong>R</strong> du couplage physique entre le <strong>retrait-gonflement des argiles</strong> mesuré à l'échelle millimétrique par le service européen <strong>EGMS</strong> (European Ground Motion Service) et le <strong>déficit de stock d'eau souterraine</strong> issu de la mission satellitaire <strong>GRACE</strong> (TWS).",
+        p3_bullet1: "<strong>Exploitation de Données Massives EGMS :</strong> Filtrage géométrique et traitement statistique de millions de points de déplacement vertical du sol acquis par les satellites Sentinel-1.",
+        p3_bullet2: "<strong>Estimation du Déphasage Temporel :</strong> Calcul de fonctions d'inter-corrélation temporelle démontrant un retard caractéristique de 1 à 2 mois entre le pic de déficit hydrique et l'affaissement mécanique du sol.",
+        p3_bullet3: "<strong>Harmonisation Temporelle & Spatiale :</strong> Rééchantillonnage temporel mensuel et projection spatiale pour aligner les résolutions spatiales hétérogènes d'EGMS et de GRACE.",
+        p3_btn_report: "Rapport d'Étude MSRO (PDF)",
+
+        // P4 KOC
+        p4_domain: "📈 Séries Temporelles & Recherche Opérationnelle",
+        p4_context: "Projet 4 • Université Koç",
+        p4_title: "Forecasting des Ventes & Optimisation de Stocks (Newsvendor)",
+        p4_desc: "Pipeline quantitatif articulé en deux étapes : <strong>prévision statistique de séries temporelles</strong> (Régression OLS saisonnière, lags autorégressifs, Random Forest) puis <strong>décision prescriptive stochastique</strong> via le modèle du Newsvendor pour minimiser les coûts espérés sous incertitude de la demande.",
+        p4_bullet1: "<strong>Volumétrie & Benchmark Prédictif :</strong> Analyse de 108 mois d'historique de ventes automobiles US avec split temporel strict (test set 1967-1968). L'OLS saisonnière atteint un RMSE de 1 954 unités et le Random Forest un MAPE de 9.99%.",
+        p4_bullet2: "<strong>Importance des Variables Autorégressives :</strong> Identification formelle du terme saisonnier $y_{t-12}$ comme prédicteur dominant (coefficient 0.68 en OLS, feature importance majeure en Random Forest).",
+        p4_bullet3: "<strong>Prise de Décision Opérationnelle Optimale :</strong> Détermination du stock mensuel optimal sous ratio critique de coût et analyse de sensibilité continue entre risque de rupture et coût de stockage.",
+        p4_btn_report: "Rapport Data Science Koç (PDF)",
+        p4_note: "11 pages • Prof. Fikri Karaesmen",
+
+        // P5 Biomedical
+        p5_domain: "🧬 Machine Learning Non Supervisé & Santé",
+        p5_context: "Projet 5 • INSA Rouen (GM3)",
+        p5_title: "Classification Non Supervisée & Clustering de Données de Santé",
+        p5_desc: "Analyse exploratoire et segmentation d'une cohorte clinique en <strong>R</strong> : <strong>Analyse en Composantes Principales (ACP)</strong> normée et non-normée pour la réduction de dimension, suivie d'une <strong>Classification Ascendante Hiérarchique (CAH / critère de Ward)</strong> pour identifier des profils métaboliques distincts.",
+        p5_bullet1: "<strong>Décomposition Spectrale Rigoureuse :</strong> Diagonalisation de la matrice de corrélation, analyse de l'éboulis des valeurs propres et projection sur les axes factoriels principaux capturant la majorité de l'inertie totale.",
+        p5_bullet2: "<strong>Segmentation Clinique par CAH :</strong> Agrégation selon le critère de variance minimale de Ward et découpage objectif du dendrogramme basé sur le saut d'inertie inter-classes.",
+        p5_bullet3: "<strong>Interprétation Multivariée des Corrélations :</strong> Projection des variables cliniques (indices métaboliques, mensurations) dans le cercle des corrélations pour caractériser chaque sous-groupe de patients sans a priori.",
+        p5_btn_report: "Rapport d'Analyse (PDF)",
+
+        // UI & Common
+        btn_github: "Code GitHub",
+        hint_click_zoom: "Cliquer sur une miniature pour agrandir en plein écran",
+        hint_zoom: "Cliquer pour agrandir",
+
+        // Catalog
+        catalog_badge: "Autres Travaux Académiques & R&D",
+        catalog_title: "Catalogue de Projets",
+        catalog_subtitle: "Calcul haute performance (HPC), optimisation continue, intégrateurs symplectiques et algorithmique système.",
+        filter_all: "Tous (6)",
+        filter_hpc: "Calcul & HPC (4)",
+        filter_software: "Génie Logiciel (2)",
+        cat_code: "Code",
+        cat_report: "Rapport PDF",
+        cat_c1_pill: "HPC & Numérique",
+        cat_c1_title: "Résolveur Gauss-Seidel Optimisé",
+        cat_c1_desc: "Implémentation en Fortran 90 et Python pour la résolution de systèmes linéaires creux issus de la discrétisation de l'équation de Poisson.",
+        cat_c2_pill: "Physique Numérique",
+        cat_c2_title: "Intégrateurs Verlet vs Runge-Kutta",
+        cat_c2_desc: "Étude comparative de la conservation de l'énergie et de la symplecticité sur les systèmes hamiltoniens dynamiques à temps long.",
+        cat_c2_tag2: "EDO Symplectiques",
+        cat_c3_pill: "Mécanique Numérique",
+        cat_c3_title: "Analyse Statique & Modale de Treillis",
+        cat_c3_desc: "Modélisation matricielle de la rigidité globale par éléments finis barres, calcul des contraintes et déformées d'un pont sous sollicitations.",
+        cat_c3_tag2: "Algèbre Creuse",
+        cat_c4_pill: "Algèbre Numérique",
+        cat_c4_title: "Factorisations LU & Cholesky",
+        cat_c4_desc: "Développement des algorithmes de factorisation directe sans pivotage et avec pivot partiel, étude de stabilité numérique et erreurs d'arrondi.",
+        cat_c4_tag2: "Analyse Matricielle",
+        cat_c5_pill: "Système & Mémoire",
+        cat_c5_title: "Dictionnaire Indexé & Arbres en C",
+        cat_c5_desc: "Moteur de recherche lexicographique optimisé en langage C via tables de hachage et arbres préfixes (Trie) avec gestion manuelle de la mémoire.",
+        cat_c5_tag3: "Trie / Hachage",
+        cat_c6_pill: "Génie Logiciel",
+        cat_c6_title: "Jeu des Chiffres Croisés (Java Swing)",
+        cat_c6_desc: "Application de jeu mathématique interactif selon le patron de conception MVC, gestion d'événements asynchrones et validation d'équations.",
+
+        // Skills
+        skills_badge: "Boîte à Outils d'Ingénieur",
+        skills_title: "Compétences & Technologies",
+        skills_subtitle: "Un profil d'ingénieur en Génie Mathématiques combinant machine learning, optimisation mathématique, modélisation statistique avancée et développement logiciel.",
+        sk1_title: "Machine Learning & IA Appliquée",
+        sk2_title: "Séries Temporelles & R.O.",
+        sk3_title: "Statistique & Modélisation",
+        sk4_title: "Calcul Scientifique & Software",
+
+        // Education
+        edu_headline: "Diplôme d'Ingénieur — Département Génie Mathématique (GM)",
+        edu_badge_years: "2022 — 2027 (Diplôme d'Ingénieur CTI)",
+        edu_gm5_title: "GM5 — Cinquième Année de Spécialisation en Génie Mathématiques",
+        badge_current: "En cours",
+        edu_gm5_desc: "Machine Learning avancé, régression non-linéaire (Gauss-Newton, Bootstrap), méta-apprentissage, classification médicale par SVM, recherche d'un stage de fin d'études de 6 mois dès le 4 mai 2027.",
+        edu_koc_title: "Université Koç (Istanbul) — Échange Académique International",
+        edu_koc_desc: "Semestre d'études d'excellence en anglais : Data Science for Operational Decision Making (INDR 422 - Forecasting & Newsvendor), Intelligent User Interfaces (COMP 437 - Projet ITIM), Machine Learning (multiclass classification from scratch), Financial Engineering (INDR 473 - Modélisation stochastique).",
+        edu_gm4_title: "GM4 — Modélisation Stochastique, Optimisation Convexe & Systèmes Dynamiques",
+        edu_gm4_desc: "Optimisation continue (conditions KKT, algorithme d'Uzawa), processus stochastiques, séries temporelles et données radar EGMS/GRACE (projet MSRO), algorithmes heuristiques A* et programmation orientée objet en Java.",
+        edu_gm3_title: "GM3 — Mathématiques Appliquées & Analyse Numérique Matricielle",
+        edu_gm3_desc: "Statistique multivariée exploratoire (ACP normée/non-normée, CAH de Ward), résolution de systèmes linéaires creux (Gauss-Seidel, Cholesky), calcul de valeurs propres (puissance itérée), structures de données et gestion mémoire en C.",
+        edu_stpi_title: "STPI — Classes Préparatoires Intégrées INSA Rouen (2022-2024)",
+        edu_stpi_desc: "Formation scientifique fondamentale : analyse mathématique, algèbre linéaire, probabilités, physique générale, algorithmique et programmation impérative.",
+
+        // Contact
+        contact_badge: "Disponibilité Immédiate pour Entretien",
+        contact_title: "Opportunité de Stage de Fin d'Études",
+        contact_desc: "Actuellement élève ingénieur en <strong>cinquième année GM5</strong> je suis à la recherche d'un <strong>stage de fin d'études de 6 mois à partir du 4 mai 2027</strong> en Data Science, Machine Learning, IA ou Recherche Opérationnelle. Mobilité totale en <strong>France et à l'international</strong>.",
+        contact_email_label: "Email direct",
+        contact_mobility: "Mobilité : Partout en France & à l'International",
+        contact_dates: "Durée : 6 mois (Dès le 4 mai 2027)",
+        footer_top: "Haut de page ↑"
+      },
+      en: {
+        nav_role: "Mathematical Engineering • 5th Year (GM5)",
+        nav_featured: "5 Key Projects",
+        nav_catalog: "Catalog",
+        nav_skills: "Skills",
+        nav_education: "Education",
+        nav_contact: "Contact",
+        nav_btn_contact: "Contact Me",
+        hero_banner: "Seeking a 6-month end-of-studies internship starting May 4, 2027",
+        hero_subtitle: "5th-year Engineering Student in Mathematical Engineering (GM5) — <span class='text-slate-900 font-semibold'>INSA Rouen Normandie</span>",
+        hero_desc: "Passionate about the convergence of <strong class='text-slate-900 font-semibold'>mathematical statistics</strong>, <strong class='text-slate-900 font-semibold'>machine learning</strong>, and <strong class='text-slate-900 font-semibold'>operations research</strong>. From multimodal AI architectures (real-time handwriting-to-LaTeX OCR & cognitive tutoring) to stochastic inventory forecasting (Koç University), heuristic A* pathfinding, and satellite EGMS radar analytics, I build rigorous predictive and computational systems.",
+        metric_exchange: "Exchange 2026",
+        metric_projects: "Curated Projects",
+        btn_explore_featured: "Explore the 5 Key Projects",
+        profile_card_role: "Graduate Student (GM5)",
+        profile_mobility: "🌍 Worldwide Mobility",
+        profile_insa: "🎓 INSA Rouen (GM5)",
+        featured_badge: "Curated & Proven Selection",
+        featured_title: "5 Featured Projects",
+        featured_subtitle: "Major projects combining multimodal artificial intelligence, intelligent user interfaces (IUI), A* heuristic machine learning, EGMS radar remote sensing, operational time-series forecasting, and healthcare unsupervised clustering.",
+        featured_reports_hint: "Full scientific papers & source code included",
+        
+        // P1 ITIM
+        p1_domain: "🤖 Artificial Intelligence & IUI",
+        p1_context: "Project 1 • Koç University",
+        p1_title: "ITIM — Intelligent Tutoring Interface for Mathematics",
+        p1_desc: "Rich educational AI platform combining an <strong>infinite digital handwriting canvas</strong>, <strong>real-time VLM handwriting-to-LaTeX transcription</strong> (&lt; 200 ms), <strong>formal symbolic mathematical verification (SymPy)</strong>, and an <strong>adaptive cognitive tutor</strong> powered by Anderson's ACT-R cognitive architecture.",
+        p1_tag_rt: "Real-Time Inference (<200ms)",
+        p1_bullet1: "<strong>Multimodal OCR & VLM Recognition :</strong> Real-time visual parsing of complex handwritten math expressions into clean LaTeX code.",
+        p1_bullet2: "<strong>Symbolic Computation & Step-by-Step Validation :</strong> Rigorous formal verification via SymPy CAS to inspect reasoning without leaking answers.",
+        p1_bullet3: "<strong>Cognitive Monitoring & Buggy Rules :</strong> Active detection of student misconceptions and adaptive cognitive-load scaffolding.",
+        p1_btn_report: "ITIM Final Report (PDF)",
+        video_demo_label: "Video Demonstration",
+        p1_tab_demo: "Interface & Tutor",
+        p1_tab_ocr: "OCR Recognition",
+        
+        // P2 Satellite
+        p2_domain: "🛰️ Machine Learning & Autonomous Navigation",
+        p2_context: "Project 2 • INSA Rouen (GM4)",
+        p2_title: "Satellite Trajectory Simulation & Autonomous Avoidance",
+        p2_desc: "Design and implementation in <strong>Java</strong> of an orbital dynamics simulation environment featuring <strong>autonomous trajectory planning</strong> using the <strong>A* heuristic algorithm</strong> under multi-obstacle avoidance and fuel minimization constraints.",
+        p2_bullet1: "<strong>A* Heuristic Path Optimization :</strong> Weighted multi-objective cost function $f(n) = \\alpha \\cdot d(n) + \\beta \\cdot c(n) + \\gamma \\cdot p(n)$ balancing distance, propellant consumption, and risk penalties.",
+        p2_bullet2: "<strong>2D Space Modeling :</strong> Spatial discretization, real-time geometric collision cone detection with celestial bodies and orbital debris.",
+        p2_bullet3: "<strong>Robust Software Architecture :</strong> Modular OOP Java design isolating the dynamic physics model, networking communication, and visual display engine.",
+        p2_btn_report: "Satellite Report (PDF)",
+        p2_video_label: "Real-Time Orbital Simulation",
+
+        // P3 EGMS
+        p3_domain: "🌍 Radar Remote Sensing & Spatio-Temporal Analysis",
+        p3_context: "Project 3 • INSA Rouen (GM4)",
+        p3_title: "Study of the Link Between Soil Drought and Ground Height in Europe",
+        p3_desc: "Spatio-temporal statistical study in <strong>R</strong> analyzing the physical correlation between <strong>clay shrinkage-swelling subsidence</strong> measured with millimeter precision by <strong>EGMS</strong> (European Ground Motion Service) and <strong>groundwater storage anomalies</strong> from NASA/DLR <strong>GRACE</strong> satellite gravimetry (TWS).",
+        p3_bullet1: "<strong>Massive EGMS Big Data Processing :</strong> Spatial filtering and time-series extraction from millions of Sentinel-1 radar displacement points across Europe.",
+        p3_bullet2: "<strong>Time Lag & Phase Delay Modeling :</strong> Cross-correlation analysis revealing a characteristic 1-to-2 month latency between groundwater storage deficit and mechanical surface subsidence.",
+        p3_bullet3: "<strong>Spatio-Temporal Harmonization :</strong> Monthly temporal resampling and geodetic coordinate reprojection between disparate spatial grids.",
+        p3_btn_report: "MSRO Research Report (PDF)",
+
+        // P4 KOC
+        p4_domain: "📈 Time Series & Operations Research",
+        p4_context: "Project 4 • Koç University",
+        p4_title: "Monthly Auto Sales Forecasting & Newsvendor Inventory Optimization",
+        p4_desc: "Two-stage quantitative pipeline bridging <strong>predictive time series analytics</strong> (Seasonal OLS regression, autoregressive lags, Random Forest) and <strong>prescriptive operational optimization</strong> using the stochastic Newsvendor framework to minimize expected shortage and overage costs.",
+        p4_bullet1: "<strong>Benchmark & Temporal Validation :</strong> Rigorous evaluation on 108 monthly US car sales with temporal hold-out split (1967-1968). Seasonal OLS reaches RMSE of 1,954 units; Random Forest achieves 9.99% test MAPE.",
+        p4_bullet2: "<strong>Autoregressive Feature Importance :</strong> Proved dominance of the $y_{t-12}$ seasonal lag (OLS coefficient 0.68, dominant tree split in Random Forest).",
+        p4_bullet3: "<strong>Stochastic Inventory Decisions :</strong> Optimal monthly stock derivation under critical fractile cost ratios with continuous sensitivity analysis.",
+        p4_btn_report: "Koç Data Science Report (PDF)",
+        p4_note: "11 pages • Supervised by Prof. Fikri Karaesmen",
+
+        // P5 Biomedical
+        p5_domain: "🧬 Unsupervised Machine Learning & Healthcare Data",
+        p5_context: "Project 5 • INSA Rouen (GM3)",
+        p5_title: "Unsupervised Clustering & Dimensionality Reduction on Clinical Data",
+        p5_desc: "Exploratory multivariate statistical analysis in <strong>R</strong> : <strong>Principal Component Analysis (PCA)</strong> (normalized and unnormalized) for dimensionality reduction, followed by <strong>Hierarchical Ascendant Clustering (HAC / Ward's criterion)</strong> to uncover distinct metabolic patient phenotypes.",
+        p5_bullet1: "<strong>Spectral Matrix Decomposition :</strong> Correlation matrix diagonalization, Kaiser rule screening, and factorial plane projection capturing dominant cumulative variance.",
+        p5_bullet2: "<strong>Ward's Hierarchical Clustering :</strong> Minimal variance agglomeration with objective dendrogram pruning at optimal inter-cluster inertia drop points.",
+        p5_bullet3: "<strong>Multivariate Feature Interpretation :</strong> Correlation circle mapping of clinical parameters (metabolic indices, physical metrics) for unsupervised profiling.",
+        p5_btn_report: "Biomedical Report (PDF)",
+
+        // UI & Common
+        btn_github: "GitHub Code",
+        hint_click_zoom: "Click on any thumbnail to enlarge in full screen",
+        hint_zoom: "Click to zoom",
+
+        // Catalog
+        catalog_badge: "Additional Academic & R&D Work",
+        catalog_title: "Project Catalog",
+        catalog_subtitle: "High-performance computing (HPC), continuous optimization, symplectic integrators, and systems programming.",
+        filter_all: "All (6)",
+        filter_hpc: "Computing & HPC (4)",
+        filter_software: "Software Engineering (2)",
+        cat_code: "Code",
+        cat_report: "PDF Report",
+        cat_c1_pill: "HPC & Numerical",
+        cat_c1_title: "Optimized Gauss-Seidel Solver",
+        cat_c1_desc: "High-performance implementation in Fortran 90 and Python solving sparse linear systems from Poisson PDE discretizations.",
+        cat_c2_pill: "Computational Physics",
+        cat_c2_title: "Verlet vs Runge-Kutta Integrators",
+        cat_c2_desc: "Comparative study of energy conservation and symplecticity on dynamical Hamiltonian systems over long time horizons.",
+        cat_c2_tag2: "Symplectic ODEs",
+        cat_c3_pill: "Computational Mechanics",
+        cat_c3_title: "Truss Static & Modal FE Analysis",
+        cat_c3_desc: "Global stiffness matrix modeling via bar finite elements, stress and bridge deflection computation under mechanical loading.",
+        cat_c3_tag2: "Sparse Algebra",
+        cat_c4_pill: "Numerical Algebra",
+        cat_c4_title: "LU & Cholesky Factorizations",
+        cat_c4_desc: "Implementation of direct factorization algorithms with and without partial pivoting, numerical stability and round-off error bounds.",
+        cat_c4_tag2: "Matrix Analysis",
+        cat_c5_pill: "Systems & Memory",
+        cat_c5_title: "Indexed Dictionary & Prefix Trees in C",
+        cat_c5_desc: "High-efficiency lexicographical search engine in pure C using hash tables and prefix trees (Trie) with manual memory management.",
+        cat_c5_tag3: "Trie / Hash Table",
+        cat_c6_pill: "Software Engineering",
+        cat_c6_title: "Cross-Number Puzzle Game (Java Swing)",
+        cat_c6_desc: "Interactive mathematical puzzle application built on the MVC design pattern with asynchronous event handling and equation validation.",
+
+        // Skills
+        skills_badge: "Engineering Toolset",
+        skills_title: "Skills & Technologies",
+        skills_subtitle: "A Mathematical Engineering profile bridging machine learning, mathematical optimization, advanced statistical modeling, and software engineering.",
+        sk1_title: "Machine Learning & Applied AI",
+        sk2_title: "Time Series & Operations Research",
+        sk3_title: "Statistics & Mathematical Modeling",
+        sk4_title: "Scientific Computing & Software",
+
+        // Education
+        edu_headline: "Master of Science in Engineering (Diplôme d'Ingénieur) — Mathematical Engineering",
+        edu_badge_years: "2022 — 2027 (CTI Accredited)",
+        edu_gm5_title: "GM5 — 5th Year Specialization in Mathematical Engineering",
+        badge_current: "In Progress",
+        edu_gm5_desc: "Advanced Machine Learning, non-linear regression (Gauss-Newton, Bootstrap), meta-learning, SVM clinical classification, seeking a 6-month end-of-studies internship starting May 4, 2027.",
+        edu_koc_title: "Koç University (Istanbul) — International Academic Exchange",
+        edu_koc_desc: "Intensive English curriculum : Data Science for Operational Decision Making (INDR 422 - Forecasting & Newsvendor), Intelligent User Interfaces (COMP 437 - ITIM Project), Machine Learning (multiclass classification from scratch), Financial Engineering (INDR 473 - Stochastic modeling).",
+        edu_gm4_title: "GM4 — Stochastic Modeling, Convex Optimization & Dynamic Systems",
+        edu_gm4_desc: "Continuous optimization (KKT conditions, Uzawa algorithm), stochastic processes, time series & EGMS/GRACE radar data (MSRO project), A* heuristic algorithms, advanced OOP in Java.",
+        edu_gm3_title: "GM3 — Applied Mathematics & Numerical Matrix Analysis",
+        edu_gm3_desc: "Exploratory multivariate statistics (PCA, Ward clustering), sparse linear systems solvers (Gauss-Seidel, Cholesky), spectral power iteration, data structures & memory management in C.",
+        edu_stpi_title: "STPI — Preparatory Classes (Classes Préparatoires) INSA Rouen (2022-2024)",
+        edu_stpi_desc: "Intensive core sciences : mathematical analysis, linear algebra, probability, classical physics, algorithmics and imperative programming.",
+
+        // Contact
+        contact_badge: "Immediate Availability for Interviews",
+        contact_title: "End-of-Studies Internship Opportunity",
+        contact_desc: "Currently a <strong>5th-year engineering student (GM5)</strong>, I am actively seeking a <strong>6-month end-of-studies internship starting May 4, 2027</strong> in Data Science, Machine Learning, AI, or Operations Research. Full mobility across <strong>France and Worldwide</strong>.",
+        contact_email_label: "Direct Email",
+        contact_mobility: "Mobility : France & Worldwide",
+        contact_dates: "Duration : 6 months (Starting May 4, 2027)",
+        footer_top: "Back to top ↑"
+      }
+    };
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('site_lang', lang);
+      document.getElementById('lang-label').innerText = lang === 'fr' ? 'EN' : 'FR';
+      document.documentElement.lang = lang;
+
+      const dict = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
+      });
+      lucide.createIcons();
+    }
+
+    function toggleLanguage() {
+      const nextLang = currentLang === 'fr' ? 'en' : 'fr';
+      applyLanguage(nextLang);
+    }
+
+    // Apply saved language on load
+    document.addEventListener('DOMContentLoaded', () => {
+      applyLanguage(currentLang);
+    });
   </script>
 
 </body>
