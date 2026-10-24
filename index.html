@@ -181,14 +181,14 @@
           </button>
 
           <a href="https://www.linkedin.com/in/amr-zaki-salih" target="_blank" rel="noopener noreferrer"
-             class="p-2 rounded-xl bg-white hover:bg-slate-50 text-slate-600 hover:text-sky-600 border border-slate-200 shadow-xs hover:border-sky-300 transition"
+             class="p-2 rounded-xl bg-white hover:bg-slate-50 text-slate-600 hover:text-sky-600 border border-slate-200 shadow-xs hover:border-sky-300 transition flex items-center justify-center"
              title="LinkedIn (Amr ZAKI SALIH)">
-            <i data-lucide="linkedin" class="w-4 h-4"></i>
+            <img src="assets/images/linkedin.png" alt="LinkedIn" class="w-4 h-4 object-contain">
           </a>
           <a href="https://github.com/amrzakizakisalih-alt" target="_blank" rel="noopener noreferrer" 
-             class="p-2 rounded-xl bg-white hover:bg-slate-50 text-slate-600 hover:text-slate-900 border border-slate-200 shadow-xs hover:border-slate-400 transition"
+             class="p-2 rounded-xl bg-white hover:bg-slate-50 text-slate-600 hover:text-slate-900 border border-slate-200 shadow-xs hover:border-slate-400 transition flex items-center justify-center"
              title="GitHub (@amrzakizakisalih-alt)">
-            <i data-lucide="github" class="w-4 h-4"></i>
+            <img src="assets/images/github.png" alt="GitHub" class="w-4 h-4 object-contain">
           </a>
 
           <a href="#contact" 
@@ -257,12 +257,12 @@
               </a>
               <a href="https://www.linkedin.com/in/amr-zaki-salih" target="_blank" rel="noopener noreferrer"
                  class="px-4 py-2.5 rounded-xl bg-white border border-slate-200 text-sky-700 hover:text-sky-800 text-xs font-medium hover:border-sky-300 hover:bg-sky-50 shadow-xs transition-all flex items-center gap-2">
-                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                <img src="assets/images/linkedin.png" alt="LinkedIn" class="w-4 h-4 object-contain">
                 <span>LinkedIn</span>
               </a>
               <a href="https://github.com/amrzakizakisalih-alt" target="_blank" rel="noopener noreferrer"
                  class="px-4 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-slate-900 text-xs font-medium hover:border-slate-400 hover:bg-slate-50 shadow-xs transition-all flex items-center gap-2">
-                <i data-lucide="github" class="w-4 h-4"></i>
+                <img src="assets/images/github.png" alt="GitHub" class="w-4 h-4 object-contain">
                 <span>GitHub</span>
               </a>
               <button onclick="copyEmail()" id="btn-copy-email"
@@ -431,17 +431,32 @@
 
                   <!-- Screenshot Thumbnails -->
                   <div class="grid grid-cols-3 gap-2 pt-1">
-                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-indigo-400 hover:shadow-md transition group/thumb"
+                    <div class="space-y-1.5 cursor-pointer group/thumb"
                          onclick="openLightbox('assets/images/ITIM/itim-ui-full.png', 'ITIM : Vue complète du Canvas d\'écriture et de l\'interface de résolution')">
-                      <img src="assets/images/ITIM/itim-ui-full.png" alt="ITIM Canvas complet" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video hover:border-indigo-400 hover:shadow-md transition">
+                        <img src="assets/images/ITIM/itim-ui-full.png" alt="ITIM Canvas complet" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-600 font-medium text-center truncate group-hover/thumb:text-indigo-600 transition" data-i18n="p1_thumb1">
+                        Canvas & Interface
+                      </div>
                     </div>
-                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-indigo-400 hover:shadow-md transition group/thumb"
-                         onclick="openLightbox('assets/images/ITIM/itim-ui-handwriting.png', 'ITIM : Écriture manuscrite mathématique et transcription instantanée')">
-                      <img src="assets/images/ITIM/itim-ui-handwriting.png" alt="ITIM HandWriting" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    <div class="space-y-1.5 cursor-pointer group/thumb"
+                         onclick="openLightbox('assets/images/ITIM/itim-ui-handwriting.png', 'ITIM : Écriture manuscrite mathématique et transcription instantanée en syntaxe LaTeX')">
+                      <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video hover:border-indigo-400 hover:shadow-md transition">
+                        <img src="assets/images/ITIM/itim-ui-handwriting.png" alt="ITIM HandWriting" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-600 font-medium text-center truncate group-hover/thumb:text-indigo-600 transition" data-i18n="p1_thumb2">
+                        Écriture & OCR
+                      </div>
                     </div>
-                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-indigo-400 hover:shadow-md transition group/thumb"
-                         onclick="openLightbox('assets/images/ITIM/itim-ui-chat.png', 'ITIM : Agent Conversationnel et Détection Cognitive ACT-R')">
-                      <img src="assets/images/ITIM/itim-ui-chat.png" alt="ITIM Chat & ACT-R" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    <div class="space-y-1.5 cursor-pointer group/thumb"
+                         onclick="openLightbox('assets/images/ITIM/itim-ui-chat.png', 'ITIM : Tuteur adaptatif intelligent et détection cognitive ACT-R')">
+                      <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video hover:border-indigo-400 hover:shadow-md transition">
+                        <img src="assets/images/ITIM/itim-ui-chat.png" alt="ITIM Chat & ACT-R" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-600 font-medium text-center truncate group-hover/thumb:text-indigo-600 transition" data-i18n="p1_thumb3">
+                        Tuteur ACT-R
+                      </div>
                     </div>
                   </div>
                   <div class="text-[10px] text-slate-500 font-mono text-right" data-i18n="hint_click_zoom">
@@ -543,14 +558,24 @@
                   </div>
 
                   <!-- Screenshots Thumbnails -->
-                  <div class="grid grid-cols-2 gap-2 pt-1">
-                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-sky-400 hover:shadow-md transition group/thumb"
-                         onclick="openLightbox('assets/images/Satellite/satellite-ui-main.png', 'Simulation Satellite : Interface graphique et tracé orbital 2D')">
-                      <img src="assets/images/Satellite/satellite-ui-main.png" alt="Interface Satellite" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                  <div class="grid grid-cols-2 gap-3 pt-1">
+                    <div class="space-y-1.5 cursor-pointer group/thumb"
+                         onclick="openLightbox('assets/images/Satellite/satellite-ui-main.png', 'Simulation Satellite : Interface graphique et tracé orbital 2D avec évitement A*')">
+                      <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video hover:border-sky-400 hover:shadow-md transition">
+                        <img src="assets/images/Satellite/satellite-ui-main.png" alt="Interface Satellite 2D" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-600 font-medium text-center truncate group-hover/thumb:text-sky-600 transition" data-i18n="p2_thumb1">
+                        Tracé Orbital & A*
+                      </div>
                     </div>
-                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-sky-400 hover:shadow-md transition group/thumb"
-                         onclick="openLightbox('assets/images/Satellite/satellite-ui-panel.png', 'Simulation Satellite : Panneau de contrôle et paramètres physiques')">
-                      <img src="assets/images/Satellite/satellite-ui-panel.png" alt="Panneau Satellite" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    <div class="space-y-1.5 cursor-pointer group/thumb"
+                         onclick="openLightbox('assets/images/Satellite/satellite-ui-panel.png', 'Simulation Satellite : Panneau de contrôle et paramètres physiques orbitaux')">
+                      <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video hover:border-sky-400 hover:shadow-md transition">
+                        <img src="assets/images/Satellite/satellite-ui-panel.png" alt="Panneau de configuration physique" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-600 font-medium text-center truncate group-hover/thumb:text-sky-600 transition" data-i18n="p2_thumb2">
+                        Physique & Contrôle
+                      </div>
                     </div>
                   </div>
                   <div class="text-[10px] text-slate-500 font-mono text-right" data-i18n="hint_click_zoom">
@@ -636,27 +661,48 @@
                 <!-- Right: Gallery of EGMS & TWS plots -->
                 <div class="lg:col-span-6 space-y-3">
                   
-                  <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-200 aspect-video relative cursor-pointer group/main shadow-xs hover:border-emerald-300 transition"
-                       onclick="openLightbox('assets/images/EGMS CEREMA/cerema-timeseries-tws.png', 'EGMS x GRACE : Séries temporelles TWS et Déplacement vertical millimétrique (Caen 2019-2023)')">
-                    <img src="assets/images/EGMS CEREMA/cerema-timeseries-tws.png" alt="Série temporelle GRACE vs EGMS" class="w-full h-full object-contain p-2 group-hover/main:scale-105 transition duration-300">
-                    <div class="absolute bottom-2 right-2 bg-white/95 text-[10px] font-mono text-emerald-800 px-2 py-1 rounded border border-slate-200 shadow-sm flex items-center gap-1 font-medium">
-                      <i data-lucide="zoom-in" class="w-3 h-3 text-emerald-600"></i> <span data-i18n="hint_zoom">Cliquer pour agrandir</span>
+                  <div class="space-y-1.5">
+                    <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-200 aspect-video relative cursor-pointer group/main shadow-xs hover:border-emerald-300 transition"
+                         onclick="openLightbox('assets/images/EGMS CEREMA/cerema-timeseries-tws.png', 'EGMS x GRACE : Confrontation des dynamiques temporelles (Signal TWS vs Vitesse moyenne de subsidence EGMS à Caen, 2019-2023)')">
+                      <img src="assets/images/EGMS CEREMA/cerema-timeseries-tws.png" alt="Série temporelle GRACE vs EGMS" class="w-full h-full object-contain p-2 group-hover/main:scale-105 transition duration-300">
+                      <div class="absolute bottom-2 right-2 bg-white/95 text-[10px] font-mono text-emerald-800 px-2 py-1 rounded border border-slate-200 shadow-sm flex items-center gap-1 font-medium">
+                        <i data-lucide="zoom-in" class="w-3 h-3 text-emerald-600"></i> <span data-i18n="hint_zoom">Cliquer pour agrandir</span>
+                      </div>
+                    </div>
+                    <div class="text-[11px] font-mono text-emerald-900 font-semibold flex items-center justify-between px-1">
+                      <span data-i18n="p3_main_caption">Confrontation TWS (GRACE) vs Déplacement (EGMS)</span>
+                      <span class="text-slate-400 font-normal">Caen (2019-2023)</span>
                     </div>
                   </div>
 
                   <!-- Sub-gallery thumbnails -->
                   <div class="grid grid-cols-3 gap-2 pt-1">
-                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-emerald-400 hover:shadow-md transition group/thumb"
-                         onclick="openLightbox('assets/images/EGMS CEREMA/cerema-map-insar.png', 'EGMS : Cartographie radar des vitesses de déformation du sol')">
-                      <img src="assets/images/EGMS CEREMA/cerema-map-insar.png" alt="Carte EGMS" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    <div class="space-y-1.5 cursor-pointer group/thumb"
+                         onclick="openLightbox('assets/images/EGMS CEREMA/cerema-map-insar.png', 'EGMS : Superposition des 31 685 points de mesure radar dans un rayon de 50 km autour de Caen (Méthode distance euclidienne)')">
+                      <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video hover:border-emerald-400 hover:shadow-md transition">
+                        <img src="assets/images/EGMS CEREMA/cerema-map-insar.png" alt="Points EGMS 50 km" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-600 font-medium text-center truncate group-hover/thumb:text-emerald-700 transition" data-i18n="p3_thumb1">
+                        Points EGMS (50 km)
+                      </div>
                     </div>
-                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-emerald-400 hover:shadow-md transition group/thumb"
-                         onclick="openLightbox('assets/images/EGMS CEREMA/cerema-multisite-analysis.png', 'EGMS x GRACE : Analyse comparée multi-sites du déficit hydrique')">
-                      <img src="assets/images/EGMS CEREMA/cerema-multisite-analysis.png" alt="Multi-sites EGMS" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    <div class="space-y-1.5 cursor-pointer group/thumb"
+                         onclick="openLightbox('assets/images/EGMS CEREMA/cerema-multisite-analysis.png', 'GRACE x EGMS : Filtrage spatial par Bounding Box sous l\'emprise du pixel satellitaire (50 km × 50 km)')">
+                      <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video hover:border-emerald-400 hover:shadow-md transition">
+                        <img src="assets/images/EGMS CEREMA/cerema-multisite-analysis.png" alt="Filtrage Bounding Box" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-600 font-medium text-center truncate group-hover/thumb:text-emerald-700 transition" data-i18n="p3_thumb2">
+                        Filtrage Bounding Box
+                      </div>
                     </div>
-                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-emerald-400 hover:shadow-md transition group/thumb"
-                         onclick="openLightbox('assets/images/EGMS CEREMA/cerema-cross-correlation.png', 'EGMS x GRACE : Corrélation croisée et identification de la latence')">
-                      <img src="assets/images/EGMS CEREMA/cerema-cross-correlation.png" alt="Corrélation croisée" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    <div class="space-y-1.5 cursor-pointer group/thumb"
+                         onclick="openLightbox('assets/images/EGMS CEREMA/cerema-cross-correlation.png', 'GRACE : Évolution temporelle du stock d\'eau souterraine (TWS) à Caen de 2002 à 2023')">
+                      <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video hover:border-emerald-400 hover:shadow-md transition">
+                        <img src="assets/images/EGMS CEREMA/cerema-cross-correlation.png" alt="Signal TWS 2002-2023" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-600 font-medium text-center truncate group-hover/thumb:text-emerald-700 transition" data-i18n="p3_thumb3">
+                        Signal TWS 2002-2023
+                      </div>
                     </div>
                   </div>
                   <div class="text-[10px] text-slate-500 font-mono text-right" data-i18n="hint_click_zoom">
@@ -738,27 +784,48 @@
                 <!-- Right: Figures Showcase -->
                 <div class="lg:col-span-6 space-y-3">
                   
-                  <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-200 aspect-video relative cursor-pointer group/main shadow-xs hover:border-amber-300 transition"
-                       onclick="openLightbox('assets/images/datascience/proj_fig4_test_forecasts.png', 'Université Koç : Comparaison des prévisions sur l\'échantillon de test (1967-1968)')">
-                    <img src="assets/images/datascience/proj_fig4_test_forecasts.png" alt="Prévisions Test Set" class="w-full h-full object-contain p-2 group-hover/main:scale-105 transition duration-300">
-                    <div class="absolute bottom-2 right-2 bg-white/95 text-[10px] font-mono text-amber-800 px-2 py-1 rounded border border-slate-200 shadow-sm flex items-center gap-1 font-medium">
-                      <i data-lucide="zoom-in" class="w-3 h-3 text-amber-600"></i> <span data-i18n="hint_zoom">Cliquer pour agrandir</span>
+                  <div class="space-y-1.5">
+                    <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-200 aspect-video relative cursor-pointer group/main shadow-xs hover:border-amber-300 transition"
+                         onclick="openLightbox('assets/images/datascience/proj_fig4_test_forecasts.png', 'Université Koç : Prévisions sur l\'échantillon de test (1967-1968) — Régression OLS saisonnière et Random Forest vs Ventes réelles')">
+                      <img src="assets/images/datascience/proj_fig4_test_forecasts.png" alt="Prévisions Test Set" class="w-full h-full object-contain p-2 group-hover/main:scale-105 transition duration-300">
+                      <div class="absolute bottom-2 right-2 bg-white/95 text-[10px] font-mono text-amber-800 px-2 py-1 rounded border border-slate-200 shadow-sm flex items-center gap-1 font-medium">
+                        <i data-lucide="zoom-in" class="w-3 h-3 text-amber-600"></i> <span data-i18n="hint_zoom">Cliquer pour agrandir</span>
+                      </div>
+                    </div>
+                    <div class="text-[11px] font-mono text-amber-900 font-semibold flex items-center justify-between px-1">
+                      <span data-i18n="p4_main_caption">Prévisions Modèles vs Demande Réelle</span>
+                      <span class="text-slate-400 font-normal">Test 1967-1968</span>
                     </div>
                   </div>
 
                   <!-- Sub-gallery thumbnails -->
                   <div class="grid grid-cols-3 gap-2 pt-1">
-                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-amber-400 hover:shadow-md transition group/thumb"
-                         onclick="openLightbox('assets/images/datascience/proj_fig7_newsvendor.png', 'Université Koç : Optimisation des stocks Newsvendor (Courbe Coût Espéré vs Niveau de Stock)')">
-                      <img src="assets/images/datascience/proj_fig7_newsvendor.png" alt="Newsvendor Optimization" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    <div class="space-y-1.5 cursor-pointer group/thumb"
+                         onclick="openLightbox('assets/images/datascience/proj_fig7_newsvendor.png', 'Université Koç : Optimisation des stocks Newsvendor — Niveaux de commande mensuels optimaux S* vs Demande réelle')">
+                      <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video hover:border-amber-400 hover:shadow-md transition">
+                        <img src="assets/images/datascience/proj_fig7_newsvendor.png" alt="Stock Optimal S*" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-600 font-medium text-center truncate group-hover/thumb:text-amber-700 transition" data-i18n="p4_thumb1">
+                        Stock Optimal S* (Newsvendor)
+                      </div>
                     </div>
-                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-amber-400 hover:shadow-md transition group/thumb"
-                         onclick="openLightbox('assets/images/datascience/proj_fig6_rf_importance.png', 'Université Koç : Importances des variables (Random Forest Feature Importance)')">
-                      <img src="assets/images/datascience/proj_fig6_rf_importance.png" alt="Random Forest Importance" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    <div class="space-y-1.5 cursor-pointer group/thumb"
+                         onclick="openLightbox('assets/images/datascience/proj_fig6_rf_importance.png', 'Université Koç : Importance des variables (Random Forest) — Prépondérance du lag autorégressif yt-12')">
+                      <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video hover:border-amber-400 hover:shadow-md transition">
+                        <img src="assets/images/datascience/proj_fig6_rf_importance.png" alt="Importance Variables yt-12" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-600 font-medium text-center truncate group-hover/thumb:text-amber-700 transition" data-i18n="p4_thumb2">
+                        Importance Features (yt-12)
+                      </div>
                     </div>
-                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-amber-400 hover:shadow-md transition group/thumb"
-                         onclick="openLightbox('assets/images/datascience/proj_fig8_sensitivity.png', 'Université Koç : Analyse de sensibilité du niveau de stock selon le ratio critique')">
-                      <img src="assets/images/datascience/proj_fig8_sensitivity.png" alt="Sensibilité Newsvendor" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    <div class="space-y-1.5 cursor-pointer group/thumb"
+                         onclick="openLightbox('assets/images/datascience/proj_fig8_sensitivity.png', 'Université Koç : Analyse de sensibilité stochastique — Facteur de sécurité z et stock optimal selon le ratio critique')">
+                      <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video hover:border-amber-400 hover:shadow-md transition">
+                        <img src="assets/images/datascience/proj_fig8_sensitivity.png" alt="Sensibilité Ratio Critique" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-600 font-medium text-center truncate group-hover/thumb:text-amber-700 transition" data-i18n="p4_thumb3">
+                        Sensibilité au Ratio Critique
+                      </div>
                     </div>
                   </div>
                   <div class="text-[10px] text-slate-500 font-mono text-right" data-i18n="hint_click_zoom">
@@ -844,27 +911,48 @@
                 <!-- Right: Gallery of ACP & CAH figures -->
                 <div class="lg:col-span-6 space-y-3">
                   
-                  <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-200 aspect-video relative cursor-pointer group/main shadow-xs hover:border-rose-300 transition"
-                       onclick="openLightbox('assets/images/biomedical/biomedical-cluster-projection.png', 'Données de Santé : Projection factorielle des clusters d\'individus')">
-                    <img src="assets/images/biomedical/biomedical-cluster-projection.png" alt="Projection des Clusters" class="w-full h-full object-contain p-2 group-hover/main:scale-105 transition duration-300">
-                    <div class="absolute bottom-2 right-2 bg-white/95 text-[10px] font-mono text-rose-800 px-2 py-1 rounded border border-slate-200 shadow-sm flex items-center gap-1 font-medium">
-                      <i data-lucide="zoom-in" class="w-3 h-3 text-rose-600"></i> <span data-i18n="hint_zoom">Cliquer pour agrandir</span>
+                  <div class="space-y-1.5">
+                    <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-200 aspect-video relative cursor-pointer group/main shadow-xs hover:border-rose-300 transition"
+                         onclick="openLightbox('assets/images/biomedical/biomedical-cluster-projection.png', 'Données de Santé : Projection factorielle 2D des individus et délimitation des 5 profils métaboliques (HCPC FactoMineR)')">
+                      <img src="assets/images/biomedical/biomedical-cluster-projection.png" alt="Projection des Clusters" class="w-full h-full object-contain p-2 group-hover/main:scale-105 transition duration-300">
+                      <div class="absolute bottom-2 right-2 bg-white/95 text-[10px] font-mono text-rose-800 px-2 py-1 rounded border border-slate-200 shadow-sm flex items-center gap-1 font-medium">
+                        <i data-lucide="zoom-in" class="w-3 h-3 text-rose-600"></i> <span data-i18n="hint_zoom">Cliquer pour agrandir</span>
+                      </div>
+                    </div>
+                    <div class="text-[11px] font-mono text-rose-900 font-semibold flex items-center justify-between px-1">
+                      <span data-i18n="p5_main_caption">Projection Factorielle des 5 Clusters (HCPC)</span>
+                      <span class="text-slate-400 font-normal">Dim 1 & Dim 2</span>
                     </div>
                   </div>
 
                   <!-- Sub-gallery thumbnails -->
                   <div class="grid grid-cols-3 gap-2 pt-1">
-                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-rose-400 hover:shadow-md transition group/thumb"
-                         onclick="openLightbox('assets/images/biomedical/biomedical-correlation-circle.png', 'Données de Santé : Cercle des corrélations des variables')">
-                      <img src="assets/images/biomedical/biomedical-correlation-circle.png" alt="Cercle des corrélations" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    <div class="space-y-1.5 cursor-pointer group/thumb"
+                         onclick="openLightbox('assets/images/biomedical/biomedical-correlation-circle.png', 'Données de Santé : Cercle des corrélations de l\'ACP normée (Axes factoriels Dim 1 : 61.50% et Dim 2 : 26.94%)')">
+                      <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video hover:border-rose-400 hover:shadow-md transition">
+                        <img src="assets/images/biomedical/biomedical-correlation-circle.png" alt="Cercle des corrélations" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-600 font-medium text-center truncate group-hover/thumb:text-rose-700 transition" data-i18n="p5_thumb1">
+                        Cercle Corrélations ACP
+                      </div>
                     </div>
-                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-rose-400 hover:shadow-md transition group/thumb"
-                         onclick="openLightbox('assets/images/biomedical/biomedical-dendrogram-cah.png', 'Données de Santé : Dendrogramme de la Classification Hiérarchique (Ward)')">
-                      <img src="assets/images/biomedical/biomedical-dendrogram-cah.png" alt="Dendrogramme CAH" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    <div class="space-y-1.5 cursor-pointer group/thumb"
+                         onclick="openLightbox('assets/images/biomedical/biomedical-dendrogram-cah.png', 'Données de Santé : Dendrogramme de la Classification Ascendante Hiérarchique (méthode de Ward.D2)')">
+                      <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video hover:border-rose-400 hover:shadow-md transition">
+                        <img src="assets/images/biomedical/biomedical-dendrogram-cah.png" alt="Dendrogramme CAH" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-600 font-medium text-center truncate group-hover/thumb:text-rose-700 transition" data-i18n="p5_thumb2">
+                        Dendrogramme CAH (Ward)
+                      </div>
                     </div>
-                    <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video cursor-pointer hover:border-rose-400 hover:shadow-md transition group/thumb"
-                         onclick="openLightbox('assets/images/biomedical/biomedical-variance-scree.png', 'Données de Santé : Éboulis des valeurs propres et pourcentage d\'inertie')">
-                      <img src="assets/images/biomedical/biomedical-variance-scree.png" alt="Éboulis des valeurs propres" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                    <div class="space-y-1.5 cursor-pointer group/thumb"
+                         onclick="openLightbox('assets/images/biomedical/biomedical-variance-scree.png', 'Données de Santé : Comparaison des partitions et inertie inter-classes avant et après consolidation K-Means')">
+                      <div class="rounded-lg overflow-hidden border border-slate-200 bg-white aspect-video hover:border-rose-400 hover:shadow-md transition">
+                        <img src="assets/images/biomedical/biomedical-variance-scree.png" alt="Consolidation K-Means" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300">
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-600 font-medium text-center truncate group-hover/thumb:text-rose-700 transition" data-i18n="p5_thumb3">
+                        Consolidation K-Means
+                      </div>
                     </div>
                   </div>
                   <div class="text-[10px] text-slate-500 font-mono text-right" data-i18n="hint_click_zoom">
@@ -1311,8 +1399,8 @@
             <a href="https://www.linkedin.com/in/amr-zaki-salih" target="_blank" rel="noopener noreferrer" 
                class="p-4 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-sky-400 shadow-xs transition-all text-left flex items-center justify-between group">
               <div class="flex items-center gap-3 min-w-0">
-                <div class="w-9 h-9 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center shrink-0">
-                  <i data-lucide="linkedin" class="w-4 h-4"></i>
+                <div class="w-9 h-9 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center shrink-0 p-1.5 shadow-xs">
+                  <img src="assets/images/linkedin.png" alt="LinkedIn" class="w-full h-full object-contain">
                 </div>
                 <div class="min-w-0">
                   <div class="text-[11px] font-mono text-slate-500">LinkedIn</div>
@@ -1326,8 +1414,8 @@
             <a href="https://github.com/amrzakizakisalih-alt" target="_blank" rel="noopener noreferrer" 
                class="p-4 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-400 shadow-xs transition-all text-left flex items-center justify-between group">
               <div class="flex items-center gap-3 min-w-0">
-                <div class="w-9 h-9 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
-                  <i data-lucide="github" class="w-4 h-4"></i>
+                <div class="w-9 h-9 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center shrink-0 p-1.5 shadow-xs">
+                  <img src="assets/images/github.png" alt="GitHub" class="w-full h-full object-contain">
                 </div>
                 <div class="min-w-0">
                   <div class="text-[11px] font-mono text-slate-500">GitHub</div>
@@ -1561,6 +1649,9 @@
         video_demo_label: "Démonstration Vidéo",
         p1_tab_demo: "Interface & Tuteur",
         p1_tab_ocr: "Reconnaissance OCR",
+        p1_thumb1: "Canvas & Interface",
+        p1_thumb2: "Écriture & OCR",
+        p1_thumb3: "Tuteur ACT-R",
         
         // P2 Satellite
         p2_domain: "Machine Learning & Navigation Autonome",
@@ -1572,6 +1663,8 @@
         p2_bullet3: "<strong>Génie Logiciel Robuste :</strong> Architecture logicielle modulaire découplant le moteur physique, le système de communication réseau et l'interface de visualisation.",
         p2_btn_report: "Rapport Simulation Satellite (PDF)",
         p2_video_label: "Simulation Orbitale en Temps Réel",
+        p2_thumb1: "Tracé Orbital & A*",
+        p2_thumb2: "Physique & Contrôle",
 
         // P3 EGMS
         p3_domain: "Télédétection Radar & Analyse Spatio-Temporelle",
@@ -1582,6 +1675,10 @@
         p3_bullet2: "<strong>Estimation du Déphasage Temporel :</strong> Calcul de fonctions d'inter-corrélation temporelle démontrant un retard caractéristique de 1 à 2 mois entre le pic de déficit hydrique et l'affaissement mécanique du sol.",
         p3_bullet3: "<strong>Harmonisation Temporelle & Spatiale :</strong> Rééchantillonnage temporel mensuel et projection spatiale pour aligner les résolutions spatiales hétérogènes d'EGMS et de GRACE.",
         p3_btn_report: "Rapport d'Étude MSRO (PDF)",
+        p3_main_caption: "Confrontation TWS (GRACE) vs Déplacement (EGMS)",
+        p3_thumb1: "Points EGMS (50 km)",
+        p3_thumb2: "Filtrage Bounding Box",
+        p3_thumb3: "Signal TWS 2002-2023",
 
         // P4 KOC
         p4_domain: "Séries Temporelles & Recherche Opérationnelle",
@@ -1593,6 +1690,10 @@
         p4_bullet3: "<strong>Prise de Décision Opérationnelle Optimale :</strong> Détermination du stock mensuel optimal sous ratio critique de coût et analyse de sensibilité continue entre risque de rupture et coût de stockage.",
         p4_btn_report: "Rapport Data Science Koç (PDF)",
         p4_note: "11 pages • Prof. Fikri Karaesmen",
+        p4_main_caption: "Prévisions Modèles vs Demande Réelle",
+        p4_thumb1: "Stock Optimal S* (Newsvendor)",
+        p4_thumb2: "Importance Features (yt-12)",
+        p4_thumb3: "Sensibilité au Ratio Critique",
 
         // P5 Biomedical
         p5_domain: "Machine Learning Non Supervisé & Santé",
@@ -1603,6 +1704,10 @@
         p5_bullet2: "<strong>Segmentation Clinique par CAH :</strong> Agrégation selon le critère de variance minimale de Ward et découpage objectif du dendrogramme basé sur le saut d'inertie inter-classes.",
         p5_bullet3: "<strong>Interprétation Multivariée des Corrélations :</strong> Projection des variables cliniques (indices métaboliques, mensurations) dans le cercle des corrélations pour caractériser chaque sous-groupe de patients sans a priori.",
         p5_btn_report: "Rapport d'Analyse (PDF)",
+        p5_main_caption: "Projection Factorielle des 5 Clusters (HCPC)",
+        p5_thumb1: "Cercle Corrélations ACP",
+        p5_thumb2: "Dendrogramme CAH (Ward)",
+        p5_thumb3: "Consolidation K-Means",
 
         // UI & Common
         btn_github: "Code GitHub",
@@ -1709,6 +1814,9 @@
         video_demo_label: "Video Demonstration",
         p1_tab_demo: "Interface & Tutor",
         p1_tab_ocr: "OCR Recognition",
+        p1_thumb1: "Canvas & Interface",
+        p1_thumb2: "Handwriting & OCR",
+        p1_thumb3: "ACT-R Tutor",
         
         // P2 Satellite
         p2_domain: "Machine Learning & Autonomous Navigation",
@@ -1720,6 +1828,8 @@
         p2_bullet3: "<strong>Robust Software Architecture :</strong> Modular OOP Java design isolating the dynamic physics model, networking communication, and visual display engine.",
         p2_btn_report: "Satellite Report (PDF)",
         p2_video_label: "Real-Time Orbital Simulation",
+        p2_thumb1: "Orbital Path & A*",
+        p2_thumb2: "Physics & Control",
 
         // P3 EGMS
         p3_domain: "Radar Remote Sensing & Spatio-Temporal Analysis",
@@ -1730,6 +1840,10 @@
         p3_bullet2: "<strong>Time Lag & Phase Delay Modeling :</strong> Cross-correlation analysis revealing a characteristic 1-to-2 month latency between groundwater storage deficit and mechanical surface subsidence.",
         p3_bullet3: "<strong>Spatio-Temporal Harmonization :</strong> Monthly temporal resampling and geodetic coordinate reprojection between disparate spatial grids.",
         p3_btn_report: "MSRO Research Report (PDF)",
+        p3_main_caption: "TWS (GRACE) vs Ground Motion (EGMS)",
+        p3_thumb1: "EGMS Points (50 km)",
+        p3_thumb2: "Bounding Box Filter",
+        p3_thumb3: "TWS Signal 2002-2023",
 
         // P4 KOC
         p4_domain: "Time Series & Operations Research",
@@ -1741,6 +1855,10 @@
         p4_bullet3: "<strong>Stochastic Inventory Decisions :</strong> Optimal monthly stock derivation under critical fractile cost ratios with continuous sensitivity analysis.",
         p4_btn_report: "Koç Data Science Report (PDF)",
         p4_note: "11 pages • Supervised by Prof. Fikri Karaesmen",
+        p4_main_caption: "Model Forecasts vs Actual Sales (Test 1967-1968)",
+        p4_thumb1: "Optimal Stock S* (Newsvendor)",
+        p4_thumb2: "Feature Importance (yt-12)",
+        p4_thumb3: "Critical Ratio Sensitivity",
 
         // P5 Biomedical
         p5_domain: "Unsupervised Machine Learning & Healthcare Data",
@@ -1751,6 +1869,10 @@
         p5_bullet2: "<strong>Ward's Hierarchical Clustering :</strong> Minimal variance agglomeration with objective dendrogram pruning at optimal inter-cluster inertia drop points.",
         p5_bullet3: "<strong>Multivariate Feature Interpretation :</strong> Correlation circle mapping of clinical parameters (metabolic indices, physical metrics) for unsupervised profiling.",
         p5_btn_report: "Biomedical Report (PDF)",
+        p5_main_caption: "Factorial Projection of 5 Clusters (HCPC)",
+        p5_thumb1: "PCA Correlation Circle",
+        p5_thumb2: "HAC Dendrogram (Ward)",
+        p5_thumb3: "K-Means Consolidation",
 
         // UI & Common
         btn_github: "GitHub Code",
