@@ -322,7 +322,7 @@
               Les 5 Projets Phares
             </h2>
             <p class="text-slate-600 text-sm max-w-2xl" data-i18n="featured_subtitle">
-              Projets majeurs associant intelligence artificielle, interfaces utilisateur intelligentes (IUI), machine learning avec pathfinding A*, traitement de données radar EGMS, séries temporelles avec recherche opérationnelle et clustering de données médicales.
+              Projets majeurs associant intelligence artificielle, interfaces utilisateur intelligentes (IUI), machine learning avec pathfinding A*, traitement de données radar EGMS, séries temporelles avec recherche opérationnelle et clustering de données de santé.
             </p>
           </div>
           <div class="mt-4 md:mt-0 text-xs font-mono text-slate-500 flex items-center gap-1.5">
@@ -358,14 +358,13 @@
                       ITIM — Système de Tutorat Intelligent de Mathématiques
                     </h3>
                     <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed" data-i18n="p1_desc">
-                      Plateforme d'apprentissage intelligente combinant un <strong>canvas d'écriture manuscrite infini</strong>, une <strong>transcription VLM en LaTeX temps réel</strong> (&lt; 200 ms), un <strong>moteur de calcul symbolique formel (SymPy)</strong> et un <strong>agent tuteur adaptatif</strong> inspiré de l'architecture cognitive ACT-R.
+                      Plateforme d'apprentissage intelligente (binôme avec Yagiz Efe Acar) combinant un <strong>canvas d'écriture manuscrite infini</strong>, une <strong>transcription VLM en LaTeX via l'API GPT-4o Vision</strong>, un <strong>moteur de calcul symbolique formel (SymPy)</strong> et un <strong>agent tuteur adaptatif</strong> inspiré de l'architecture cognitive ACT-R.
                     </p>
                   </div>
 
                   <!-- Competencies & Skills Pills -->
                   <div class="flex flex-wrap gap-1.5 pt-1">
                     <span class="tech-pill bg-indigo-50 text-indigo-700 border border-indigo-200">Vision-Language Model (VLM)</span>
-                    <span class="tech-pill bg-emerald-50 text-emerald-700 border border-emerald-200" data-i18n="p1_tag_rt">Inférence Temps Réel (&lt;200ms)</span>
                     <span class="tech-pill bg-indigo-50 text-indigo-700 border border-indigo-200">Vérification Formelle SymPy</span>
                     <span class="tech-pill bg-purple-50 text-purple-700 border border-purple-200">Modélisation Cognitive ACT-R</span>
                     <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">FastAPI & WebSockets</span>
@@ -376,7 +375,7 @@
                   <ul class="text-xs text-slate-600 space-y-2 pt-2">
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-indigo-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p1_bullet1"><strong>Reconnaissance OCR & VLM Multimodale :</strong> Numérisation instantanée d'expressions mathématiques manuscrites complexes converties en syntaxe formelle LaTeX.</span>
+                      <span data-i18n="p1_bullet1"><strong>Transcription OCR via GPT-4o Vision :</strong> Numérisation d'expressions mathématiques manuscrites en syntaxe LaTeX via l'API GPT-4o Vision (anti-rebond OCR de 0,8 s, latence d'appel LLM de 1 à 3 s).</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-indigo-600 mt-0.5 shrink-0"></i>
@@ -384,7 +383,7 @@
                     </li>
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-indigo-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p1_bullet3"><strong>Diagnostic Cognitif & Buggy Rules :</strong> Détection active des règles erronées récurrentes chez l'élève et génération d'indices adaptés à la charge cognitive.</span>
+                      <span data-i18n="p1_bullet3"><strong>Étude Utilisateur Contrôlée :</strong> 14 participants, plan intra-sujet contrebalancé, test de Wilcoxon ; 4,07 contre 2,50 questions correctes sur 5 avec/sans ITIM (p = 0,010) ; effort perçu significativement plus bas (environ −12 points sur 100, p = 0,044).</span>
                     </li>
                   </ul>
 
@@ -483,11 +482,12 @@
                 <div class="lg:col-span-6 space-y-4">
                   <div class="flex flex-wrap items-center gap-2">
                     <span class="tech-pill bg-sky-50 text-sky-700 border border-sky-200 font-semibold" data-i18n="p2_domain">
-                      Machine Learning & Navigation Autonome
+                      Algorithmique & Simulation
                     </span>
                     <span class="text-[11px] font-mono text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200" data-i18n="p2_context">
                       Projet 2 • INSA Rouen (GM4)
                     </span>
+                    <!-- TODO: Confirmer les dates exactes du projet (le rapport indique seulement "2025-2026") -->
                   </div>
 
                   <div>
@@ -520,7 +520,7 @@
                     </li>
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-sky-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p2_bullet3"><strong>Génie Logiciel Robuste :</strong> Architecture logicielle modulaire découplant le moteur physique, le système de communication réseau et l'interface de visualisation.</span>
+                      <span data-i18n="p2_bullet3"><strong>Génie Logiciel & Communication Réseau :</strong> Binôme avec Mouad Sheradj Drissi ; j'ai réalisé les classes Satellite, réseau de satellites et Antenne, avec communication TCP multi-thread.</span>
                     </li>
                   </ul>
 
@@ -611,10 +611,10 @@
 
                   <div>
                     <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 group-hover:text-emerald-700 transition-colors" data-i18n="p3_title">
-                      Étude du lien entre assèchement du sol et hauteur du sol en Europe
+                      Étude du lien entre assèchement du sol et hauteur du sol à Caen (2019-2023)
                     </h3>
                     <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed" data-i18n="p3_desc">
-                      Étude statistique spatio-temporelle en <strong>R</strong> du couplage physique entre le <strong>retrait-gonflement des argiles</strong> mesuré à l'échelle millimétrique par le service européen <strong>EGMS</strong> (European Ground Motion Service) et le <strong>déficit de stock d'eau souterraine</strong> issu de la mission satellitaire <strong>GRACE</strong> (TWS).
+                      Étude statistique spatio-temporelle en <strong>R</strong> (trinôme avec Cheikh Seck et Mouad Sheradj Drissi) du couplage physique entre le <strong>retrait-gonflement des argiles</strong> mesuré à l'échelle millimétrique par le service européen <strong>EGMS</strong> (European Ground Motion Service) et le <strong>déficit de stock d'eau souterraine</strong> issu de la mission satellitaire <strong>GRACE</strong> (TWS).
                     </p>
                   </div>
 
@@ -622,7 +622,7 @@
                   <div class="flex flex-wrap gap-1.5 pt-1">
                     <span class="tech-pill bg-emerald-50 text-emerald-700 border border-emerald-200">Interférométrie Radar Différentielle (InSAR / EGMS)</span>
                     <span class="tech-pill bg-sky-50 text-sky-700 border border-sky-200">Analyse Statistique Spatio-Temporelle</span>
-                    <span class="tech-pill bg-indigo-50 text-indigo-700 border border-indigo-200">Corrélation Croisée & Estimation de Lag</span>
+                    <span class="tech-pill bg-indigo-50 text-indigo-700 border border-indigo-200">Détection CRS (EPSG:3035 → WGS84)</span>
                     <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">Reprojection Géodésique (WGS84 / ETRS89)</span>
                     <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">Harmonisation & Rééchantillonnage Temporel (R)</span>
                   </div>
@@ -631,15 +631,15 @@
                   <ul class="text-xs text-slate-600 space-y-2 pt-2">
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p3_bullet1"><strong>Exploitation de Données Massives EGMS :</strong> Filtrage géométrique et traitement statistique de millions de points de déplacement vertical du sol acquis par les satellites Sentinel-1.</span>
+                      <span data-i18n="p3_bullet1"><strong>Exploitation des Données EGMS :</strong> Filtrage géométrique et traitement statistique de 31 685 points dans un rayon de 50 km autour de Caen acquis par les satellites Sentinel-1 (vitesse verticale moyenne d'environ −1,4 mm/an).</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p3_bullet2"><strong>Estimation du Déphasage Temporel :</strong> Calcul de fonctions d'inter-corrélation temporelle démontrant un retard caractéristique de 1 à 2 mois entre le pic de déficit hydrique et l'affaissement mécanique du sol.</span>
+                      <span data-i18n="p3_bullet2"><strong>Harmonisation Spatiale & Reprojection :</strong> Détection automatique du système de coordonnées (EPSG:3035 → WGS84) et extraction spatiale pour aligner les résolutions géodésiques d'EGMS et du pixel GRACE.</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p3_bullet3"><strong>Harmonisation Temporelle & Spatiale :</strong> Rééchantillonnage temporel mensuel et projection spatiale pour aligner les résolutions spatiales hétérogènes d'EGMS et de GRACE.</span>
+                      <span data-i18n="p3_bullet3"><strong>Analyse de Corrélation (2019-2023) :</strong> Corrélation r = 0,135 (zone circulaire de 50 km) puis r = 0,132 (méthode retenue : emprise du pixel GRACE 0,5° × 0,5°) : aucun lien détectable entre stock d'eau et affaissement.</span>
                     </li>
                   </ul>
 
@@ -755,18 +755,19 @@
                   </div>
 
                   <!-- Highlights Bullet Points with Data -->
+                  <!-- TODO: Confirmer s'il s'agit de ventes automobiles US ou de ventes au Québec -->
                   <ul class="text-xs text-slate-600 space-y-2 pt-2">
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-amber-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p4_bullet1"><strong>Volumétrie & Benchmark Prédictif :</strong> Analyse de 108 mois d'historique de ventes automobiles US avec split temporel strict (test set 1967-1968). L'OLS saisonnière atteint un RMSE de 1 954 unités et le Random Forest un MAPE de 9.99%.</span>
+                      <span data-i18n="p4_bullet1"><strong>Benchmark Prédictif (cinq familles de modèles comparées) :</strong> Analyse de 108 mois de ventes automobiles US (test 1967-1968) : Seasonal OLS RMSE 1 954 / MAPE 10,31 % ; Random Forest RMSE 2 208 / MAPE 9,99 % (OLS meilleure en RMSE, RF légèrement meilleur en MAPE).</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-amber-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p4_bullet2"><strong>Importance des Variables Autorégressives :</strong> Identification formelle du terme saisonnier $y_{t-12}$ comme prédicteur dominant (coefficient 0.68 en OLS, feature importance majeure en Random Forest).</span>
+                      <span data-i18n="p4_bullet2"><strong>Importance des Variables Autorégressives :</strong> Prédicteur dominant $y_{t-12}$ avec un coefficient OLS 0,68 et feature importance majeure en Random Forest.</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-amber-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p4_bullet3"><strong>Prise de Décision Opérationnelle Optimale :</strong> Détermination du stock mensuel optimal sous ratio critique de coût et analyse de sensibilité continue entre risque de rupture et coût de stockage.</span>
+                      <span data-i18n="p4_bullet3"><strong>Optimisation Stochastique Newsvendor :</strong> Détermination du stock mensuel optimal sous ratio critique ; niveau de service empirique 87,5 % (21 mois sur 24) pour une cible de 90 %.</span>
                     </li>
                   </ul>
 
@@ -864,16 +865,16 @@
                       Classification Non Supervisée & Clustering de Données de Santé
                     </h3>
                     <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed" data-i18n="p5_desc">
-                      Analyse exploratoire et segmentation d'une cohorte clinique en <strong>R</strong> : <strong>Analyse en Composantes Principales (ACP)</strong> normée et non-normée pour la réduction de dimension, suivie d'une <strong>Classification Ascendante Hiérarchique (CAH / critère de Ward)</strong> pour identifier des profils métaboliques distincts.
+                      Analyse exploratoire et segmentation (binôme avec Mouad Sheradj Drissi) en <strong>R</strong> sur le jeu public Obesity Classification (108 individus, 4 variables : âge, taille, poids, IMC) : <strong>ACP</strong> normée et non-normée pour la réduction de dimension, suivie d'une <strong>CAH (critère de Ward.D2)</strong> et consolidation K-Means (5 clusters fixés d'avance).
                     </p>
                   </div>
 
                   <!-- Competencies & Skills Pills -->
                   <div class="flex flex-wrap gap-1.5 pt-1">
                     <span class="tech-pill bg-rose-50 text-rose-700 border border-rose-200">Réduction de Dimensionnalité (ACP)</span>
-                    <span class="tech-pill bg-indigo-50 text-indigo-700 border border-indigo-200">Clustering Hiérarchique (Ward)</span>
-                    <span class="tech-pill bg-emerald-50 text-emerald-700 border border-emerald-200">Analyse de Variance & Saut d'Inertie</span>
-                    <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">Sélection de Facteurs (Règle de Kaiser)</span>
+                    <span class="tech-pill bg-indigo-50 text-indigo-700 border border-indigo-200">Clustering Hiérarchique (Ward.D2)</span>
+                    <span class="tech-pill bg-emerald-50 text-emerald-700 border border-emerald-200">5 Clusters Fixés d'Avance</span>
+                    <span class="tech-pill bg-purple-50 text-purple-700 border border-purple-200">Consolidation K-Means</span>
                     <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">Programmation Statistique R & FactoMineR</span>
                   </div>
 
@@ -881,15 +882,15 @@
                   <ul class="text-xs text-slate-600 space-y-2 pt-2">
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-rose-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p5_bullet1"><strong>Décomposition Spectrale Rigoureuse :</strong> Diagonalisation de la matrice de corrélation, analyse de l'éboulis des valeurs propres et projection sur les axes factoriels principaux capturant la majorité de l'inertie totale.</span>
+                      <span data-i18n="p5_bullet1"><strong>Décomposition Spectrale Rigoureuse :</strong> Diagonalisation de la matrice de corrélation, analyse de l'éboulis des valeurs propres et projection sur les axes factoriels principaux (Dim 1 : 61,50 %, Dim 2 : 26,94 %).</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-rose-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p5_bullet2"><strong>Segmentation Clinique par CAH :</strong> Agrégation selon le critère de variance minimale de Ward et découpage objectif du dendrogramme basé sur le saut d'inertie inter-classes.</span>
+                      <span data-i18n="p5_bullet2"><strong>Classification en 5 Clusters & Ratios d'Inertie :</strong> CAH (critère de Ward.D2) fixant 5 clusters d'avance ; ratio d'inertie 0,7337 (brutes), 0,7264 (standardisées), 0,7457 (standardisées + consolidation k-means).</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-rose-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p5_bullet3"><strong>Interprétation Multivariée des Corrélations :</strong> Projection des variables cliniques (indices métaboliques, mensurations) dans le cercle des corrélations pour caractériser chaque sous-groupe de patients sans a priori.</span>
+                      <span data-i18n="p5_bullet3"><strong>Interprétation des Variables :</strong> Projection des 4 variables du jeu public Obesity Classification (âge, taille, poids, IMC) dans le cercle des corrélations pour caractériser chaque sous-groupe sans a priori.</span>
                     </li>
                   </ul>
 
@@ -914,7 +915,7 @@
                   
                   <div class="space-y-1.5">
                     <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-200 aspect-video relative cursor-pointer group/main shadow-xs hover:border-rose-300 transition"
-                         onclick="openLightbox('assets/images/biomedical/biomedical-cluster-projection.png', 'Données de Santé : Projection factorielle 2D des individus et délimitation des 5 profils métaboliques (HCPC FactoMineR)')">
+                         onclick="openLightbox('assets/images/biomedical/biomedical-cluster-projection.png', 'Données de Santé : Projection factorielle 2D des individus et délimitation des 5 clusters (HCPC FactoMineR)')">
                       <img src="assets/images/biomedical/biomedical-cluster-projection.png" alt="Projection des Clusters" class="w-full h-full object-contain p-2 group-hover/main:scale-105 transition duration-300">
                       <div class="absolute bottom-2 right-2 bg-white/95 text-[10px] font-mono text-rose-800 px-2 py-1 rounded border border-slate-200 shadow-sm flex items-center gap-1 font-medium">
                         <i data-lucide="zoom-in" class="w-3 h-3 text-rose-600"></i> <span data-i18n="hint_zoom">Cliquer pour agrandir</span>
@@ -1197,10 +1198,8 @@
             <h3 class="font-bold text-slate-900 text-base" data-i18n="sk1_title">Machine Learning & IA Appliquée</h3>
             <ul class="text-xs text-slate-700 space-y-2 font-mono">
               <li>• Vision-Language Models (VLM) & OCR</li>
-              <li>• Support Vector Machines (SVM RBF / Linéaires)</li>
               <li>• Algorithmes Heuristiques & Pathfinding (A*)</li>
               <li>• Random Forest & Arbres de Décision</li>
-              <li>• Régression Logistique from scratch (NumPy)</li>
               <li>• Clustering (CAH critère de Ward, K-Means)</li>
             </ul>
           </div>
@@ -1212,11 +1211,8 @@
             </div>
             <h3 class="font-bold text-slate-900 text-base" data-i18n="sk2_title">Séries Temporelles & R.O.</h3>
             <ul class="text-xs text-slate-700 space-y-2 font-mono">
-              <li>• Prévision Temporelle (ARIMA, SARIMA)</li>
               <li>• OLS Saisonnière & Lags Autorégressifs</li>
               <li>• Modèle Stochastique de Stocks (Newsvendor)</li>
-              <li>• Optimisation Convexe & Conditions KKT</li>
-              <li>• Algorithme d'Uzawa & Dualité Lagrangienne</li>
               <li>• Scipy Optimize & Programmation Linéaire</li>
             </ul>
           </div>
@@ -1228,12 +1224,8 @@
             </div>
             <h3 class="font-bold text-slate-900 text-base" data-i18n="sk3_title">Statistique & Modélisation</h3>
             <ul class="text-xs text-slate-700 space-y-2 font-mono">
-              <li>• Régression Non Linéaire (Gauss-Newton)</li>
-              <li>• Rééchantillonnage Bootstrap & Bandes de Confiance</li>
               <li>• Réduction de Dimension (ACP Normée / Non Normée)</li>
-              <li>• Estimation de Densité par Noyau (KDE)</li>
               <li>• Analyse de Séries Spatio-temporelles (EGMS)</li>
-              <li>• Détection de Latence & Corrélation Croisée</li>
             </ul>
           </div>
 
@@ -1249,10 +1241,16 @@
               <li>• Java (POO Avancée, Pattern MVC, Swing)</li>
               <li>• C Pur (Pointeurs, Arbres Trie, Hachage)</li>
               <li>• Fortran 90 (Calcul Creux & HPC Gauss-Seidel)</li>
-              <li>• FastAPI, React 19, Git / CI-CD, Linux (Ubuntu)</li>
+              <li>• FastAPI, React 19, Git, Linux (Ubuntu)</li>
             </ul>
           </div>
 
+        </div>
+
+        <!-- Sous-ligne distincte : Vus en cours et TP -->
+        <div class="mt-8 p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs font-mono text-slate-600 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+          <span class="font-bold text-slate-800 shrink-0 px-2.5 py-1 rounded-md bg-slate-200/80 text-[11px]" data-i18n="skills_coursework_badge">Vus en cours et TP :</span>
+          <span data-i18n="skills_coursework_list">ARIMA/SARIMA, SVM, bootstrap, Gauss-Newton, KDE, KKT/Uzawa, régression logistique, optimisation convexe</span>
         </div>
       </section>
 
@@ -1293,6 +1291,7 @@
                   <h4 class="font-bold text-slate-900 text-sm" data-i18n="edu_gm5_title">GM5 — Cinquième Année de Spécialisation en Génie Mathématiques</h4>
                   <span class="text-[10px] bg-emerald-50 border border-emerald-200 text-emerald-700 px-2 py-0.5 rounded font-mono font-semibold" data-i18n="badge_current">En cours</span>
                 </div>
+                <!-- TODO: Confirmer 'classification médicale par SVM' (aucun rapport disponible pour ce point) -->
                 <p class="text-xs text-slate-600 mt-1" data-i18n="edu_gm5_desc">
                   Machine Learning avancé, régression non-linéaire (Gauss-Newton, Bootstrap), méta-apprentissage, classification médicale par SVM, recherche d'un stage de fin d'études de 6 mois dès le 4 mai 2027.
                 </p>
@@ -1754,18 +1753,17 @@
         profile_insa: "INSA Rouen (GM5)",
         featured_badge: "Sélection Curatée & Éprouvée",
         featured_title: "Les 5 Projets Phares",
-        featured_subtitle: "Projets majeurs associant intelligence artificielle, interfaces utilisateur intelligentes (IUI), machine learning avec pathfinding A*, traitement de données radar EGMS, séries temporelles avec recherche opérationnelle et clustering de données médicales.",
+        featured_subtitle: "Projets majeurs associant intelligence artificielle, interfaces utilisateur intelligentes (IUI), machine learning avec pathfinding A*, traitement de données radar EGMS, séries temporelles avec recherche opérationnelle et clustering de données de santé.",
         featured_reports_hint: "Rapports scientifiques complets & code source",
         
         // P1 ITIM
         p1_domain: "Intelligence Artificielle & IUI",
         p1_context: "Projet 1 • Université Koç",
         p1_title: "ITIM — Système de Tutorat Intelligent de Mathématiques",
-        p1_desc: "Plateforme d'apprentissage intelligente combinant un <strong>canvas d'écriture manuscrite infini</strong>, une <strong>transcription VLM en LaTeX temps réel</strong> (&lt; 200 ms), un <strong>moteur de calcul symbolique formel (SymPy)</strong> et un <strong>agent tuteur adaptatif</strong> inspiré de l'architecture cognitive ACT-R.",
-        p1_tag_rt: "Inférence Temps Réel (<200ms)",
-        p1_bullet1: "<strong>Reconnaissance OCR & VLM Multimodale :</strong> Numérisation instantanée d'expressions mathématiques manuscrites complexes converties en syntaxe formelle LaTeX.",
+        p1_desc: "Plateforme d'apprentissage intelligente (binôme avec Yagiz Efe Acar) combinant un <strong>canvas d'écriture manuscrite infini</strong>, une <strong>transcription VLM en LaTeX via l'API GPT-4o Vision</strong>, un <strong>moteur de calcul symbolique formel (SymPy)</strong> et un <strong>agent tuteur adaptatif</strong> inspiré de l'architecture cognitive ACT-R.",
+        p1_bullet1: "<strong>Transcription OCR via GPT-4o Vision :</strong> Numérisation d'expressions mathématiques manuscrites en syntaxe LaTeX via l'API GPT-4o Vision (anti-rebond OCR de 0,8 s, latence d'appel LLM de 1 à 3 s).",
         p1_bullet2: "<strong>Calcul Symbolique & Validation Pas-à-Pas :</strong> Évaluation formelle étape par étape via SymPy pour vérifier la rigueur du raisonnement sans révéler la solution.",
-        p1_bullet3: "<strong>Diagnostic Cognitif & Buggy Rules :</strong> Détection active des règles erronées récurrentes chez l'élève et génération d'indices adaptés à la charge cognitive.",
+        p1_bullet3: "<strong>Étude Utilisateur Contrôlée :</strong> 14 participants, plan intra-sujet contrebalancé, test de Wilcoxon ; 4,07 contre 2,50 questions correctes sur 5 avec/sans ITIM (p = 0,010) ; effort perçu significativement plus bas (environ −12 points sur 100, p = 0,044).",
         p1_btn_report: "Rapport ITIM (PDF)",
         video_demo_label: "Démonstration Vidéo",
         p1_tab_demo: "Interface & Tuteur",
@@ -1775,13 +1773,13 @@
         p1_thumb3: "Tuteur ACT-R",
         
         // P2 Satellite
-        p2_domain: "Machine Learning & Navigation Autonome",
+        p2_domain: "Algorithmique & Simulation",
         p2_context: "Projet 2 • INSA Rouen (GM4)",
         p2_title: "Simulation Satellite & Trajectoire Autonome",
         p2_desc: "Conception et développement en <strong>Java</strong> d'un environnement de <strong>simulation dynamique spatiale</strong> et de <strong>planification autonome de trajectoires</strong> par <strong>algorithme heuristique A*</strong> sous contraintes d'évitement d'obstacles et d'optimisation énergétique.",
         p2_bullet1: "<strong>Optimisation de Chemin par A* :</strong> Fonction de coût multi-objectifs pondérée $f(n) = \\alpha \\cdot d(n) + \\beta \\cdot c(n) + \\gamma \\cdot p(n)$ conciliant distance, dépense énergétique et pénalité de risque.",
         p2_bullet2: "<strong>Modélisation de l'Espace 2D :</strong> Discrétisation de l'espace, détection géométrique des risques de collision avec corps célestes et débris orbitaux en temps réel.",
-        p2_bullet3: "<strong>Génie Logiciel Robuste :</strong> Architecture logicielle modulaire découplant le moteur physique, le système de communication réseau et l'interface de visualisation.",
+        p2_bullet3: "<strong>Génie Logiciel & Communication Réseau :</strong> Binôme avec Mouad Sheradj Drissi ; j'ai réalisé les classes Satellite, réseau de satellites et Antenne, avec communication TCP multi-thread.",
         p2_btn_report: "Rapport Simulation Satellite (PDF)",
         p2_video_label: "Simulation Orbitale en Temps Réel",
         p2_thumb1: "Tracé Orbital & A*",
@@ -1790,11 +1788,11 @@
         // P3 EGMS
         p3_domain: "Télédétection Radar & Analyse Spatio-Temporelle",
         p3_context: "Projet 3 • INSA Rouen (GM4)",
-        p3_title: "Étude du lien entre assèchement du sol et hauteur du sol en Europe",
-        p3_desc: "Étude statistique spatio-temporelle en <strong>R</strong> du couplage physique entre le <strong>retrait-gonflement des argiles</strong> mesuré à l'échelle millimétrique par le service européen <strong>EGMS</strong> (European Ground Motion Service) et le <strong>déficit de stock d'eau souterraine</strong> issu de la mission satellitaire <strong>GRACE</strong> (TWS).",
-        p3_bullet1: "<strong>Exploitation de Données Massives EGMS :</strong> Filtrage géométrique et traitement statistique de millions de points de déplacement vertical du sol acquis par les satellites Sentinel-1.",
-        p3_bullet2: "<strong>Estimation du Déphasage Temporel :</strong> Calcul de fonctions d'inter-corrélation temporelle démontrant un retard caractéristique de 1 à 2 mois entre le pic de déficit hydrique et l'affaissement mécanique du sol.",
-        p3_bullet3: "<strong>Harmonisation Temporelle & Spatiale :</strong> Rééchantillonnage temporel mensuel et projection spatiale pour aligner les résolutions spatiales hétérogènes d'EGMS et de GRACE.",
+        p3_title: "Étude du lien entre assèchement du sol et hauteur du sol à Caen (2019-2023)",
+        p3_desc: "Étude statistique spatio-temporelle en <strong>R</strong> (trinôme avec Cheikh Seck et Mouad Sheradj Drissi) du couplage physique entre le <strong>retrait-gonflement des argiles</strong> mesuré à l'échelle millimétrique par le service européen <strong>EGMS</strong> (European Ground Motion Service) et le <strong>déficit de stock d'eau souterraine</strong> issu de la mission satellitaire <strong>GRACE</strong> (TWS).",
+        p3_bullet1: "<strong>Exploitation des Données EGMS :</strong> Filtrage géométrique et traitement statistique de 31 685 points dans un rayon de 50 km autour de Caen acquis par les satellites Sentinel-1 (vitesse verticale moyenne d'environ −1,4 mm/an).",
+        p3_bullet2: "<strong>Harmonisation Spatiale & Reprojection :</strong> Détection automatique du système de coordonnées (EPSG:3035 → WGS84) et extraction spatiale pour aligner les résolutions géodésiques d'EGMS et du pixel GRACE.",
+        p3_bullet3: "<strong>Analyse de Corrélation (2019-2023) :</strong> Corrélation r = 0,135 (zone circulaire de 50 km) puis r = 0,132 (méthode retenue : emprise du pixel GRACE 0,5° × 0,5°) : aucun lien détectable entre stock d'eau et affaissement.",
         p3_btn_report: "Rapport d'Étude MSRO (PDF)",
         p3_main_caption: "Confrontation TWS (GRACE) vs Déplacement (EGMS)",
         p3_thumb1: "Points EGMS (50 km)",
@@ -1806,9 +1804,9 @@
         p4_context: "Projet 4 • Université Koç",
         p4_title: "Forecasting des Ventes & Optimisation de Stocks (Newsvendor)",
         p4_desc: "Pipeline quantitatif articulé en deux étapes : <strong>prévision statistique de séries temporelles</strong> (Régression OLS saisonnière, lags autorégressifs, Random Forest) puis <strong>décision prescriptive stochastique</strong> via le modèle du Newsvendor pour minimiser les coûts espérés sous incertitude de la demande.",
-        p4_bullet1: "<strong>Volumétrie & Benchmark Prédictif :</strong> Analyse de 108 mois d'historique de ventes automobiles US avec split temporel strict (test set 1967-1968). L'OLS saisonnière atteint un RMSE de 1 954 unités et le Random Forest un MAPE de 9.99%.",
-        p4_bullet2: "<strong>Importance des Variables Autorégressives :</strong> Identification formelle du terme saisonnier $y_{t-12}$ comme prédicteur dominant (coefficient 0.68 en OLS, feature importance majeure en Random Forest).",
-        p4_bullet3: "<strong>Prise de Décision Opérationnelle Optimale :</strong> Détermination du stock mensuel optimal sous ratio critique de coût et analyse de sensibilité continue entre risque de rupture et coût de stockage.",
+        p4_bullet1: "<strong>Benchmark Prédictif (cinq familles de modèles comparées) :</strong> Analyse de 108 mois de ventes automobiles US (test 1967-1968) : Seasonal OLS RMSE 1 954 / MAPE 10,31 % ; Random Forest RMSE 2 208 / MAPE 9,99 % (OLS meilleure en RMSE, RF légèrement meilleur en MAPE).",
+        p4_bullet2: "<strong>Importance des Variables Autorégressives :</strong> Prédicteur dominant $y_{t-12}$ avec un coefficient OLS 0,68 et feature importance majeure en Random Forest.",
+        p4_bullet3: "<strong>Optimisation Stochastique Newsvendor :</strong> Détermination du stock mensuel optimal sous ratio critique ; niveau de service empirique 87,5 % (21 mois sur 24) pour une cible de 90 %.",
         p4_btn_report: "Rapport Data Science Koç (PDF)",
         p4_note: "11 pages • Prof. Fikri Karaesmen",
         p4_main_caption: "Prévisions Modèles vs Demande Réelle",
@@ -1820,10 +1818,10 @@
         p5_domain: "Machine Learning Non Supervisé & Santé",
         p5_context: "Projet 5 • INSA Rouen (GM3)",
         p5_title: "Classification Non Supervisée & Clustering de Données de Santé",
-        p5_desc: "Analyse exploratoire et segmentation d'une cohorte clinique en <strong>R</strong> : <strong>Analyse en Composantes Principales (ACP)</strong> normée et non-normée pour la réduction de dimension, suivie d'une <strong>Classification Ascendante Hiérarchique (CAH / critère de Ward)</strong> pour identifier des profils métaboliques distincts.",
-        p5_bullet1: "<strong>Décomposition Spectrale Rigoureuse :</strong> Diagonalisation de la matrice de corrélation, analyse de l'éboulis des valeurs propres et projection sur les axes factoriels principaux capturant la majorité de l'inertie totale.",
-        p5_bullet2: "<strong>Segmentation Clinique par CAH :</strong> Agrégation selon le critère de variance minimale de Ward et découpage objectif du dendrogramme basé sur le saut d'inertie inter-classes.",
-        p5_bullet3: "<strong>Interprétation Multivariée des Corrélations :</strong> Projection des variables cliniques (indices métaboliques, mensurations) dans le cercle des corrélations pour caractériser chaque sous-groupe de patients sans a priori.",
+        p5_desc: "Analyse exploratoire et segmentation (binôme avec Mouad Sheradj Drissi) en <strong>R</strong> sur le jeu public Obesity Classification (108 individus, 4 variables : âge, taille, poids, IMC) : <strong>ACP</strong> normée et non-normée pour la réduction de dimension, suivie d'une <strong>CAH (critère de Ward.D2)</strong> et consolidation K-Means (5 clusters fixés d'avance).",
+        p5_bullet1: "<strong>Décomposition Spectrale Rigoureuse :</strong> Diagonalisation de la matrice de corrélation, analyse de l'éboulis des valeurs propres et projection sur les axes factoriels principaux (Dim 1 : 61,50 %, Dim 2 : 26,94 %).",
+        p5_bullet2: "<strong>Classification en 5 Clusters & Ratios d'Inertie :</strong> CAH (critère de Ward.D2) fixant 5 clusters d'avance ; ratio d'inertie 0,7337 (brutes), 0,7264 (standardisées), 0,7457 (standardisées + consolidation k-means).",
+        p5_bullet3: "<strong>Interprétation des Variables :</strong> Projection des 4 variables du jeu public Obesity Classification (âge, taille, poids, IMC) dans le cercle des corrélations pour caractériser chaque sous-groupe sans a priori.",
         p5_btn_report: "Rapport d'Analyse (PDF)",
         p5_main_caption: "Projection Factorielle des 5 Clusters (HCPC)",
         p5_thumb1: "Cercle Corrélations ACP",
@@ -1875,6 +1873,8 @@
         sk2_title: "Séries Temporelles & R.O.",
         sk3_title: "Statistique & Modélisation",
         sk4_title: "Calcul Scientifique & Software",
+        skills_coursework_badge: "Vus en cours et TP :",
+        skills_coursework_list: "ARIMA/SARIMA, SVM, bootstrap, Gauss-Newton, KDE, KKT/Uzawa, régression logistique, optimisation convexe",
 
         // Education
         edu_headline: "Diplôme d'Ingénieur — Département Génie Mathématique (GM)",
@@ -1939,11 +1939,10 @@
         p1_domain: "Artificial Intelligence & IUI",
         p1_context: "Project 1 • Koç University",
         p1_title: "ITIM — Intelligent Tutoring Interface for Mathematics",
-        p1_desc: "Rich educational AI platform combining an <strong>infinite digital handwriting canvas</strong>, <strong>real-time VLM handwriting-to-LaTeX transcription</strong> (&lt; 200 ms), <strong>formal symbolic mathematical verification (SymPy)</strong>, and an <strong>adaptive cognitive tutor</strong> powered by Anderson's ACT-R cognitive architecture.",
-        p1_tag_rt: "Real-Time Inference (<200ms)",
-        p1_bullet1: "<strong>Multimodal OCR & VLM Recognition :</strong> Real-time visual parsing of complex handwritten math expressions into clean LaTeX code.",
+        p1_desc: "Educational AI platform (in pairs with Yagiz Efe Acar) combining an <strong>infinite digital handwriting canvas</strong>, <strong>handwriting-to-LaTeX transcription via GPT-4o Vision API</strong>, <strong>formal symbolic mathematical verification (SymPy)</strong>, and an <strong>adaptive cognitive tutor</strong> inspired by ACT-R.",
+        p1_bullet1: "<strong>OCR Transcription via GPT-4o Vision :</strong> Parsing of handwritten mathematical expressions into LaTeX via GPT-4o Vision API (0.8s OCR debouncing, 1-3s LLM API latency).",
         p1_bullet2: "<strong>Symbolic Computation & Step-by-Step Validation :</strong> Rigorous formal verification via SymPy CAS to inspect reasoning without leaking answers.",
-        p1_bullet3: "<strong>Cognitive Monitoring & Buggy Rules :</strong> Active detection of student misconceptions and adaptive cognitive-load scaffolding.",
+        p1_bullet3: "<strong>Controlled User Study :</strong> 14 participants, counterbalanced within-subject design, Wilcoxon signed-rank test; 4.07 vs 2.50 correct answers out of 5 with/without ITIM (p = 0.010); perceived effort significantly lower (around −12 points out of 100, p = 0.044).",
         p1_btn_report: "ITIM Final Report (PDF)",
         video_demo_label: "Video Demonstration",
         p1_tab_demo: "Interface & Tutor",
@@ -1953,13 +1952,13 @@
         p1_thumb3: "ACT-R Tutor",
         
         // P2 Satellite
-        p2_domain: "Machine Learning & Autonomous Navigation",
+        p2_domain: "Algorithms & Simulation",
         p2_context: "Project 2 • INSA Rouen (GM4)",
         p2_title: "Satellite Trajectory Simulation & Autonomous Avoidance",
-        p2_desc: "Design and implementation in <strong>Java</strong> of an orbital dynamics simulation environment featuring <strong>autonomous trajectory planning</strong> using the <strong>A* heuristic algorithm</strong> under multi-obstacle avoidance and fuel minimization constraints.",
+        p2_desc: "Design and implementation in <strong>Java</strong> of an orbital dynamics simulation environment featuring <strong>trajectory planning</strong> using the <strong>A* heuristic algorithm</strong> under multi-obstacle avoidance and fuel minimization constraints.",
         p2_bullet1: "<strong>A* Heuristic Path Optimization :</strong> Weighted multi-objective cost function $f(n) = \\alpha \\cdot d(n) + \\beta \\cdot c(n) + \\gamma \\cdot p(n)$ balancing distance, propellant consumption, and risk penalties.",
         p2_bullet2: "<strong>2D Space Modeling :</strong> Spatial discretization, real-time geometric collision cone detection with celestial bodies and orbital debris.",
-        p2_bullet3: "<strong>Robust Software Architecture :</strong> Modular OOP Java design isolating the dynamic physics model, networking communication, and visual display engine.",
+        p2_bullet3: "<strong>Software Engineering & Networking :</strong> In pairs with Mouad Sheradj Drissi; I implemented the Satellite, SatelliteNetwork, and Antenna classes with multi-threaded TCP communication.",
         p2_btn_report: "Satellite Report (PDF)",
         p2_video_label: "Real-Time Orbital Simulation",
         p2_thumb1: "Orbital Path & A*",
@@ -1968,11 +1967,11 @@
         // P3 EGMS
         p3_domain: "Radar Remote Sensing & Spatio-Temporal Analysis",
         p3_context: "Project 3 • INSA Rouen (GM4)",
-        p3_title: "Study of the Link Between Soil Drought and Ground Height in Europe",
-        p3_desc: "Spatio-temporal statistical study in <strong>R</strong> analyzing the physical correlation between <strong>clay shrinkage-swelling subsidence</strong> measured with millimeter precision by <strong>EGMS</strong> (European Ground Motion Service) and <strong>groundwater storage anomalies</strong> from NASA/DLR <strong>GRACE</strong> satellite gravimetry (TWS).",
-        p3_bullet1: "<strong>Massive EGMS Big Data Processing :</strong> Spatial filtering and time-series extraction from millions of Sentinel-1 radar displacement points across Europe.",
-        p3_bullet2: "<strong>Time Lag & Phase Delay Modeling :</strong> Cross-correlation analysis revealing a characteristic 1-to-2 month latency between groundwater storage deficit and mechanical surface subsidence.",
-        p3_bullet3: "<strong>Spatio-Temporal Harmonization :</strong> Monthly temporal resampling and geodetic coordinate reprojection between disparate spatial grids.",
+        p3_title: "Study of the Link Between Soil Drought and Ground Height in Caen (2019-2023)",
+        p3_desc: "Spatio-temporal statistical study in <strong>R</strong> (team of three with Cheikh Seck and Mouad Sheradj Drissi) analyzing the physical coupling between <strong>clay shrinkage-swelling</strong> measured by <strong>EGMS</strong> and <strong>GRACE groundwater storage</strong> (TWS).",
+        p3_bullet1: "<strong>EGMS Data Processing :</strong> Geometric filtering and statistical analysis of 31,685 points within a 50 km radius around Caen from Sentinel-1 radar (mean vertical velocity of approximately −1.4 mm/year).",
+        p3_bullet2: "<strong>Spatial Harmonization & Reprojection :</strong> Automatic coordinate reference system detection (EPSG:3035 → WGS84) and spatial extraction matching the GRACE satellite footprint.",
+        p3_bullet3: "<strong>Correlation Analysis (2019-2023) :</strong> Correlation r = 0.135 (50 km circular zone) then r = 0.132 (selected method: 0.5° × 0.5° GRACE pixel footprint): no detectable relationship between water storage and ground subsidence.",
         p3_btn_report: "MSRO Research Report (PDF)",
         p3_main_caption: "TWS (GRACE) vs Ground Motion (EGMS)",
         p3_thumb1: "EGMS Points (50 km)",
@@ -1984,9 +1983,9 @@
         p4_context: "Project 4 • Koç University",
         p4_title: "Monthly Auto Sales Forecasting & Newsvendor Inventory Optimization",
         p4_desc: "Two-stage quantitative pipeline bridging <strong>predictive time series analytics</strong> (Seasonal OLS regression, autoregressive lags, Random Forest) and <strong>prescriptive operational optimization</strong> using the stochastic Newsvendor framework to minimize expected shortage and overage costs.",
-        p4_bullet1: "<strong>Benchmark & Temporal Validation :</strong> Rigorous evaluation on 108 monthly US car sales with temporal hold-out split (1967-1968). Seasonal OLS reaches RMSE of 1,954 units; Random Forest achieves 9.99% test MAPE.",
-        p4_bullet2: "<strong>Autoregressive Feature Importance :</strong> Proved dominance of the $y_{t-12}$ seasonal lag (OLS coefficient 0.68, dominant tree split in Random Forest).",
-        p4_bullet3: "<strong>Stochastic Inventory Decisions :</strong> Optimal monthly stock derivation under critical fractile cost ratios with continuous sensitivity analysis.",
+        p4_bullet1: "<strong>Predictive Benchmark (five model families compared) :</strong> Analysis of 108 months of US auto sales (test 1967-1968): Seasonal OLS RMSE 1,954 / MAPE 10.31%; Random Forest RMSE 2,208 / MAPE 9.99% (OLS better on RMSE, RF slightly better on MAPE).",
+        p4_bullet2: "<strong>Autoregressive Feature Importance :</strong> Dominant predictor $y_{t-12}$ with an OLS coefficient 0.68 and leading feature importance in Random Forest.",
+        p4_bullet3: "<strong>Stochastic Newsvendor Optimization :</strong> Derivation of optimal monthly stock under critical fractile; empirical service level 87.5% (21 out of 24 months) for a 90% target.",
         p4_btn_report: "Koç Data Science Report (PDF)",
         p4_note: "11 pages • Supervised by Prof. Fikri Karaesmen",
         p4_main_caption: "Model Forecasts vs Actual Sales (Test 1967-1968)",
@@ -1998,10 +1997,10 @@
         p5_domain: "Unsupervised Machine Learning & Healthcare Data",
         p5_context: "Project 5 • INSA Rouen (GM3)",
         p5_title: "Unsupervised Clustering & Dimensionality Reduction on Clinical Data",
-        p5_desc: "Exploratory multivariate statistical analysis in <strong>R</strong> : <strong>Principal Component Analysis (PCA)</strong> (normalized and unnormalized) for dimensionality reduction, followed by <strong>Hierarchical Ascendant Clustering (HAC / Ward's criterion)</strong> to uncover distinct metabolic patient phenotypes.",
-        p5_bullet1: "<strong>Spectral Matrix Decomposition :</strong> Correlation matrix diagonalization, Kaiser rule screening, and factorial plane projection capturing dominant cumulative variance.",
-        p5_bullet2: "<strong>Ward's Hierarchical Clustering :</strong> Minimal variance agglomeration with objective dendrogram pruning at optimal inter-cluster inertia drop points.",
-        p5_bullet3: "<strong>Multivariate Feature Interpretation :</strong> Correlation circle mapping of clinical parameters (metabolic indices, physical metrics) for unsupervised profiling.",
+        p5_desc: "Exploratory analysis and clustering (in pairs with Mouad Sheradj Drissi) in <strong>R</strong> on the public Obesity Classification dataset, 108 individuals, 4 variables (age, height, weight, BMI): standardized/unstandardized <strong>PCA</strong> for dimensionality reduction, followed by <strong>HAC (Ward.D2)</strong> and K-Means consolidation (5 clusters set in advance).",
+        p5_bullet1: "<strong>Spectral Matrix Decomposition :</strong> Correlation matrix diagonalization, scree plot analysis, and factorial plane projection (Dim 1: 61.50%, Dim 2: 26.94%).",
+        p5_bullet2: "<strong>5-Cluster Classification & Inertia Ratios :</strong> HAC (Ward.D2 criterion) fixing 5 clusters in advance; inertia ratio 0.7337 (raw), 0.7264 (standardized), 0.7457 (standardized + k-means consolidation).",
+        p5_bullet3: "<strong>Variable Interpretation :</strong> Projection of the 4 variables from the public Obesity Classification dataset (age, height, weight, BMI) on the correlation circle for unsupervised profiling.",
         p5_btn_report: "Biomedical Report (PDF)",
         p5_main_caption: "Factorial Projection of 5 Clusters (HCPC)",
         p5_thumb1: "PCA Correlation Circle",
@@ -2053,6 +2052,8 @@
         sk2_title: "Time Series & Operations Research",
         sk3_title: "Statistics & Mathematical Modeling",
         sk4_title: "Scientific Computing & Software",
+        skills_coursework_badge: "Coursework & Lab Work :",
+        skills_coursework_list: "ARIMA/SARIMA, SVM, bootstrap, Gauss-Newton, KDE, KKT/Uzawa, logistic regression, convex optimization",
 
         // Education
         edu_headline: "Master of Science in Engineering (Diplôme d'Ingénieur) — Mathematical Engineering",
