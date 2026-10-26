@@ -855,7 +855,7 @@
             </div>
             <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight" data-i18n="catalog_title">Catalogue de Projets</h2>
             <p class="text-slate-600 text-xs sm:text-sm mt-1" data-i18n="catalog_subtitle">
-              Calcul haute performance (HPC), optimisation continue, intégrateurs symplectiques et algorithmique système.
+              Calcul haute performance (HPC), statistique multivariée, intégrateurs symplectiques et algorithmique système.
             </p>
           </div>
 
@@ -863,11 +863,15 @@
           <div class="flex flex-wrap gap-2 mt-4 md:mt-0 font-mono text-xs">
             <button id="btn-filter-all" onclick="filterCatalog('all')" 
                     class="filter-btn px-3.5 py-1.5 rounded-lg bg-indigo-600 text-white border border-indigo-600 shadow-xs transition font-semibold" data-i18n="filter_all">
-              Tous (6)
+              Tous (7)
             </button>
             <button id="btn-filter-hpc" onclick="filterCatalog('hpc')" 
                     class="filter-btn px-3.5 py-1.5 rounded-lg bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition" data-i18n="filter_hpc">
               Calcul & HPC (4)
+            </button>
+            <button id="btn-filter-stats" onclick="filterCatalog('stats')" 
+                    class="filter-btn px-3.5 py-1.5 rounded-lg bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition" data-i18n="filter_stats">
+              Statistique & Data (1)
             </button>
             <button id="btn-filter-software" onclick="filterCatalog('software')" 
                     class="filter-btn px-3.5 py-1.5 rounded-lg bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition" data-i18n="filter_software">
@@ -1034,6 +1038,33 @@
                 <i data-lucide="github" class="w-3.5 h-3.5"></i> <span data-i18n="cat_code">Code</span>
               </a>
               <a href="assets/reports/rapport-chiffres-croises.pdf" target="_blank" class="text-emerald-700 hover:underline flex items-center gap-1 font-semibold">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> <span data-i18n="cat_report">Rapport PDF</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 7 : Clustering & ACP Données de Santé -->
+          <div class="catalog-item glass-card rounded-xl p-5 border border-slate-200 shadow-xs hover:shadow-md hover:border-rose-300 transition-all flex flex-col justify-between" data-category="stats">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="tech-pill bg-rose-50 text-rose-700 border border-rose-200" data-i18n="cat_c7_pill">Statistique & Data</span>
+                <span class="text-[11px] font-mono text-slate-500 font-semibold">GM3</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base" data-i18n="cat_c7_title">Clustering & ACP de Données de Santé</h4>
+              <p class="text-xs text-slate-600 leading-relaxed" data-i18n="cat_c7_desc">
+                Analyse multivariée en R sur le jeu Obesity Classification (108 individus) : réduction de dimension par ACP normée et classification ascendante hiérarchique (Ward.D2, 5 clusters).
+              </p>
+              <div class="flex flex-wrap gap-1 font-mono text-[10px]">
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">Langage R</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">FactoMineR</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200" data-i18n="cat_c7_tag3">ACP & CAH (Ward)</span>
+              </div>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-mono">
+              <a href="https://github.com/amrzakizakisalih-alt/Projet_Classification_Hierarchique_INSA" target="_blank" class="text-indigo-600 hover:underline flex items-center gap-1 font-medium">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i> <span data-i18n="cat_code">Code</span>
+              </a>
+              <a href="assets/reports/rapport-classification-biomedicale.pdf" target="_blank" class="text-emerald-700 hover:underline flex items-center gap-1 font-semibold">
                 <i data-lucide="file-text" class="w-3.5 h-3.5"></i> <span data-i18n="cat_report">Rapport PDF</span>
               </a>
             </div>
@@ -1694,9 +1725,10 @@
         // Catalog
         catalog_badge: "Autres Projets Académiques",
         catalog_title: "Catalogue de Projets",
-        catalog_subtitle: "Calcul haute performance (HPC), optimisation continue, intégrateurs symplectiques et algorithmique système.",
-        filter_all: "Tous (6)",
+        catalog_subtitle: "Calcul haute performance (HPC), statistique multivariée, intégrateurs symplectiques et algorithmique système.",
+        filter_all: "Tous (7)",
         filter_hpc: "Calcul & HPC (4)",
+        filter_stats: "Statistique & Data (1)",
         filter_software: "Génie Logiciel (2)",
         cat_code: "Code",
         cat_report: "Rapport PDF",
@@ -1722,6 +1754,10 @@
         cat_c6_pill: "Génie Logiciel",
         cat_c6_title: "Jeu des Chiffres Croisés (Java Swing)",
         cat_c6_desc: "Application de jeu mathématique interactif selon le patron de conception MVC, gestion d'événements asynchrones et validation d'équations.",
+        cat_c7_pill: "Statistique & Data",
+        cat_c7_title: "Clustering & ACP de Données de Santé",
+        cat_c7_desc: "Analyse multivariée en R sur le jeu Obesity Classification (108 individus) : réduction de dimension par ACP normée et classification ascendante hiérarchique (Ward.D2, 5 clusters).",
+        cat_c7_tag3: "ACP & CAH (Ward)",
 
         // Skills
         skills_badge: "Compétences Techniques",
@@ -1857,9 +1893,10 @@
         // Catalog
         catalog_badge: "Additional Academic Projects",
         catalog_title: "Project Catalog",
-        catalog_subtitle: "High-performance computing (HPC), continuous optimization, symplectic integrators, and systems programming.",
-        filter_all: "All (6)",
+        catalog_subtitle: "High-performance computing (HPC), multivariate statistics, symplectic integrators, and systems programming.",
+        filter_all: "All (7)",
         filter_hpc: "Computing & HPC (4)",
+        filter_stats: "Statistics & Data (1)",
         filter_software: "Software Engineering (2)",
         cat_code: "Code",
         cat_report: "PDF Report",
@@ -1885,6 +1922,10 @@
         cat_c6_pill: "Software Engineering",
         cat_c6_title: "Cross-Number Puzzle Game (Java Swing)",
         cat_c6_desc: "Interactive mathematical puzzle application built on the MVC design pattern with asynchronous event handling and equation validation.",
+        cat_c7_pill: "Statistics & Data",
+        cat_c7_title: "Clustering & PCA on Health Data",
+        cat_c7_desc: "Multivariate analysis in R on the Obesity Classification dataset (108 individuals): PCA dimensionality reduction and hierarchical agglomerative clustering (Ward.D2, 5 clusters).",
+        cat_c7_tag3: "PCA & HAC (Ward)",
 
         // Skills
         skills_badge: "Technical Skills",
