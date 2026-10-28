@@ -737,10 +737,10 @@
 
                   <div>
                     <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 group-hover:text-amber-700 transition-colors" data-i18n="p4_title">
-                      Forecasting des Ventes & Optimisation de Stocks (Newsvendor)
+                      Forecasting des Ventes & Optimisation de Stocks : du Notebook à l'API
                     </h3>
                     <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed" data-i18n="p4_desc">
-                      Pipeline quantitatif articulé en deux étapes : <strong>prévision statistique de séries temporelles</strong> (Régression OLS saisonnière, lags autorégressifs, Random Forest) puis <strong>décision prescriptive stochastique</strong> via le modèle du Newsvendor pour minimiser les coûts espérés sous incertitude de la demande.
+                      Projet de cours (INDR 422) transformé en service déployable : <strong>prévision de séries temporelles</strong> (OLS saisonnière, lags autorégressifs, Random Forest, Gradient Boosting, Holt-Winters) puis <strong>décision prescriptive</strong> via le modèle du Newsvendor, exposée par une API REST qui renvoie la prévision et le stock optimal.
                     </p>
                   </div>
 
@@ -748,29 +748,36 @@
                   <div class="flex flex-wrap gap-1.5 pt-1">
                     <span class="tech-pill bg-amber-50 text-amber-800 border border-amber-200">Forecasting de Séries Temporelles</span>
                     <span class="tech-pill bg-indigo-50 text-indigo-700 border border-indigo-200">Feature Engineering (Lags yt-12)</span>
-                    <span class="tech-pill bg-emerald-50 text-emerald-700 border border-emerald-200">Modélisation OLS & Random Forest</span>
+                    <span class="tech-pill bg-emerald-50 text-emerald-700 border border-emerald-200">OLS, Random Forest & Holt-Winters</span>
                     <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">Optimisation Stochastique Newsvendor</span>
                     <span class="tech-pill bg-slate-100 text-slate-700 border border-slate-200">Validation Temporelle Hold-out (24 mois)</span>
+                    <span class="tech-pill bg-sky-50 text-sky-700 border border-sky-200">FastAPI · Docker · MLflow</span>
+                    <span class="tech-pill bg-sky-50 text-sky-700 border border-sky-200">Tests pytest</span>
                   </div>
 
                   <!-- Highlights Bullet Points with Data -->
                   <ul class="text-xs text-slate-600 space-y-2 pt-2">
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-amber-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p4_bullet1"><strong>Benchmark Prédictif (cinq familles de modèles comparées) :</strong> Analyse de 108 mois de ventes automobiles au Québec (test 1967-1968) : Seasonal OLS RMSE 1 954 / MAPE 10,31 % ; Random Forest RMSE 2 208 / MAPE 9,99 % (OLS meilleure en RMSE, RF légèrement meilleur en MAPE).</span>
+                      <span data-i18n="p4_bullet1"><strong>Benchmark (cinq familles de modèles) :</strong> 108 mois de ventes automobiles au Québec (test 1967-1968). En prévision à un pas : OLS saisonnière RMSE 1 954 / MAPE 10,31 %, Random Forest RMSE 2 208 / MAPE 9,99 %. En prévision récursive (mode production), l'OLS reste stable (RMSE 1 975) alors que le Random Forest se dégrade (RMSE 2 460) : l'OLS est retenue.</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-amber-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p4_bullet2"><strong>Importance des Variables Autorégressives :</strong> Prédicteur dominant $y_{t-12}$ avec un coefficient OLS 0,68 et feature importance majeure en Random Forest.</span>
+                      <span data-i18n="p4_bullet2"><strong>Incertitude recalibrée :</strong> le stock de sécurité initial reposait sur l'erreur d'entraînement (σ = 1 127), d'où un niveau de service empirique de 87,5 % (21 mois sur 24) pour une cible de 90 %. L'API utilise l'erreur hors échantillon (σ = 1 975) : le stock de sécurité passe de 1 444 à 2 531 unités.</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <i data-lucide="check-circle" class="w-4 h-4 text-amber-600 mt-0.5 shrink-0"></i>
-                      <span data-i18n="p4_bullet3"><strong>Optimisation Stochastique Newsvendor :</strong> Détermination du stock mensuel optimal sous ratio critique ; niveau de service empirique 87,5 % (21 mois sur 24) pour une cible de 90 %.</span>
+                      <span data-i18n="p4_bullet3"><strong>Mise en production :</strong> package Python modulaire, API FastAPI (prévision et stock optimal sur 1 à 24 mois, à partir d'un niveau de service ou des coûts c<sub>u</sub>/c<sub>o</sub>), suivi des expériences avec MLflow, image Docker non-root, 31 tests pytest dont des tests de non-régression qui reproduisent les résultats du notebook.</span>
                     </li>
                   </ul>
 
                   <!-- Action Buttons -->
                   <div class="pt-4 flex flex-wrap items-center gap-3">
+                    <a href="https://github.com/amrzakizakisalih-alt/Auto_sales_forecasting_KOC" target="_blank" rel="noopener noreferrer"
+                       class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold font-mono flex items-center gap-2 shadow-sm transition">
+                      <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                      <span data-i18n="btn_github">Code GitHub</span>
+                    </a>
                     <a href="assets/reports/Rapport data science KOC.pdf" target="_blank"
                        class="px-4 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-semibold font-mono flex items-center gap-2 shadow-sm shadow-amber-600/20 transition">
                       <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
@@ -1705,11 +1712,11 @@
         // P4 KOC
         p4_domain: "Séries Temporelles & Recherche Opérationnelle",
         p4_context: "Projet 4 • Université Koç",
-        p4_title: "Forecasting des Ventes & Optimisation de Stocks (Newsvendor)",
-        p4_desc: "Pipeline quantitatif articulé en deux étapes : <strong>prévision statistique de séries temporelles</strong> (Régression OLS saisonnière, lags autorégressifs, Random Forest) puis <strong>décision prescriptive stochastique</strong> via le modèle du Newsvendor pour minimiser les coûts espérés sous incertitude de la demande.",
-        p4_bullet1: "<strong>Benchmark Prédictif (cinq familles de modèles comparées) :</strong> Analyse de 108 mois de ventes automobiles au Québec (test 1967-1968) : Seasonal OLS RMSE 1 954 / MAPE 10,31 % ; Random Forest RMSE 2 208 / MAPE 9,99 % (OLS meilleure en RMSE, RF légèrement meilleur en MAPE).",
-        p4_bullet2: "<strong>Importance des Variables Autorégressives :</strong> Prédicteur dominant $y_{t-12}$ avec un coefficient OLS 0,68 et feature importance majeure en Random Forest.",
-        p4_bullet3: "<strong>Optimisation Stochastique Newsvendor :</strong> Détermination du stock mensuel optimal sous ratio critique ; niveau de service empirique 87,5 % (21 mois sur 24) pour une cible de 90 %.",
+        p4_title: "Forecasting des Ventes & Optimisation de Stocks : du Notebook à l'API",
+        p4_desc: "Projet de cours (INDR 422) transformé en service déployable : <strong>prévision de séries temporelles</strong> (OLS saisonnière, lags autorégressifs, Random Forest, Gradient Boosting, Holt-Winters) puis <strong>décision prescriptive</strong> via le modèle du Newsvendor, exposée par une API REST qui renvoie la prévision et le stock optimal.",
+        p4_bullet1: "<strong>Benchmark (cinq familles de modèles) :</strong> 108 mois de ventes automobiles au Québec (test 1967-1968). En prévision à un pas : OLS saisonnière RMSE 1 954 / MAPE 10,31 %, Random Forest RMSE 2 208 / MAPE 9,99 %. En prévision récursive (mode production), l'OLS reste stable (RMSE 1 975) alors que le Random Forest se dégrade (RMSE 2 460) : l'OLS est retenue.",
+        p4_bullet2: "<strong>Incertitude recalibrée :</strong> le stock de sécurité initial reposait sur l'erreur d'entraînement (σ = 1 127), d'où un niveau de service empirique de 87,5 % (21 mois sur 24) pour une cible de 90 %. L'API utilise l'erreur hors échantillon (σ = 1 975) : le stock de sécurité passe de 1 444 à 2 531 unités.",
+        p4_bullet3: "<strong>Mise en production :</strong> package Python modulaire, API FastAPI (prévision et stock optimal sur 1 à 24 mois, à partir d'un niveau de service ou des coûts c<sub>u</sub>/c<sub>o</sub>), suivi des expériences avec MLflow, image Docker non-root, 31 tests pytest dont des tests de non-régression qui reproduisent les résultats du notebook.",
         p4_btn_report: "Rapport Data Science Koç (PDF)",
         p4_note: "12 pages • Prof. Fikri Karaesmen",
         p4_main_caption: "Prévisions Modèles vs Demande Réelle",
@@ -1873,11 +1880,11 @@
         // P4 KOC
         p4_domain: "Time Series & Operations Research",
         p4_context: "Project 4 • Koç University",
-        p4_title: "Monthly Auto Sales Forecasting & Newsvendor Inventory Optimization",
-        p4_desc: "Two-stage quantitative pipeline bridging <strong>predictive time series analytics</strong> (Seasonal OLS regression, autoregressive lags, Random Forest) and <strong>prescriptive operational optimization</strong> using the stochastic Newsvendor framework to minimize expected shortage and overage costs.",
-        p4_bullet1: "<strong>Predictive Benchmark (five model families compared) :</strong> Analysis of 108 months of Quebec auto sales (test 1967-1968): Seasonal OLS RMSE 1,954 / MAPE 10.31%; Random Forest RMSE 2,208 / MAPE 9.99% (OLS better on RMSE, RF slightly better on MAPE).",
-        p4_bullet2: "<strong>Autoregressive Feature Importance :</strong> Dominant predictor $y_{t-12}$ with an OLS coefficient 0.68 and leading feature importance in Random Forest.",
-        p4_bullet3: "<strong>Stochastic Newsvendor Optimization :</strong> Derivation of optimal monthly stock under critical fractile; empirical service level 87.5% (21 out of 24 months) for a 90% target.",
+        p4_title: "Auto Sales Forecasting & Newsvendor Inventory Optimization: From Notebook to API",
+        p4_desc: "Course project (INDR 422) turned into a deployable service: <strong>time series forecasting</strong> (seasonal OLS, autoregressive lags, Random Forest, Gradient Boosting, Holt-Winters) followed by a <strong>prescriptive decision</strong> with the Newsvendor model, served through a REST API that returns the forecast and the optimal stock.",
+        p4_bullet1: "<strong>Benchmark (five model families):</strong> 108 months of Quebec auto sales (test 1967-1968). One-step ahead: seasonal OLS RMSE 1,954 / MAPE 10.31%, Random Forest RMSE 2,208 / MAPE 9.99%. Recursive (production mode): OLS stays stable (RMSE 1,975) while Random Forest degrades (RMSE 2,460), so OLS is selected.",
+        p4_bullet2: "<strong>Recalibrated uncertainty:</strong> the original safety stock used the training error (σ = 1,127), which explains the 87.5% empirical service level (21 of 24 months) for a 90% target. The API uses the out-of-sample error (σ = 1,975): safety stock grows from 1,444 to 2,531 units.",
+        p4_bullet3: "<strong>Production-ready:</strong> modular Python package, FastAPI service (forecast and optimal stock for 1 to 24 months, from a service level or from the c<sub>u</sub>/c<sub>o</sub> costs), MLflow experiment tracking, non-root Docker image, 31 pytest tests including regression tests that reproduce the notebook results.",
         p4_btn_report: "Koç Data Science Report (PDF)",
         p4_note: "12 pages • Supervised by Prof. Fikri Karaesmen",
         p4_main_caption: "Model Forecasts vs Actual Sales (Test 1967-1968)",
